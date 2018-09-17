@@ -112,6 +112,17 @@ class GlossarVC: UIViewController {
     func sortDataListABCAsc(){
         data = data.sorted(by: { $0.name < $1.name})
     }
+    
+    //MARK: - Segues
+    /***************************************************************/
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToGlossarDetail"{
+            let destinationVC = segue.destination as! GlossarDetailVC
+            
+            destinationVC.pilzData = (searching ? filteredData[indexOfRow] : rowsSection[indexOfSection][indexOfRow])
+        }
+    }
 
 }
 
@@ -146,7 +157,7 @@ extension GlossarVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         indexOfSection = indexPath.section
         indexOfRow = indexPath.row
-        performSegue(withIdentifier: "goToDetailGlossar", sender: self)
+        performSegue(withIdentifier: "goToGlossarDetail", sender: self)
         glossarTableView.deselectRow(at: indexPath, animated: true)
         
     }
