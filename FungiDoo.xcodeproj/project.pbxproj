@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7609C2ADF6C81CDDDE73CC99 /* Pods_FungiDoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FED889CC8CFF9E8C91B1870 /* Pods_FungiDoo.framework */; };
 		D067521D214F9CF60086B007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067521C214F9CF60086B007 /* AppDelegate.swift */; };
 		D067521F214F9CF60086B007 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067521E214F9CF60086B007 /* ViewController.swift */; };
 		D0675222214F9CF60086B007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0675220214F9CF60086B007 /* Main.storyboard */; };
 		D0675225214F9CF60086B007 /* FungiDoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0675223214F9CF60086B007 /* FungiDoo.xcdatamodeld */; };
 		D0675227214F9CF80086B007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0675226214F9CF80086B007 /* Assets.xcassets */; };
 		D067522A214F9CF80086B007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0675228214F9CF80086B007 /* LaunchScreen.storyboard */; };
+		D0675233214F9DF10086B007 /* pilzeList.json in Resources */ = {isa = PBXBuildFile; fileRef = D0675232214F9DF10086B007 /* pilzeList.json */; };
+		D0EA3880214FE3E6002E462C /* GlossarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA387F214FE3E6002E462C /* GlossarVC.swift */; };
+		D0EA3882214FE47B002E462C /* Pilze.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3881214FE47B002E462C /* Pilze.swift */; };
+		D0EA3885214FE694002E462C /* GlossarListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3883214FE694002E462C /* GlossarListTableViewCell.swift */; };
+		D0EA3886214FE694002E462C /* GlossarListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EA3884214FE694002E462C /* GlossarListTableViewCell.xib */; };
+		D0EA3888214FF419002E462C /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3887214FF419002E462C /* AlertService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		539F91D9F1DD01E0ED45B0CA /* Pods-FungiDoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FungiDoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FungiDoo/Pods-FungiDoo.debug.xcconfig"; sourceTree = "<group>"; };
+		7FED889CC8CFF9E8C91B1870 /* Pods_FungiDoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FungiDoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0675219214F9CF60086B007 /* FungiDoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FungiDoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067521C214F9CF60086B007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D067521E214F9CF60086B007 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,13 @@
 		D0675226214F9CF80086B007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0675229214F9CF80086B007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D067522B214F9CF80086B007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0675232214F9DF10086B007 /* pilzeList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pilzeList.json; sourceTree = "<group>"; };
+		D0EA387F214FE3E6002E462C /* GlossarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarVC.swift; sourceTree = "<group>"; };
+		D0EA3881214FE47B002E462C /* Pilze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pilze.swift; sourceTree = "<group>"; };
+		D0EA3883214FE694002E462C /* GlossarListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarListTableViewCell.swift; sourceTree = "<group>"; };
+		D0EA3884214FE694002E462C /* GlossarListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GlossarListTableViewCell.xib; sourceTree = "<group>"; };
+		D0EA3887214FF419002E462C /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		D4108D0D4BDCDF3C379AFA5B /* Pods-FungiDoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FungiDoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FungiDoo/Pods-FungiDoo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7609C2ADF6C81CDDDE73CC99 /* Pods_FungiDoo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66AACC76C33BF19BBD3465EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FED889CC8CFF9E8C91B1870 /* Pods_FungiDoo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BFBC021CA65F5738E4F20D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				539F91D9F1DD01E0ED45B0CA /* Pods-FungiDoo.debug.xcconfig */,
+				D4108D0D4BDCDF3C379AFA5B /* Pods-FungiDoo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D0675210214F9CF60086B007 = {
 			isa = PBXGroup;
 			children = (
 				D067521B214F9CF60086B007 /* FungiDoo */,
 				D067521A214F9CF60086B007 /* Products */,
+				7BFBC021CA65F5738E4F20D3 /* Pods */,
+				66AACC76C33BF19BBD3465EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +92,61 @@
 		D067521B214F9CF60086B007 /* FungiDoo */ = {
 			isa = PBXGroup;
 			children = (
+				D0EA387B214FDF36002E462C /* Model */,
+				D0675235214F9FA60086B007 /* Controller */,
+				D0675234214F9F8F0086B007 /* View */,
+				D0675231214F9DA00086B007 /* SupportFiles */,
 				D067521C214F9CF60086B007 /* AppDelegate.swift */,
 				D067521E214F9CF60086B007 /* ViewController.swift */,
-				D0675220214F9CF60086B007 /* Main.storyboard */,
 				D0675226214F9CF80086B007 /* Assets.xcassets */,
-				D0675228214F9CF80086B007 /* LaunchScreen.storyboard */,
 				D067522B214F9CF80086B007 /* Info.plist */,
 				D0675223214F9CF60086B007 /* FungiDoo.xcdatamodeld */,
+				D0EA3889214FF420002E462C /* Services */,
 			);
 			path = FungiDoo;
+			sourceTree = "<group>";
+		};
+		D0675231214F9DA00086B007 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D0675232214F9DF10086B007 /* pilzeList.json */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		D0675234214F9F8F0086B007 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0675220214F9CF60086B007 /* Main.storyboard */,
+				D0675228214F9CF80086B007 /* LaunchScreen.storyboard */,
+				D0EA3883214FE694002E462C /* GlossarListTableViewCell.swift */,
+				D0EA3884214FE694002E462C /* GlossarListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0675235214F9FA60086B007 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0EA387F214FE3E6002E462C /* GlossarVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0EA387B214FDF36002E462C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0EA3881214FE47B002E462C /* Pilze.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0EA3889214FF420002E462C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D0EA3887214FF419002E462C /* AlertService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D067522E214F9CF80086B007 /* Build configuration list for PBXNativeTarget "FungiDoo" */;
 			buildPhases = (
+				0A80034FA091E0D1EE86EC06 /* [CP] Check Pods Manifest.lock */,
 				D0675215214F9CF60086B007 /* Sources */,
 				D0675216214F9CF60086B007 /* Frameworks */,
 				D0675217214F9CF60086B007 /* Resources */,
+				158EB8A3FEBC2B50BB86F50D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,19 +211,70 @@
 			files = (
 				D067522A214F9CF80086B007 /* LaunchScreen.storyboard in Resources */,
 				D0675227214F9CF80086B007 /* Assets.xcassets in Resources */,
+				D0675233214F9DF10086B007 /* pilzeList.json in Resources */,
 				D0675222214F9CF60086B007 /* Main.storyboard in Resources */,
+				D0EA3886214FE694002E462C /* GlossarListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A80034FA091E0D1EE86EC06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FungiDoo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		158EB8A3FEBC2B50BB86F50D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FungiDoo/Pods-FungiDoo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FungiDoo/Pods-FungiDoo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0675215214F9CF60086B007 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EA3882214FE47B002E462C /* Pilze.swift in Sources */,
 				D0675225214F9CF60086B007 /* FungiDoo.xcdatamodeld in Sources */,
+				D0EA3888214FF419002E462C /* AlertService.swift in Sources */,
 				D067521F214F9CF60086B007 /* ViewController.swift in Sources */,
+				D0EA3885214FE694002E462C /* GlossarListTableViewCell.swift in Sources */,
+				D0EA3880214FE3E6002E462C /* GlossarVC.swift in Sources */,
 				D067521D214F9CF60086B007 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +417,7 @@
 		};
 		D067522F214F9CF80086B007 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 539F91D9F1DD01E0ED45B0CA /* Pods-FungiDoo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +430,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.kfraeger.FungiDoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D0675230214F9CF80086B007 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4108D0D4BDCDF3C379AFA5B /* Pods-FungiDoo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +449,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.kfraeger.FungiDoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
