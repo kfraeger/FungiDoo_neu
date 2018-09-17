@@ -6,10 +6,77 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Hilfe-->
+        <scene sceneID="fFS-AO-vXa">
+            <objects>
+                <viewController title="Hilfe" id="FyU-Zs-af0" customClass="GlossarHelpVC" customModule="FungiDoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yGA-7T-Dau">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jW7-hL-Mk9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlossarHelpCell" rowHeight="112" id="vXC-XL-3xi" customClass="GlossarHelpTableViewCell" customModule="FungiDoo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="112"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vXC-XL-3xi" id="kA1-2Z-BX0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Akf-YU-KCo">
+                                                    <rect key="frame" x="30" y="35" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="88I-wF-mV8"/>
+                                                        <constraint firstAttribute="height" constant="40" id="t9W-2W-sja"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sh-67-Sfr">
+                                                    <rect key="frame" x="90" y="45" width="250" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5Sh-67-Sfr" secondAttribute="trailing" constant="20" id="K08-sE-MxM"/>
+                                                <constraint firstItem="Akf-YU-KCo" firstAttribute="leading" secondItem="kA1-2Z-BX0" secondAttribute="leadingMargin" constant="15" id="OOf-aG-0bP"/>
+                                                <constraint firstItem="5Sh-67-Sfr" firstAttribute="centerY" secondItem="Akf-YU-KCo" secondAttribute="centerY" id="XKd-Ui-J2d"/>
+                                                <constraint firstItem="Akf-YU-KCo" firstAttribute="centerY" secondItem="kA1-2Z-BX0" secondAttribute="centerY" id="crq-cF-PdB"/>
+                                                <constraint firstItem="5Sh-67-Sfr" firstAttribute="leading" secondItem="Akf-YU-KCo" secondAttribute="trailing" constant="20" id="ien-nx-uda"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconHelpTextLabel" destination="5Sh-67-Sfr" id="AGx-2C-nuS"/>
+                                            <outlet property="iconImageView" destination="Akf-YU-KCo" id="MX4-KL-lDE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jW7-hL-Mk9" firstAttribute="trailing" secondItem="Mby-4O-j06" secondAttribute="trailing" id="1Jf-Ie-98j"/>
+                            <constraint firstItem="jW7-hL-Mk9" firstAttribute="leading" secondItem="Mby-4O-j06" secondAttribute="leading" id="Mdl-ha-xTL"/>
+                            <constraint firstItem="jW7-hL-Mk9" firstAttribute="top" secondItem="Mby-4O-j06" secondAttribute="top" id="dRe-jF-9cF"/>
+                            <constraint firstAttribute="bottom" secondItem="jW7-hL-Mk9" secondAttribute="bottom" id="fYc-HG-mmd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mby-4O-j06"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jW7-hL-Mk9" id="LYJ-iS-eMP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qgb-Id-kE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2548" y="-1418.1409295352325"/>
+        </scene>
         <!--Glossar-->
         <scene sceneID="9kt-sc-Ibo">
             <objects>
@@ -42,6 +109,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="A - Z Finder" id="ejd-Nx-qsj">
                         <barButtonItem key="backBarButtonItem" title="zurück" id="Fzd-YQ-Zbh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Hilfe" id="xAW-AH-ADz">
+                            <connections>
+                                <segue destination="FyU-Zs-af0" kind="show" identifier="goToGlosserHelp" id="YzV-2q-ucz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="glossarTableView" destination="Rt2-f8-2uC" id="ZJM-lK-Fz1"/>
@@ -66,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGJ-bP-NYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="-743"/>
+            <point key="canvasLocation" x="2548" y="-743.47826086956525"/>
         </scene>
         <!--Bestimmung-->
         <scene sceneID="tne-QT-ifu">
@@ -146,6 +218,7 @@
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.55294117649999996" green="0.40000000000000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">

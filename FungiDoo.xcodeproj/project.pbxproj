@@ -20,6 +20,8 @@
 		D0EA3885214FE694002E462C /* GlossarListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3883214FE694002E462C /* GlossarListTableViewCell.swift */; };
 		D0EA3886214FE694002E462C /* GlossarListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EA3884214FE694002E462C /* GlossarListTableViewCell.xib */; };
 		D0EA3888214FF419002E462C /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3887214FF419002E462C /* AlertService.swift */; };
+		D0EA388B21500022002E462C /* GlossarHelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA388A21500021002E462C /* GlossarHelpVC.swift */; };
+		D0EA388D215001AA002E462C /* GlossarHelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA388C215001AA002E462C /* GlossarHelpTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		D0EA3883214FE694002E462C /* GlossarListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarListTableViewCell.swift; sourceTree = "<group>"; };
 		D0EA3884214FE694002E462C /* GlossarListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GlossarListTableViewCell.xib; sourceTree = "<group>"; };
 		D0EA3887214FF419002E462C /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		D0EA388A21500021002E462C /* GlossarHelpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlossarHelpVC.swift; sourceTree = "<group>"; };
+		D0EA388C215001AA002E462C /* GlossarHelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarHelpTableViewCell.swift; sourceTree = "<group>"; };
 		D4108D0D4BDCDF3C379AFA5B /* Pods-FungiDoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FungiDoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FungiDoo/Pods-FungiDoo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +121,7 @@
 		D0675234214F9F8F0086B007 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D0EA388C215001AA002E462C /* GlossarHelpTableViewCell.swift */,
 				D0675220214F9CF60086B007 /* Main.storyboard */,
 				D0675228214F9CF80086B007 /* LaunchScreen.storyboard */,
 				D0EA3883214FE694002E462C /* GlossarListTableViewCell.swift */,
@@ -128,6 +133,7 @@
 		D0675235214F9FA60086B007 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0EA388A21500021002E462C /* GlossarHelpVC.swift */,
 				D0EA387F214FE3E6002E462C /* GlossarVC.swift */,
 			);
 			path = Controller;
@@ -273,7 +279,9 @@
 				D0675225214F9CF60086B007 /* FungiDoo.xcdatamodeld in Sources */,
 				D0EA3888214FF419002E462C /* AlertService.swift in Sources */,
 				D067521F214F9CF60086B007 /* ViewController.swift in Sources */,
+				D0EA388D215001AA002E462C /* GlossarHelpTableViewCell.swift in Sources */,
 				D0EA3885214FE694002E462C /* GlossarListTableViewCell.swift in Sources */,
+				D0EA388B21500022002E462C /* GlossarHelpVC.swift in Sources */,
 				D0EA3880214FE3E6002E462C /* GlossarVC.swift in Sources */,
 				D067521D214F9CF60086B007 /* AppDelegate.swift in Sources */,
 			);
