@@ -19,6 +19,13 @@ struct AlertService {
         vc.present(alert, animated: true)
     }
     
+    static func showErrorCoreDataLoadAlert(on vc : UIViewController){
+        let alert = UIAlertController(title: "Es ist ein internes Problem aufgetreten.", message: "Ihre Daten konnten nicht geladen werden.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        vc.present(alert, animated: true)
+    }
+    
     
     
     //Photo Library Asking for Permission Alert

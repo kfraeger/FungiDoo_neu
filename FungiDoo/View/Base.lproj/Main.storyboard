@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgb-Id-kE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="-1418.1409295352325"/>
+            <point key="canvasLocation" x="2588" y="-1856"/>
         </scene>
         <!--Glossar-->
         <scene sceneID="9kt-sc-Ibo">
@@ -124,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XyT-6b-Pvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1632.8" y="-742.5787106446777"/>
+            <point key="canvasLocation" x="1478" y="-1218"/>
         </scene>
         <!--Details-->
         <scene sceneID="kFb-dt-wNH">
@@ -304,52 +305,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGJ-bP-NYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="-582"/>
+            <point key="canvasLocation" x="2588" y="-1023"/>
         </scene>
         <!--Bestimmung-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Bestimmung" id="BYZ-38-t0r" customClass="ViewController" customModule="FungiDoo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Bestimmung" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="check_icon" id="RwG-nm-dN7"/>
+                    <tabBarItem key="tabBarItem" title="Bestimmung" image="check_icon" selectedImage="check_icon" id="RwG-nm-dN7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="840.79999999999995" y="117.39130434782609"/>
-        </scene>
-        <!--Mein Pilzkorb-->
-        <scene sceneID="1CL-WY-C0o">
-            <objects>
-                <tableViewController title="Mein Pilzkorb" id="UFc-lp-c1A" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AMi-xt-ekY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userListCell" id="J9C-tz-sCQ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J9C-tz-sCQ" id="e2E-VX-tGm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="UFc-lp-c1A" id="vNO-Pl-l25"/>
-                            <outlet property="delegate" destination="UFc-lp-c1A" id="Ipf-9O-2sr"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="basket_icon" id="GWJ-M9-oLn"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="12c-Nt-tNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="841" y="979"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Reg-IE-tgM">
@@ -364,8 +336,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="NoC-zp-41T"/>
+                        <segue destination="LgT-OJ-6VM" kind="relationship" relationship="viewControllers" id="OJV-tu-9K4"/>
                         <segue destination="d7p-W3-kZ9" kind="relationship" relationship="viewControllers" id="ZGN-i0-SIW"/>
-                        <segue destination="UFc-lp-c1A" kind="relationship" relationship="viewControllers" id="OJV-tu-9K4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ded-5P-TKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -376,7 +348,7 @@
         <scene sceneID="D7f-xi-OFY">
             <objects>
                 <navigationController title="navGlossar" automaticallyAdjustsScrollViewInsets="NO" id="d7p-W3-kZ9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="encyclopedia_icon" selectedImage="encyclopedia_icon" id="OH6-67-Ygu"/>
+                    <tabBarItem key="tabBarItem" title="A - Z" image="encyclopedia_icon" selectedImage="encyclopedia_icon" id="OH6-67-Ygu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JQF-03-ftt">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -398,7 +370,83 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRZ-LC-bdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808.79999999999995" y="-741.67916041979015"/>
+            <point key="canvasLocation" x="652" y="-1218"/>
+        </scene>
+        <!--Mein Pilzkorb-->
+        <scene sceneID="VHF-s2-XYq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LgT-OJ-6VM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mein Pilzkorb" image="basket_icon" selectedImage="basket_icon" id="GWJ-M9-oLn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kJq-cp-u3f">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.55294117649999996" green="0.40000000000000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Ip-SE-Mda" kind="relationship" relationship="rootViewController" id="Isu-pF-EdD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bV-FX-3aR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.79999999999995" y="1080.8095952023989"/>
+        </scene>
+        <!--Mein Pilzkorb-->
+        <scene sceneID="AcL-bX-GnD">
+            <objects>
+                <viewController id="0Ip-SE-Mda" customClass="UserListVC" customModule="FungiDoo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wtL-Gd-NVY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uN5-4W-a7C">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="5sQ-6P-gx5">
+                                <rect key="frame" x="47" y="283" width="281" height="100"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="ajM-Zb-0lY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5sQ-6P-gx5" firstAttribute="width" secondItem="wtL-Gd-NVY" secondAttribute="width" multiplier="0.75 : 1" id="0kF-be-O8V"/>
+                            <constraint firstItem="uN5-4W-a7C" firstAttribute="bottom" secondItem="jdc-Re-93p" secondAttribute="bottom" id="6RL-ZG-Fzw"/>
+                            <constraint firstItem="5sQ-6P-gx5" firstAttribute="centerY" secondItem="wtL-Gd-NVY" secondAttribute="centerY" id="Rrb-Sc-FXY"/>
+                            <constraint firstItem="uN5-4W-a7C" firstAttribute="top" secondItem="jdc-Re-93p" secondAttribute="top" id="TF9-FB-ldO"/>
+                            <constraint firstItem="uN5-4W-a7C" firstAttribute="trailing" secondItem="jdc-Re-93p" secondAttribute="trailing" id="XYe-2j-qa7"/>
+                            <constraint firstItem="5sQ-6P-gx5" firstAttribute="centerX" secondItem="wtL-Gd-NVY" secondAttribute="centerX" id="lDg-eZ-BVB"/>
+                            <constraint firstItem="uN5-4W-a7C" firstAttribute="leading" secondItem="jdc-Re-93p" secondAttribute="leading" id="moM-mU-vd9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jdc-Re-93p"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mein Pilzkorb" id="S6g-jS-R2o">
+                        <barButtonItem key="backBarButtonItem" title="zurück" id="SaL-Ta-GuV"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hl0-mp-mJf"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="infoLabel" destination="5sQ-6P-gx5" id="fFY-BJ-Pv7"/>
+                        <outlet property="userListItemsTableView" destination="uN5-4W-a7C" id="wLv-gz-hWc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3g-DC-row" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1633" y="1081"/>
         </scene>
     </scenes>
     <resources>
