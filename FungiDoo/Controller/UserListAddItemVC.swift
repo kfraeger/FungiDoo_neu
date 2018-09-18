@@ -7,29 +7,44 @@
 //
 
 import UIKit
+import Photos
+import Alamofire
+import SwiftyJSON
 
 class UserListAddItemVC: UIViewController {
 
+    
+    
+    //Outlets
+    /***************************************************************/
+    
+    @IBOutlet weak var addNameTextField: UITextField!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var userNotesTextView: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func cameraButtonPressed(_ sender: UIButton) {
     }
-    */
-
+    
+    @IBAction func photoButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func changeDateButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func editLocationButtonPressed(_ sender: UIButton) {
+    }
+    
 }
