@@ -59,8 +59,10 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
     //image
     @IBOutlet weak var avatarImageView: UIImageView!
     
+    
     //textView
     @IBOutlet weak var userNotesTextView: UITextView!
+    @IBOutlet weak var textViewContainerTopConstraint: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
@@ -278,8 +280,6 @@ extension UserListAddItemVC : UIImagePickerControllerDelegate, UINavigationContr
         
         var selectedImageFromPicker : UIImage?
         
-        //print(info)
-        
         avatarImageView.contentMode = .scaleAspectFit
         
         
@@ -305,7 +305,6 @@ extension UserListAddItemVC : UIImagePickerControllerDelegate, UINavigationContr
     
     //cancel Method of ImagePicker
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        print("ImagePicker canceled")
         dismiss(animated: true, completion: nil)
     }
 }
@@ -354,8 +353,7 @@ extension UserListAddItemVC: UITextViewDelegate {
         }
         
         UIView.animate(withDuration: 0.3) {
-            //self.middleView.isHidden = true
-            //self.heightConstraintTableView.constant = 0
+            self.textViewContainerTopConstraint.constant = -150
             self.view.layoutIfNeeded()
             self.view.snapshotView(afterScreenUpdates: true)
         }
@@ -376,8 +374,7 @@ extension UserListAddItemVC: UITextViewDelegate {
             textView.textColor = UIColor.lightGray
         }
         UIView.animate(withDuration: 0.3) {
-            //self.middleView.isHidden = false
-            //self.heightConstraintTableView.constant = CGFloat(self.rowHeight * 2)
+            self.textViewContainerTopConstraint.constant = 0
             self.view.layoutIfNeeded()
             self.view.snapshotView(afterScreenUpdates: true)
         }

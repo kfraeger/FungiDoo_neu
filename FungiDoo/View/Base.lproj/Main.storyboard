@@ -619,17 +619,18 @@
                                     <constraint firstAttribute="height" constant="66" id="yaP-6D-vp6"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGw-Qk-5QF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGw-Qk-5QF" userLabel="TextViewContainerView">
                                 <rect key="frame" x="0.0" y="399.5" width="375" height="267.5"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eTf-on-BNi">
                                         <rect key="frame" x="25" y="20" width="325" height="222.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textView>
                                 </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="eTf-on-BNi" secondAttribute="bottom" constant="25" id="0s3-bg-Vay"/>
                                     <constraint firstItem="eTf-on-BNi" firstAttribute="leading" secondItem="ZGw-Qk-5QF" secondAttribute="leading" constant="25" id="Rmy-Bm-HcV"/>
@@ -682,6 +683,7 @@
                         <outlet property="doneButton" destination="xjg-lY-7zN" id="F5I-FG-siA"/>
                         <outlet property="locationContainerView" destination="hpm-hV-lEv" id="vl3-xH-Ygu"/>
                         <outlet property="nameTextField" destination="Nkl-XN-xAP" id="Xsg-4p-rvX"/>
+                        <outlet property="textViewContainerTopConstraint" destination="K0v-mV-gTP" id="9fI-fY-uEc"/>
                         <outlet property="userNotesTextView" destination="eTf-on-BNi" id="eF6-nh-6IP"/>
                         <segue destination="6mg-uK-s6b" kind="presentation" identifier="goToCameraVC" id="KJw-Tq-M8A"/>
                     </connections>
