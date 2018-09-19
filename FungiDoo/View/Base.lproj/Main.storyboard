@@ -465,6 +465,10 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textFieldDidEndOnExit:" destination="A2h-iM-A2n" eventType="editingDidEndOnExit" id="r1r-wV-yci"/>
+                                            <action selector="textFieldEditingChanged:" destination="A2h-iM-A2n" eventType="editingChanged" id="vRw-IT-mnm"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -666,7 +670,7 @@
                                 <action selector="cancelButtonPressed:" destination="A2h-iM-A2n" id="I6C-oo-tr4"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Weiter" id="xjg-lY-7zN"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="xjg-lY-7zN"/>
                     </navigationItem>
                     <connections>
                         <outlet property="addImageContainerView" destination="fcy-oW-riT" id="UoM-aN-z4l"/>
@@ -675,13 +679,16 @@
                         <outlet property="dateLabel" destination="gl6-Y8-yZN" id="mNY-hp-Ke8"/>
                         <outlet property="datePicker" destination="Zb2-e7-Q8k" id="LBY-uQ-sEo"/>
                         <outlet property="datePickerHeight" destination="Q7z-td-E8t" id="PEa-RS-msz"/>
+                        <outlet property="doneButton" destination="xjg-lY-7zN" id="F5I-FG-siA"/>
                         <outlet property="locationContainerView" destination="hpm-hV-lEv" id="vl3-xH-Ygu"/>
+                        <outlet property="nameTextField" destination="Nkl-XN-xAP" id="Xsg-4p-rvX"/>
+                        <outlet property="userNotesTextView" destination="eTf-on-BNi" id="eF6-nh-6IP"/>
                         <segue destination="6mg-uK-s6b" kind="presentation" identifier="goToCameraVC" id="KJw-Tq-M8A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4e-iG-94h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3350.7246376811595" y="1082.608695652174"/>
+            <point key="canvasLocation" x="3349.5999999999999" y="1082.608695652174"/>
         </scene>
         <!--CameraViewController-->
         <scene sceneID="Rtt-bK-5az">
@@ -723,10 +730,10 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yVj-lY-5nC">
-                                <rect key="frame" x="0.0" y="80" width="375" height="375"/>
+                                <rect key="frame" x="0.0" y="85" width="375" height="375"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRd-xa-adZ">
-                                <rect key="frame" x="155" y="475" width="65" height="65"/>
+                                <rect key="frame" x="155" y="480" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="3vX-ge-DDd"/>
                                     <constraint firstAttribute="width" constant="65" id="x1b-fH-PAl"/>
@@ -753,7 +760,7 @@
                             <constraint firstItem="qtU-Sl-4Vi" firstAttribute="bottom" secondItem="QFs-im-4VX" secondAttribute="bottom" constant="25" id="0yC-v4-iqa"/>
                             <constraint firstItem="jZ1-e1-p0a" firstAttribute="leading" secondItem="qtU-Sl-4Vi" secondAttribute="leading" id="1X3-4H-pdR"/>
                             <constraint firstItem="qtU-Sl-4Vi" firstAttribute="trailing" secondItem="QFs-im-4VX" secondAttribute="trailing" constant="25" id="Q5y-Si-gN8"/>
-                            <constraint firstItem="yVj-lY-5nC" firstAttribute="top" secondItem="jZ1-e1-p0a" secondAttribute="bottom" constant="5" id="eTu-8K-eBm"/>
+                            <constraint firstItem="yVj-lY-5nC" firstAttribute="top" secondItem="jZ1-e1-p0a" secondAttribute="bottom" constant="10" id="eTu-8K-eBm"/>
                             <constraint firstItem="mRd-xa-adZ" firstAttribute="centerX" secondItem="cWQ-ga-FsO" secondAttribute="centerX" id="fBv-z8-1cp"/>
                             <constraint firstItem="mRd-xa-adZ" firstAttribute="top" secondItem="yVj-lY-5nC" secondAttribute="bottom" constant="20" id="hWt-QC-whu"/>
                             <constraint firstItem="yVj-lY-5nC" firstAttribute="leading" secondItem="qtU-Sl-4Vi" secondAttribute="leading" id="jiU-A3-yxh"/>
