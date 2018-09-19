@@ -13,10 +13,15 @@ import SwiftyJSON
 
 class UserListAddItemVC: UIViewController {
 
+    //date
     let placeHolderTextView = "Hier können Sie eigene Notizen hinterlegen."
     let datePickerConstantHide : CGFloat = 0
     let datePickerConstantShow : CGFloat = 150
     let animateDuration : Double = 0.3
+    
+    //image
+    let cornerRadius :CGFloat = 8
+    
     
     var gestureRecognizer = UITapGestureRecognizer()
     
@@ -34,15 +39,16 @@ class UserListAddItemVC: UIViewController {
     @IBOutlet weak var datePickerHeight: NSLayoutConstraint!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    //image
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        datePicker.isHidden = true
-        dateLabel.text = getCurrentDateTime()
+        configureImageView()
+        configureDateView()
         
         gestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(backgroundTap(gesture:)));
         
@@ -58,8 +64,17 @@ class UserListAddItemVC: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     //MARK: - get currend Date & datePickerChanged methods
     /***************************************************************/
+    
+    private func configureDateView() {
+        datePicker.isHidden = true
+        dateLabel.text = getCurrentDateTime()
+    }
     
     private func getCurrentDateTime() -> String {
         let dateFormatter = DateFormatter()
@@ -103,12 +118,20 @@ class UserListAddItemVC: UIViewController {
     //MARK: - addImage methods
     /***************************************************************/
     
-    
-    
-    
-    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+    private func configureImageView() {
+        avatarImageView.layer.cornerRadius = cornerRadius
+        avatarImageView.clipsToBounds = true
     }
+    
+    
+    
+    
+    @IBAction func cameraButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func photoButtonPressed(_ sender: UIButton) {
+    }
+    
     
     
     
