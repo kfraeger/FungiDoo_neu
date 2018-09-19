@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7609C2ADF6C81CDDDE73CC99 /* Pods_FungiDoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FED889CC8CFF9E8C91B1870 /* Pods_FungiDoo.framework */; };
+		D014BAE2215131EE00C77187 /* UserListAddItemNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014BAE0215131EE00C77187 /* UserListAddItemNameTableViewCell.swift */; };
+		D014BAE5215134E800C77187 /* UserListAddItemImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014BAE4215134E800C77187 /* UserListAddItemImageTableViewCell.swift */; };
 		D03467FD2150F39300197129 /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03467FC2150F39300197129 /* UserListVC.swift */; };
 		D03468012150FA2500197129 /* UserItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03467FF2150FA2500197129 /* UserItemTableViewCell.swift */; };
 		D03468022150FA2500197129 /* UserItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03468002150FA2500197129 /* UserItemTableViewCell.xib */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		539F91D9F1DD01E0ED45B0CA /* Pods-FungiDoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FungiDoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FungiDoo/Pods-FungiDoo.debug.xcconfig"; sourceTree = "<group>"; };
 		7FED889CC8CFF9E8C91B1870 /* Pods_FungiDoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FungiDoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D014BAE0215131EE00C77187 /* UserListAddItemNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAddItemNameTableViewCell.swift; sourceTree = "<group>"; };
+		D014BAE4215134E800C77187 /* UserListAddItemImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAddItemImageTableViewCell.swift; sourceTree = "<group>"; };
 		D03467FC2150F39300197129 /* UserListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
 		D03467FF2150FA2500197129 /* UserItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItemTableViewCell.swift; sourceTree = "<group>"; };
 		D03468002150FA2500197129 /* UserItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				D0675228214F9CF80086B007 /* LaunchScreen.storyboard */,
 				D03467FF2150FA2500197129 /* UserItemTableViewCell.swift */,
 				D03468002150FA2500197129 /* UserItemTableViewCell.xib */,
+				D014BAE0215131EE00C77187 /* UserListAddItemNameTableViewCell.swift */,
+				D014BAE4215134E800C77187 /* UserListAddItemImageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +223,7 @@
 				TargetAttributes = {
 					D0675218214F9CF60086B007 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -311,10 +318,12 @@
 				D0EA388D215001AA002E462C /* GlossarHelpTableViewCell.swift in Sources */,
 				D0EA3885214FE694002E462C /* GlossarListTableViewCell.swift in Sources */,
 				D0EA388B21500022002E462C /* GlossarHelpVC.swift in Sources */,
+				D014BAE5215134E800C77187 /* UserListAddItemImageTableViewCell.swift in Sources */,
 				D0EA388F21501367002E462C /* GlossarDetailVC.swift in Sources */,
 				D0EA3880214FE3E6002E462C /* GlossarVC.swift in Sources */,
 				D03468012150FA2500197129 /* UserItemTableViewCell.swift in Sources */,
 				D034680421510F6900197129 /* UserListAddItemVC.swift in Sources */,
+				D014BAE2215131EE00C77187 /* UserListAddItemNameTableViewCell.swift in Sources */,
 				D067521D214F9CF60086B007 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,7 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.kfraeger.FungiDoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -488,7 +497,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.kfraeger.FungiDoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

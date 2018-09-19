@@ -33,9 +33,9 @@ struct AlertService {
         let alert = UIAlertController(title: "Bitte gestatte den Zugriff auf Fotos.", message: "So kannst du Fotos aufnehmen und speichern", preferredStyle: .alert)
         
         let settingsAction = UIAlertAction(title: "Einstellungen", style: .default) { (_) -> Void in
-            let settingsUrl = NSURL(string:UIApplicationOpenSettingsURLString)
+            let settingsUrl = NSURL(string:UIApplication.openSettingsURLString)
             if let url = settingsUrl {
-                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
         }
         let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -51,9 +51,9 @@ struct AlertService {
         let alert = UIAlertController(title: "Bitte gestatte den Zugriff auf deinen Standort.", message: "So können wir zu deinem Fund einen aktuellen Standort ermitteln.", preferredStyle: .alert)
         
         let settingsAction = UIAlertAction(title: "Einstellungen", style: .default) { (_) -> Void in
-            let settingsUrl = NSURL(string:UIApplicationOpenSettingsURLString)
+            let settingsUrl = NSURL(string:UIApplication.openSettingsURLString)
             if let url = settingsUrl {
-                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
         }
         let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -64,4 +64,9 @@ struct AlertService {
         
     }
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }
