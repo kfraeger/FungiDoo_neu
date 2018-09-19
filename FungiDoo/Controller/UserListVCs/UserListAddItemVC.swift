@@ -11,7 +11,7 @@ import Photos
 import Alamofire
 import SwiftyJSON
 
-class UserListAddItemVC: UIViewController {
+class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
 
     //date
     let placeHolderTextView = "Hier können Sie eigene Notizen hinterlegen."
@@ -21,7 +21,7 @@ class UserListAddItemVC: UIViewController {
     
     //image
     let cornerRadius :CGFloat = 8
-    
+    var imageIsSet = false
     
     var gestureRecognizer = UITapGestureRecognizer()
     
@@ -115,6 +115,11 @@ class UserListAddItemVC: UIViewController {
     }
     
     
+    func showCameraPicker() {
+        print("kamera ausgewählt")
+        self.performSegue(withIdentifier: "goToCameraVC", sender: self)
+    }
+    
     //MARK: - addImage methods
     /***************************************************************/
     
@@ -123,10 +128,28 @@ class UserListAddItemVC: UIViewController {
         avatarImageView.clipsToBounds = true
     }
     
+    //MARK: - Camera Input Changed Delegate methods
+    /***************************************************************/
     
+    func userTookANewPhoto(image: UIImage) {
+        avatarImageView.contentMode = .scaleAspectFit
+        avatarImageView.image = image
+       
+        imageIsSet = true
+        //checkIfImageAndNameSet()
+    }
     
+    //Write the PrepareForSegue Method here
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToCameraVC" {
+            let destinationVC = segue.destination as! CameraVC
+            destinationVC.delegate = self
+        }
+       
+    }
     
     @IBAction func cameraButtonPressed(_ sender: UIButton) {
+        showCameraPicker()
     }
     
     @IBAction func photoButtonPressed(_ sender: UIButton) {
