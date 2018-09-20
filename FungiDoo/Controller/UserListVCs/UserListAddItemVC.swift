@@ -50,6 +50,8 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
     //textfield
     @IBOutlet weak var nameTextField: UITextField!
     
+    //searchResults for textField
+    @IBOutlet weak var searchResultTable: UITableView!
     
     //date
     @IBOutlet weak var dateLabel: UILabel!
@@ -69,6 +71,7 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
         super.viewDidLoad()
         configureInputTextField()
         getNameListDateFromJSON(url: JSON_URL)
+        configureTableView()
         configureImageView()
         configureDateView()
         configureTextView()
@@ -110,14 +113,14 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {
         
         if nameTextField.text?.isEmpty == true {
-            //searchResultTableView.isHidden = true
+            searchResultTable.isHidden = true
             nameTextField.resignFirstResponder()
             textFieldIsSet = false
         } else {
-            //searchResultTableView.isHidden = false
+            searchResultTable.isHidden = false
             filteredList = nameList.filter { $0.lowercased().contains(nameTextField.text!.lowercased()) }
             textFieldIsSet = true
-            //searchResultTableView.reloadData()
+            searchResultTable.reloadData()
         }
         
     }
@@ -128,6 +131,14 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
         checkIfImageAndNameSet()
     }
     
+    //MARK: - searchTableView configure method
+    /***************************************************************/
+   
+    private func configureTableView(){
+        searchResultTable.delegate = self
+        searchResultTable.dataSource = self
+        searchResultTable.isHidden = true
+    }
     
     
     //MARK: - get currend Date & datePickerChanged methods
@@ -309,7 +320,29 @@ extension UserListAddItemVC : UIImagePickerControllerDelegate, UINavigationContr
     }
 }
 
+//MARK: - Extension TableView Delegate Methods
+/***************************************************************/
 
+extension UserListAddItemVC: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchResultCell", for: indexPath)
+        cell.textLabel?.text = filteredList[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        nameTextField.text = filteredList[indexPath.row]
+        searchResultTable.isHidden = true
+        self.nameTextField.endEditing(true)
+        filteredList = []
+    }
+    
+}
 
 //MARK: - Network JSON Parsing & Fill NameList with data
 /***************************************************************/
@@ -324,12 +357,13 @@ extension UserListAddItemVC {
                 
             } else {
                 print("Error : \(String(describing: response.result.error))")
+                 AlertService.showErrorConnectionAlert(on: self)
             }
         }
     }
     
     func updateNameList(json : JSON){
-        if let tempResult = json["pilze"].array {
+        if let tempResult = json.array {
             print("tempResult updatePilzeData: \(tempResult.count)")
             
             for item in 0 ... tempResult.count - 1 {
