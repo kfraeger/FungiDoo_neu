@@ -14,6 +14,7 @@
 		D03468012150FA2500197129 /* UserItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03467FF2150FA2500197129 /* UserItemTableViewCell.swift */; };
 		D03468022150FA2500197129 /* UserItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03468002150FA2500197129 /* UserItemTableViewCell.xib */; };
 		D034680421510F6900197129 /* UserListAddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D034680321510F6900197129 /* UserListAddItemVC.swift */; };
+		D049C7802153FA6A001167EF /* UserListDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049C77F2153FA6A001167EF /* UserListDetailVC.swift */; };
 		D067521D214F9CF60086B007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067521C214F9CF60086B007 /* AppDelegate.swift */; };
 		D0675222214F9CF60086B007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0675220214F9CF60086B007 /* Main.storyboard */; };
 		D0675225214F9CF60086B007 /* FungiDoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0675223214F9CF60086B007 /* FungiDoo.xcdatamodeld */; };
@@ -40,6 +41,7 @@
 		D03467FF2150FA2500197129 /* UserItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItemTableViewCell.swift; sourceTree = "<group>"; };
 		D03468002150FA2500197129 /* UserItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserItemTableViewCell.xib; sourceTree = "<group>"; };
 		D034680321510F6900197129 /* UserListAddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAddItemVC.swift; sourceTree = "<group>"; };
+		D049C77F2153FA6A001167EF /* UserListDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDetailVC.swift; sourceTree = "<group>"; };
 		D0675219214F9CF60086B007 /* FungiDoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FungiDoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067521C214F9CF60086B007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0675221214F9CF60086B007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				D03467FC2150F39300197129 /* UserListVC.swift */,
 				D034680321510F6900197129 /* UserListAddItemVC.swift */,
+				D049C77F2153FA6A001167EF /* UserListDetailVC.swift */,
 			);
 			path = UserListVCs;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				D0EA3885214FE694002E462C /* GlossarListTableViewCell.swift in Sources */,
 				D0EA388B21500022002E462C /* GlossarHelpVC.swift in Sources */,
 				D097841621527F7A00CD3374 /* CameraVC.swift in Sources */,
+				D049C7802153FA6A001167EF /* UserListDetailVC.swift in Sources */,
 				D014BAE5215134E800C77187 /* UserListAddItemImageTableViewCell.swift in Sources */,
 				D0EA388F21501367002E462C /* GlossarDetailVC.swift in Sources */,
 				D0EA3880214FE3E6002E462C /* GlossarVC.swift in Sources */,

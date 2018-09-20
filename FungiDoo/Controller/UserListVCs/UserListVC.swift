@@ -65,6 +65,16 @@ class UserListVC: UIViewController {
         showActionSheet()
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToUserItemDetail"{
+            let destinationVC = segue.destination as! UserListDetailVC
+            
+            destinationVC.userData = dataArray[indexRow]
+        }
+    }
+    
     //MARK: - Core Data methods
     /***************************************************************/
     
@@ -155,8 +165,8 @@ extension UserListVC : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //print("perform seque goToMyPilzDetail")
         indexRow = indexPath.row
-        performSegue(withIdentifier: "goToMyPilzDetail", sender: self)
-        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "goToUserItemDetail", sender: self)
+        userListItemsTableView.deselectRow(at: indexPath, animated: true)
         
     }
 }
