@@ -35,7 +35,7 @@ class UserListDetailVC: UIViewController {
         locationLabel.text = userData.location
         latitudeLabel.text = userData.latitude
         longitudeLabel.text = userData.longitude
-        print("\(userData.latitude)")
+        
         checkIfNotesSet()
         
     }
