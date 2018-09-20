@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import CoreLocation
 import Alamofire
 import SwiftyJSON
 
@@ -28,6 +29,13 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
     let datePickerConstantHide : CGFloat = 0
     let datePickerConstantShow : CGFloat = 150
     let animateDuration : Double = 0.3
+    
+    //location
+    let locationManager = CLLocationManager()
+    let regionInMeters : Double = 0.008
+    var lastUserLocation = CLLocation()
+    var coordinates = CLLocationCoordinate2D()
+    var locationString = ""
     
     //image
     let cornerRadius :CGFloat = 8
@@ -53,13 +61,17 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
     //searchResults for textField
     @IBOutlet weak var searchResultTable: UITableView!
     
+    //image
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
+    
     //date
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var datePickerHeight: NSLayoutConstraint!
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    //image
-    @IBOutlet weak var avatarImageView: UIImageView!
+   //location
+    @IBOutlet weak var locationLabel: UILabel!
     
     
     //textView
@@ -76,6 +88,8 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
         configureDateView()
         configureTextView()
         checkLibraryAuthStatus()
+        checkLocationServicePermission()
+        checkLocationAuthStatus()
         gestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(backgroundTap(gesture:)));
         
     }
@@ -108,6 +122,8 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
     func configureInputTextField() {
         nameTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: nameTextField.frame.height))
         nameTextField.leftViewMode = .always
+        nameTextField.clearButtonMode = .whileEditing
+        nameTextField.clearsOnBeginEditing = true
     }
     
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {
@@ -127,7 +143,7 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
     
     @IBAction func textFieldDidEndOnExit(_ sender: UITextField) {
         nameTextField.resignFirstResponder()
-        //searchResultTableView.isHidden = true
+        searchResultTable.isHidden = true
         checkIfImageAndNameSet()
     }
     
@@ -240,7 +256,6 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
                     self.authorizedSet = true
                 } else {}
                 print("notDetermined")
-                
             })
             
         case .restricted, .denied:
@@ -372,6 +387,98 @@ extension UserListAddItemVC {
             }
         }
     }
+}
+
+//MARK: - LocationManager methods delegate
+/***************************************************************/
+
+extension UserListAddItemVC: CLLocationManagerDelegate {
+    
+    private func checkLocationServicePermission(){
+        print("checkLocationServicePermission()")
+        if CLLocationManager.locationServicesEnabled(){
+            setupLocationManager()
+            print("checkLocationServicePermission() if")
+        } else {
+            print("checkLocationServicePermission() else")
+            checkLocationAuthStatus()
+        }
+    }
+    
+    func setupLocationManager() {
+        print("setupLocationManager()")
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        
+    }
+    
+    func checkLocationAuthStatus(){
+        print("enableBasicLocationService()")
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedAlways, .authorizedWhenInUse:
+            print("authorized location")
+        case .denied, .restricted:
+            //show alert
+            print("denied")
+            AlertService.showGPSPermissionAlert(on: self)
+        case .notDetermined:
+            print("notDetermined")
+            locationManager.requestWhenInUseAuthorization()
+            
+        }
+    }
+    
+    private func lookUpCurrentLocation(lastLocation: CLLocation, completionHandler: @escaping (CLPlacemark?) -> Void ) {
+        print("lookUpCurrenLocaton")
+        
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(lastLocation,completionHandler: { (placemarks, error) in
+            if error == nil {
+                let firstLocation = placemarks?[0]
+                completionHandler(firstLocation)
+            }
+            else {
+                // An error occurred during geocoding.
+                completionHandler(nil)
+            }
+        })
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let lastLocation = locations.last else { return }
+        
+        print("didUpdateLocations")
+        
+        if lastLocation.horizontalAccuracy > 0{
+            print("lastlocation.horizontal")
+            
+            locationManager.stopUpdatingLocation()
+            locationManager.delegate = nil
+            
+            self.lookUpCurrentLocation(lastLocation: lastLocation){(placemark ) in
+                guard let placemark = placemark else {return}
+                
+                DispatchQueue.main.async {
+                    self.coordinates = placemark.location!.coordinate
+                    self.locationLabel.text = ("\(placemark.thoroughfare ?? "")\n\(placemark.postalCode ?? "") \(placemark.locality ?? "")")
+                    //self.locationLabel.text = self.locationString
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+    }
+    
+    
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+        locationString = "Keine Ortung möglich."
+    }
+    
+    
+    
 }
 
 //MARK: - UITextViewDelegate
