@@ -29,18 +29,19 @@ class UserListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
+        NotificationCenter.default.addObserver(self, selector: #selector(loadItems), name: NSNotification.Name(rawValue: "load"), object: nil)
+        
         configureInfoLabel()
-        loadUserItems()
+        loadItems()
         swichtVisibilityInfoLabelAndTableView()
-        // Do any additional setup after loading the view.
+        configureTableView()
     }
     
     func configureTableView(){
         userListItemsTableView.delegate = self
         userListItemsTableView.dataSource = self
         userListItemsTableView.rowHeight = 180.0
-        userListItemsTableView.register(UINib(nibName: "UserItemTableCell", bundle: nil), forCellReuseIdentifier: "UserItemCell")
+        userListItemsTableView.register(UINib(nibName: "UserItemTableViewCell", bundle: nil), forCellReuseIdentifier: "UserItemCell")
     }
     
     func configureInfoLabel(){
@@ -66,7 +67,7 @@ class UserListVC: UIViewController {
     //MARK: - Core Data methods
     /***************************************************************/
     
-    func loadUserItems(){
+    @objc func loadItems(){
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let request : NSFetchRequest<UserItem> = UserItem.fetchRequest()
@@ -74,8 +75,9 @@ class UserListVC: UIViewController {
         do {
             dataArray = try context.fetch(request)
         } catch {
-            AlertService.showErrorCoreDataLoadAlert(on: self)
+            print("Error in fetching Items \(error)")
         }
+        self.userListItemsTableView.reloadData()
     }
     
     

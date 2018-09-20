@@ -17,6 +17,7 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
     private var authorizedSet = false
     private let JSON_URL = "https://kfraeger.de/fungiDoo/pilzeList.json"
     private var gestureRecognizer = UITapGestureRecognizer()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     //textField
     var textFieldIsSet = false
@@ -108,6 +109,36 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        
+        
+        
+        let newItem = UserItem(context: context)
+        newItem.name = nameTextField.text
+        newItem.date = dateLabel.text
+        newItem.location = locationLabel.text
+        newItem.latitude = coordinates.latitude.description
+        newItem.longitude = coordinates.longitude.description
+        newItem.notes = userNotesTextView.text
+        newItem.image = avatarImageView.image?.jpegData(compressionQuality: 0.5)
+        
+        saveItem()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func saveItem() {
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error saving context \(error)")
+        }
+        
+        
+    }
+    
+    
     //enables done Button of navigationbar
     func checkIfImageAndNameSet() {
         if textFieldIsSet && imageIsSet {
@@ -116,6 +147,8 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
             doneButton.isEnabled = false
         }
     }
+    
+    
     
     //MARK: - textField methods
     /***************************************************************/

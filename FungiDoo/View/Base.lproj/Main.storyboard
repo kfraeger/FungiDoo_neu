@@ -688,7 +688,11 @@
                                 <action selector="cancelButtonPressed:" destination="A2h-iM-A2n" id="I6C-oo-tr4"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="xjg-lY-7zN"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="xjg-lY-7zN">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="A2h-iM-A2n" id="htm-y4-qRP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addImageContainerView" destination="fcy-oW-riT" id="UoM-aN-z4l"/>
