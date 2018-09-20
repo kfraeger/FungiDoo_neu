@@ -306,7 +306,7 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
         avatarImageView.image = image
        
         imageIsSet = true
-        //checkIfImageAndNameSet()
+        checkIfImageAndNameSet()
     }
     
     //Write the PrepareForSegue Method here

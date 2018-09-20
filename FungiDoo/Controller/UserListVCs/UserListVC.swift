@@ -16,7 +16,8 @@ class UserListVC: UIViewController {
     /***************************************************************/
     
     let infoLabelText = "Hier kannst du alle deine Pilzfunde eintragen. \n\nDiese Einträge sind nur für dich sichtbar."
-    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     var indexRow = 0
     var dataArray = [UserItem]()
     
@@ -68,7 +69,6 @@ class UserListVC: UIViewController {
     /***************************************************************/
     
     @objc func loadItems(){
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let request : NSFetchRequest<UserItem> = UserItem.fetchRequest()
         
@@ -77,7 +77,23 @@ class UserListVC: UIViewController {
         } catch {
             print("Error in fetching Items \(error)")
         }
+        userListItemsTableView.reloadData()
+    }
+    
+    func saveItems(){
+        do {
+            try context.save()
+        } catch {
+            print("Error saving context \(error)")
+        }
         self.userListItemsTableView.reloadData()
+    }
+    
+    func deleteItem(at index : Int){
+        
+        context.delete(dataArray[index])
+        dataArray.remove(at: index)
+        saveItems()
     }
     
     
@@ -91,12 +107,15 @@ class UserListVC: UIViewController {
             NSLog("The \"Öffnen\" alert occured.")
             self.performSegue(withIdentifier: "goToMyPilzDetail", sender: self)
         }))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Bearbeiten", comment: "Default action"), style: .default, handler: { _ in
-            NSLog("The \"Bearbeiten\" alert occured.")
-            self.performSegue(withIdentifier: "goToEditView", sender: self)
-        }))
+//        alert.addAction(UIAlertAction(title: NSLocalizedString("Bearbeiten", comment: "Default action"), style: .default, handler: { _ in
+//            NSLog("The \"Bearbeiten\" alert occured.")
+//            self.performSegue(withIdentifier: "goToEditView", sender: self)
+//        }))
         alert.addAction(UIAlertAction(title: NSLocalizedString("Löschen", comment: "delete"), style: .destructive, handler: { _ in
             NSLog("The \"Löschen\" alert occured.")
+            print(self.indexRow)
+            self.deleteItem(at: self.indexRow)
+            
         }))
         alert.addAction(UIAlertAction(title: NSLocalizedString("Abbrechen", comment: "cancel"), style: .cancel, handler: { _ in
             NSLog("The \"Cancel\" alert occured.")
@@ -106,6 +125,9 @@ class UserListVC: UIViewController {
     
 
 }
+
+
+
 
 //MARK: - Extension TableView Delegate Methods
 /***************************************************************/
