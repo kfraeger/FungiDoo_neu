@@ -12,7 +12,7 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 
-class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
+class UserListAddItemVC: UIViewController, CameraInputChangeDelegate, LocationChangeDelegate {
     
     private var authorizedSet = false
     private let JSON_URL = "https://kfraeger.de/fungiDoo/pilzeList.json"
@@ -319,7 +319,11 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
         if segue.identifier == "goToCameraVC" {
             let destinationVC = segue.destination as! CameraVC
             destinationVC.delegate = self
+        } else if segue.identifier == "goToMapEditVC" {
+            let destinationVC = segue.destination as! UserListAddItemMapVC
+            destinationVC.delegate = self
         }
+        
        
     }
     
@@ -329,6 +333,42 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
         userNotesTextView.delegate = self
         userNotesTextView.text = placeHolderTextView
         userNotesTextView.textColor = UIColor.lightGray
+    }
+    
+    func userChangedLocation(coordinate: CLLocationCoordinate2D) {
+        updateLabelFromMap(coordinate: coordinate)
+    }
+    
+    private func updateLabelFromMap(coordinate : CLLocationCoordinate2D) {
+        lookUpMapLocation(coordinate: coordinate) { (placemark) in
+            guard let placemark = placemark else {return}
+            DispatchQueue.main.async {
+                self.coordinates = placemark.location!.coordinate
+                self.locationLabel.text = ("\(placemark.thoroughfare ?? "")\n\(placemark.postalCode ?? "") \(placemark.locality ?? "")")
+                self.tempData["location"] = self.locationLabel.text
+                self.tempData["lat"] = self.coordinates.latitude.description
+                self.tempData["lon"] = self.coordinates.longitude.description
+            }
+        }
+        self.view.layoutIfNeeded()
+    }
+    
+    func lookUpMapLocation(coordinate : CLLocationCoordinate2D, completionHandler: @escaping (CLPlacemark?) -> Void ) {
+        // Use the last reported location.
+        let lastLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        let geocoder = CLGeocoder()
+        
+        // Look up the location and pass it to the completion handler
+        geocoder.reverseGeocodeLocation(lastLocation,completionHandler: { (placemarks, error) in
+            if error == nil {
+                let firstLocation = placemarks?[0]
+                completionHandler(firstLocation)
+            }
+            else {
+                // An error occurred during geocoding.
+                completionHandler(nil)
+            }
+        })
     }
     
 }

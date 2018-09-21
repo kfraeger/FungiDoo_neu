@@ -12,6 +12,7 @@ import UIKit
 class UserListDetailVC: UIViewController {
     
     
+    
     var userData = UserItem(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
     
 
