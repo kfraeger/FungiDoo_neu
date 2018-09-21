@@ -34,7 +34,7 @@ class UserListVC: UIViewController {
         
         configureInfoLabel()
         loadItems()
-        swichtVisibilityInfoLabelAndTableView()
+        //swichtVisibilityInfoLabelAndTableView()
         configureTableView()
     }
     
@@ -86,6 +86,7 @@ class UserListVC: UIViewController {
         
         do {
             dataArray = try context.fetch(request)
+            dataArray = dataArray.reversed()
         } catch {
             print("Error in fetching Items \(error)")
         }

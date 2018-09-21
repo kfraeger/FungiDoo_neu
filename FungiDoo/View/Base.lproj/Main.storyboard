@@ -764,6 +764,7 @@
                                         <state key="normal" image="change_location_icon"/>
                                         <connections>
                                             <action selector="editDateButtonPressed:" destination="A2h-iM-A2n" eventType="touchUpInside" id="ouP-Vh-3a8"/>
+                                            <segue destination="pfN-5w-QBT" kind="presentation" identifier="goToMapEditVC" id="Pp1-ZY-6iv"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -875,6 +876,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4e-iG-94h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3349.5999999999999" y="1082.608695652174"/>
+        </scene>
+        <!--User List Add Item MapVC-->
+        <scene sceneID="gX8-6v-bEd">
+            <objects>
+                <viewController id="pfN-5w-QBT" customClass="UserListAddItemMapVC" customModule="FungiDoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kKb-bS-Pas">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pdg-Bb-gbJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="500.5"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pdg-Bb-gbJ" firstAttribute="trailing" secondItem="noz-VZ-hXh" secondAttribute="trailing" id="1Hz-7k-NmC"/>
+                            <constraint firstItem="Pdg-Bb-gbJ" firstAttribute="leading" secondItem="noz-VZ-hXh" secondAttribute="leading" id="ATp-pU-k8d"/>
+                            <constraint firstItem="Pdg-Bb-gbJ" firstAttribute="top" secondItem="kKb-bS-Pas" secondAttribute="top" id="jCT-PS-8Xd"/>
+                            <constraint firstItem="Pdg-Bb-gbJ" firstAttribute="height" secondItem="kKb-bS-Pas" secondAttribute="height" multiplier="0.75 : 1" id="mrv-kI-f8p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="noz-VZ-hXh"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Pdg-Bb-gbJ" id="p17-rj-pKL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7lY-E2-haO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4160.8000000000002" y="1079.9100449775112"/>
         </scene>
         <!--CameraViewController-->
         <scene sceneID="Rtt-bK-5az">

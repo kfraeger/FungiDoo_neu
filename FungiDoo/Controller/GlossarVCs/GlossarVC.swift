@@ -247,23 +247,27 @@ extension GlossarVC {
     
     //load image from url
     func getImageData(for data: Pilze, from url : String){
-        //print(dataDictonary.count)
+        print("getImageData")
         
         if url != "" {
             if let imageFromCache = imageCache.object(forKey: url as NSString) {
+                print("imageCache")
                 data.image = imageFromCache
-                return
-            }
             
-            Alamofire.request("\(IMAGE_BASE_URL)\(url)", method: .get).responseImage { response in
-                guard let imageResponse = response.result.value else {
-                    print(response.error as Any)
-                    return
+            } else {
+                
+                Alamofire.request("\(IMAGE_BASE_URL)\(url)", method: .get).responseImage { response in
+                    guard let imageResponse = response.result.value else {
+                        print(response.error as Any)
+                        return
+                    }
+                    data.image = imageResponse
+                    self.imageCache.setObject(data.image, forKey: data.imageURL as NSString)
+                    
                 }
-                data.image = imageResponse
-                self.imageCache.setObject(data.image, forKey: data.imageURL as NSString)
-                self.glossarTableView.reloadData()
             }
+            self.glossarTableView.reloadData()
+            
         }
         
         
