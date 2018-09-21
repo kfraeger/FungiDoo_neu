@@ -45,11 +45,13 @@ class UserListVC: UIViewController {
         userListItemsTableView.register(UINib(nibName: "UserItemTableViewCell", bundle: nil), forCellReuseIdentifier: "UserItemCell")
     }
     
+    
     func configureInfoLabel(){
         infoLabel.text = infoLabelText
     }
 
     func checkIfDataArrayLengthIsNull () -> Bool {
+        print("checkIFDataArrayLengthNull \(dataArray.count)")
         return (dataArray.count == 0 ? true : false)
     }
     
@@ -87,6 +89,7 @@ class UserListVC: UIViewController {
         } catch {
             print("Error in fetching Items \(error)")
         }
+        swichtVisibilityInfoLabelAndTableView()
         userListItemsTableView.reloadData()
     }
     
@@ -104,6 +107,7 @@ class UserListVC: UIViewController {
         context.delete(dataArray[index])
         dataArray.remove(at: index)
         saveItems()
+        swichtVisibilityInfoLabelAndTableView()
     }
     
     
@@ -114,21 +118,18 @@ class UserListVC: UIViewController {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("Öffnen", comment: "open"), style: .default, handler: { _ in
-            NSLog("The \"Öffnen\" alert occured.")
-            self.performSegue(withIdentifier: "goToMyPilzDetail", sender: self)
+            self.performSegue(withIdentifier: "goToUserItemDetail", sender: self)
         }))
 //        alert.addAction(UIAlertAction(title: NSLocalizedString("Bearbeiten", comment: "Default action"), style: .default, handler: { _ in
 //            NSLog("The \"Bearbeiten\" alert occured.")
 //            self.performSegue(withIdentifier: "goToEditView", sender: self)
 //        }))
         alert.addAction(UIAlertAction(title: NSLocalizedString("Löschen", comment: "delete"), style: .destructive, handler: { _ in
-            NSLog("The \"Löschen\" alert occured.")
-            print(self.indexRow)
             self.deleteItem(at: self.indexRow)
             
         }))
         alert.addAction(UIAlertAction(title: NSLocalizedString("Abbrechen", comment: "cancel"), style: .cancel, handler: { _ in
-            NSLog("The \"Cancel\" alert occured.")
+            print("Cancel - alert")
         }))
         self.present(alert, animated: true, completion: nil)
     }

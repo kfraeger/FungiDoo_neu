@@ -18,6 +18,7 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
     private let JSON_URL = "https://kfraeger.de/fungiDoo/pilzeList.json"
     private var gestureRecognizer = UITapGestureRecognizer()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var tempData = [String : Any]()
     
     //textField
     var textFieldIsSet = false
@@ -92,6 +93,7 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
         checkLocationServicePermission()
         checkLocationAuthStatus()
         gestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(backgroundTap(gesture:)));
+        tempData["notes"] = ""
         
     }
     
@@ -111,21 +113,21 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
     
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
         
-        
+        print(tempData)
         
         let newItem = UserItem(context: context)
-        newItem.name = nameTextField.text
-        newItem.date = dateLabel.text
-        newItem.location = locationLabel.text
-        newItem.latitude = coordinates.latitude.description
-        newItem.longitude = coordinates.longitude.description
-        newItem.notes = userNotesTextView.text
-        newItem.image = avatarImageView.image?.jpegData(compressionQuality: 0.5)
-        
+        newItem.name = (tempData["name"] as! String)
+        newItem.date = (tempData["date"] as! String)
+        newItem.location = (tempData["location"] as! String)
+        newItem.latitude = (tempData["lat"] as! String)
+        newItem.longitude = (tempData["lon"] as! String)
+        newItem.notes = (tempData["notes"] as! String)
+        newItem.image = (tempData["image"] as! Data)
         saveItem()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
         dismiss(animated: true, completion: nil)
     }
+    
     
     func saveItem() {
         
@@ -169,6 +171,7 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
             searchResultTable.isHidden = false
             filteredList = nameList.filter { $0.lowercased().contains(nameTextField.text!.lowercased()) }
             textFieldIsSet = true
+            tempData["name"] = nameTextField.text
             searchResultTable.reloadData()
         }
         
@@ -196,6 +199,7 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
     private func configureDateView() {
         datePicker.isHidden = true
         dateLabel.text = getCurrentDateTime()
+        tempData["date"] = dateLabel.text
     }
     
     private func getCurrentDateTime() -> String {
@@ -221,6 +225,7 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
         dateLabel.text = dateFormatter.string(from: datePicker.date)
+        tempData["date"] = dateLabel.text
         self.view.layoutIfNeeded()
         view.endEditing(true)
     }
@@ -304,7 +309,7 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate {
     func userTookANewPhoto(image: UIImage) {
         avatarImageView.contentMode = .scaleAspectFit
         avatarImageView.image = image
-       
+        tempData["image"] = avatarImageView.image?.jpegData(compressionQuality: 0.5)
         imageIsSet = true
         checkIfImageAndNameSet()
     }
@@ -356,6 +361,7 @@ extension UserListAddItemVC : UIImagePickerControllerDelegate, UINavigationContr
             print("selectedImage")
             avatarImageView.image = selectedImage
             imageIsSet = true
+            tempData["image"] = avatarImageView.image?.jpegData(compressionQuality: 0.5)
             checkIfImageAndNameSet()
         }
         
@@ -385,6 +391,7 @@ extension UserListAddItemVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         nameTextField.text = filteredList[indexPath.row]
+        tempData["name"] = nameTextField.text
         searchResultTable.isHidden = true
         self.nameTextField.endEditing(true)
         filteredList = []
@@ -496,7 +503,9 @@ extension UserListAddItemVC: CLLocationManagerDelegate {
                 DispatchQueue.main.async {
                     self.coordinates = placemark.location!.coordinate
                     self.locationLabel.text = ("\(placemark.thoroughfare ?? "")\n\(placemark.postalCode ?? "") \(placemark.locality ?? "")")
-                    //self.locationLabel.text = self.locationString
+                    self.tempData["location"] = self.locationLabel.text
+                    self.tempData["lat"] = self.coordinates.latitude.description
+                    self.tempData["lon"] = self.coordinates.longitude.description
                     self.view.layoutIfNeeded()
                 }
             }
@@ -545,6 +554,7 @@ extension UserListAddItemVC: UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
             textView.text = placeHolderTextView
+            self.tempData["notes"] = placeHolderTextView
             textView.textColor = UIColor.lightGray
         }
         UIView.animate(withDuration: 0.3) {
@@ -552,6 +562,8 @@ extension UserListAddItemVC: UITextViewDelegate {
             self.view.layoutIfNeeded()
             self.view.snapshotView(afterScreenUpdates: true)
         }
+        print(textView.text)
+        tempData["notes"] = textView.text
     }
 }
 

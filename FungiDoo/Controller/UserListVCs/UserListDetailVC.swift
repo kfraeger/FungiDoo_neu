@@ -33,9 +33,8 @@ class UserListDetailVC: UIViewController {
         nameLabel.text = userData.name
         dateLabel.text = userData.date
         locationLabel.text = userData.location
-        latitudeLabel.text = userData.latitude
-        longitudeLabel.text = userData.longitude
-        
+        latitudeLabel.text = getSubstringFrom(string: userData.latitude ?? "kein Eintrag")
+        longitudeLabel.text = getSubstringFrom(string: userData.longitude ?? "kein Eintrag")
         checkIfNotesSet()
         
     }
@@ -49,5 +48,8 @@ class UserListDetailVC: UIViewController {
         }
      
     }
-
+    
+    func getSubstringFrom(string : String) -> String {
+        return String(string.prefix(7))
+    }
 }
