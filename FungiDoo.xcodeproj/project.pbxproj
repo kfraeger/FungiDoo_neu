@@ -16,6 +16,8 @@
 		D03468022150FA2500197129 /* UserItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03468002150FA2500197129 /* UserItemTableViewCell.xib */; };
 		D034680421510F6900197129 /* UserListAddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D034680321510F6900197129 /* UserListAddItemVC.swift */; };
 		D049C7802153FA6A001167EF /* UserListDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049C77F2153FA6A001167EF /* UserListDetailVC.swift */; };
+		D05DBEC1216E3340001C4837 /* BestimmungsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05DBEC0216E3340001C4837 /* BestimmungsVC.swift */; };
+		D05DBEC9216E6062001C4837 /* Daten.csv in Resources */ = {isa = PBXBuildFile; fileRef = D05DBEC8216E6062001C4837 /* Daten.csv */; };
 		D067521D214F9CF60086B007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067521C214F9CF60086B007 /* AppDelegate.swift */; };
 		D0675222214F9CF60086B007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0675220214F9CF60086B007 /* Main.storyboard */; };
 		D0675225214F9CF60086B007 /* FungiDoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0675223214F9CF60086B007 /* FungiDoo.xcdatamodeld */; };
@@ -44,6 +46,8 @@
 		D03468002150FA2500197129 /* UserItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserItemTableViewCell.xib; sourceTree = "<group>"; };
 		D034680321510F6900197129 /* UserListAddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAddItemVC.swift; sourceTree = "<group>"; };
 		D049C77F2153FA6A001167EF /* UserListDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDetailVC.swift; sourceTree = "<group>"; };
+		D05DBEC0216E3340001C4837 /* BestimmungsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestimmungsVC.swift; sourceTree = "<group>"; };
+		D05DBEC8216E6062001C4837 /* Daten.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Daten.csv; sourceTree = "<group>"; };
 		D0675219214F9CF60086B007 /* FungiDoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FungiDoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067521C214F9CF60086B007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0675221214F9CF60086B007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,7 +135,6 @@
 				D067521C214F9CF60086B007 /* AppDelegate.swift */,
 				D0675226214F9CF80086B007 /* Assets.xcassets */,
 				D067522B214F9CF80086B007 /* Info.plist */,
-				D0675223214F9CF60086B007 /* FungiDoo.xcdatamodeld */,
 				D0EA3889214FF420002E462C /* Services */,
 			);
 			path = FungiDoo;
@@ -162,6 +165,7 @@
 				D0EA38902150173A002E462C /* GlossarVCs */,
 				D097841721527FAC00CD3374 /* UserListVCs */,
 				D097841521527F7A00CD3374 /* CameraVC.swift */,
+				D05DBEC0216E3340001C4837 /* BestimmungsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +195,8 @@
 		D0EA387B214FDF36002E462C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D05DBEC8216E6062001C4837 /* Daten.csv */,
+				D0675223214F9CF60086B007 /* FungiDoo.xcdatamodeld */,
 				D0EA3881214FE47B002E462C /* Pilze.swift */,
 			);
 			path = Model;
@@ -279,6 +285,7 @@
 				D03468022150FA2500197129 /* UserItemTableViewCell.xib in Resources */,
 				D0675227214F9CF80086B007 /* Assets.xcassets in Resources */,
 				D0675233214F9DF10086B007 /* pilzeList.json in Resources */,
+				D05DBEC9216E6062001C4837 /* Daten.csv in Resources */,
 				D0675222214F9CF60086B007 /* Main.storyboard in Resources */,
 				D0EA3886214FE694002E462C /* GlossarListTableViewCell.xib in Resources */,
 			);
@@ -335,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EA3882214FE47B002E462C /* Pilze.swift in Sources */,
+				D05DBEC1216E3340001C4837 /* BestimmungsVC.swift in Sources */,
 				D03467FD2150F39300197129 /* UserListVC.swift in Sources */,
 				D0675225214F9CF60086B007 /* FungiDoo.xcdatamodeld in Sources */,
 				D0EA3888214FF419002E462C /* AlertService.swift in Sources */,
@@ -495,8 +503,9 @@
 			baseConfigurationReference = 539F91D9F1DD01E0ED45B0CA /* Pods-FungiDoo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 288N4F226D;
 				INFOPLIST_FILE = FungiDoo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -516,8 +525,9 @@
 			baseConfigurationReference = D4108D0D4BDCDF3C379AFA5B /* Pods-FungiDoo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 288N4F226D;
 				INFOPLIST_FILE = FungiDoo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
