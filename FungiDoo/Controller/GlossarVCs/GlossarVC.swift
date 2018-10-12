@@ -25,11 +25,11 @@ class GlossarVC: UIViewController {
     
     
     
-    var data = [Pilze]()
-    var filteredData = [Pilze]() //for searching
+    var data = [PilzGlossar]()
+    var filteredData = [PilzGlossar]() //for searching
     
     var sectionIndices : [String] = []
-    var rowsSection : [[Pilze]] = []
+    var rowsSection : [[PilzGlossar]] = []
     var indexOfRow = 0
     var indexOfSection = 0
     var searching = false
@@ -96,7 +96,7 @@ class GlossarVC: UIViewController {
     //Sorts rows to the generated sections
     func getRowsForSection(){
         //print("getRowsForSection()")
-        var tempArr : [Pilze] = []
+        var tempArr : [PilzGlossar] = []
         for index in sectionIndices{
             for item in data {
                 if index == String(item.name[item.name.startIndex]) {
@@ -223,7 +223,7 @@ extension GlossarVC {
         if let tempResult = json.array {
             for item in 0 ... tempResult.count - 1 {
                 
-                let newDataItem = Pilze()
+                let newDataItem = PilzGlossar()
                 
                 newDataItem.name = json[item]["name"].stringValue
                 newDataItem.beschreibung = json[item]["beschreibung"].stringValue
@@ -246,7 +246,7 @@ extension GlossarVC {
     }
     
     //load image from url
-    func getImageData(for data: Pilze, from url : String){
+    func getImageData(for data: PilzGlossar, from url : String){
         print("getImageData")
         
         if url != "" {

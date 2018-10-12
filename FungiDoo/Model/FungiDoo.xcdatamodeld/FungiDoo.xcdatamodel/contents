@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Pilz" representedClassName=".Pilz" syncable="YES" codeGenerationType="class">
+        <attribute name="fleischFarbe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fleischVerfaerbung" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fleischVerfaerbungFarbe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="geruch" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hutFarbe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hutFormAlt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hutFormJung" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hutOberflaeche" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hutUnterseite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hutUnterseiteFarbe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="huVerfaerbung" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="huVerfaerbungFarbe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="klasse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stielBasis" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stielBasisVolva" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stielBasisVolvaFrei" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stielFarbe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stielForm" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stielHohl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stielNetzFlockenFarbe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stielOberflaeche" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stielRing" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="UserItem" representedClassName=".UserItem" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
@@ -11,5 +35,6 @@
     </entity>
     <elements>
         <element name="UserItem" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Pilz" positionX="-63" positionY="36" width="128" height="375"/>
     </elements>
 </model>

@@ -10,7 +10,7 @@ import UIKit
 
 class GlossarDetailVC: UIViewController {
     
-    var pilzData = Pilze()
+    var pilzData = PilzGlossar()
     
     @IBOutlet weak var pilzImageView: UIImageView!
     @IBOutlet weak var eatableImageView: UIImageView!

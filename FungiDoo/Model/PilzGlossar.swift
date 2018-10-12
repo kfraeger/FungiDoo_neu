@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Pilze {
+class PilzGlossar {
     
     var id : Int = 0
     var name : String = ""
