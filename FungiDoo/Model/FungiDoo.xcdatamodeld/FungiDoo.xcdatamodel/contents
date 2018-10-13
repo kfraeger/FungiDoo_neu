@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Pilz" representedClassName=".Pilz" syncable="YES" codeGenerationType="class">
+        <attribute name="busch" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fleischFarbe" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fleischVerfaerbung" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fleischVerfaerbungFarbe" optional="YES" attributeType="String" syncable="YES"/>
@@ -16,7 +17,6 @@
         <attribute name="klasse" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stielBasis" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stielBasisVolva" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="stielBasisVolvaFrei" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stielFarbe" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stielForm" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stielHohl" optional="YES" attributeType="String" syncable="YES"/>
