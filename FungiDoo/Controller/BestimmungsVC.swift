@@ -16,26 +16,26 @@ class BestimmungsVC: UIViewController {
     /***************************************************************/
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var dataArray = [Pilz]()
-   
-    let csvFile = "Daten"
-    let delimiterCSV = ";"
     
     //all variables for entropy calculation
     var countedClasses = 0
     var keyClass = "klasse"
+    var keyArray = [String]()
     var entropyClasses : Float = 0 //needed for calculation of information gain
     var bestInfoGainProperty = [String : Float]()
     
-    
-    var dataArrayTemp = [Any]()
-    var dataDict = [[String : String]]()
-    var arrayKeyEntropies = [String : Float]()
-    var keyArray = [String]()
-    var totalNumberOfClasses  = 0
-   
-    
-    var dataArrayCSVHeader = [String]()
+    //parsed CSV data from file
+    let csvFile = "Daten"
+    let delimiterCSV = ";"
     var dataArrayCSV = [[String]]()
+    
+    
+    //MARK: - IBOutlets
+    /***************************************************************/
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionImage: UIImageView!
+    
     
     
     //MARK: - life cycle
@@ -43,7 +43,7 @@ class BestimmungsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         clearDatabase()
         readDataFromCSVFile(file: csvFile)
         loadItems()
@@ -67,6 +67,35 @@ class BestimmungsVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func answerPressed(_ sender: Any) {
+        
+    }
+    
+    
+    //MARK: - methods for the question
+    /***************************************************************/
+    
+    /**
+     updates all views on screen
+     */
+    func updateUI(){
+        
+    }
+    
+    /**
+     will update the question text
+     */
+    func nextQuestion(){
+        
+    }
+    
+    /**
+     proceed the bestimmung for the answers
+     */
+    func checkAnswer(){
+        
+    }
+    
     
     
     //MARK: - statistic calculations
@@ -75,8 +104,8 @@ class BestimmungsVC: UIViewController {
     /**
      returns the total of counted pilz objects
      from data array
-     - Returns: Int
-    */
+     - Returns: counted number as Int
+     */
     func getTotalOfClasses() -> Int {
         return dataArray.count
     }
@@ -85,7 +114,7 @@ class BestimmungsVC: UIViewController {
     /**
      calculates the entropy of all identical classes
      from data array
-     - Returns: Int
+     - Returns: Float
      */
     func calcEntropyOfClasses(for key : String, and counted: Int) -> Float{
         let classArray = countIdenticalRows(for: key)
@@ -133,7 +162,7 @@ class BestimmungsVC: UIViewController {
     /**
      calculates the information gain of all properties and
      returns best property to split information
-     - Params: entropy of all classes
+     - Parameters: entropy of all classes
      - Returns: array of property key with the calculated gain
      */
     func calcInformationGain(from entropyClasses : Float) -> [String : Float]{
@@ -165,7 +194,7 @@ class BestimmungsVC: UIViewController {
     
     /**
      calculates the entropy in relation to 'klasse' property of data
-     - parameters:
+     - Parameters:
      - array:  String: contains the key of property Int: total counted number of the property
      - total:  number of rows of 'klasse' property
      - Returns: Float
@@ -189,8 +218,7 @@ class BestimmungsVC: UIViewController {
     /**
      counts the identical rows of property and
      returns a array with the counted value and the number of it
-     - parameters:
-     - String:  key of property
+     - Parameters: String:  key of property
      - Returns: [String : Int]
      */
     func countIdenticalRows(for key : String) -> [String : Int]{
@@ -216,116 +244,33 @@ class BestimmungsVC: UIViewController {
         return identicalRowsArray
     }
     
-//    func countClasses(for key : String){
-//
-//        var temp = [String : Int]()
-//        var counter = 0
-//        let total = dataArray.count
-//        for item in dataArray {
-//
-//            //print(item.value(forKeyPath: key))
-//
-//            let val = item.value(forKeyPath: key) as! String
-//
-//            if !temp.keys.contains(val){
-//                counter = 0
-//                temp[val] = counter + 1
-//            } else {
-//                counter = temp[val]!
-//                counter = counter + 1
-//                temp.updateValue(counter, forKey: val)
-//            }
-//        }
-//
-//        for value in temp {
-//            print("-------------   \(key) : wert \(value.key) : count: \(value.value)")
-//            countClassesOfProperty(for: key, and: value.key, counted: value.value)
-//        }
-//        entropyClasses = calcEntropyOfPropertiesClasses(array: temp, total: total)
-//    }
-//
-//    func countClassesOfProperty(for key : String, and value : String, counted : Int){
-//        var temp = [String : Int]()
-//        var counter = 0
-//
-//        for item in dataArray {
-//
-//            let val = item.value(forKeyPath: key) as! String
-//
-//            if val == value {
-//                if !temp.keys.contains(item.klasse!){
-//                    counter = 0
-//                    temp[item.klasse!] = counter + 1
-//                } else {
-//                    counter = temp[item.klasse!]!
-//                    counter = counter + 1
-//                    temp.updateValue(counter, forKey: item.klasse!)
-//                }
-//            }
-//        }
-//        for value in temp {
-//            print("+++++++++++++++++ \(key) : wert \(value.key) : count: \(value.value)")
-//        }
-//
-//        entropyClasses = calcEntropyOfPropertiesClasses(array: temp, total : counted)
-//
-//    }
-//
-//    //calls the countClasses for all items of Pilz with the
-//    //with the propertys
-//    func countAll(){
-//        for item in keyArray {
-//            countClasses(for: item)
-//        }
-//    }
-//
-//
-//    func calcEntropyOfPropertiesClasses(array : [String : Int], total : Int) -> Float{
-//        var number : Float = 0
-//        let total = Float(total)
-//
-////        for val in array {
-////            total += Float(val.value)
-////            print("+++++++++++++++++++++++++++++++++ Addition total \(total)")
-////        }
-//
-//        print("************************************* Summe total \(total)")
-//
-//        for klasse in array {
-//            let x = Float(klasse.value)/total
-//            number += -(x * log2(x))
-//            print("klasse: \(klasse) entropy:  \(number)")
-//        }
-//        print(number)
-//        return number
-//    }
-//
-//
-//    func calcEntropyClasses(array : [String : Int]) -> Float{
-//               var number : Float = 0
-//                let total = Float(dataArray.count)
-//
-//                for klasse in array {
-//                  let x = Float(klasse.value)/total
-//                   number += -(x * log2(x))
-//                   print("klasse: \(klasse) entropy:  \(number)")
-//               }
-//               print(number)
-//              return number
-//     }
-//
-
+    
+    
     //MARK: - methods for CSV parsing and Core Data
     /***************************************************************/
     
+    /**
+     reads CSV File from path
+     and calls the parseCSV method
+     - Parameters: String
+     */
     func readDataFromCSVFile(file:String) {
         guard let path = Bundle.main.path(forResource: file, ofType: "csv") else {return}
-        print (path)
+        //print (path)
         let contentsOfURL = URL(fileURLWithPath: path)
-        print(contentsOfURL)
         parseCSV(contentsOfURL: contentsOfURL, encoding: String.Encoding.macOSRoman)
     }
     
+    
+    /**
+     parses data from CSV file to array
+     calls the cleanArray method
+     calls the removeHeaderOfColoum
+     calls the createDataforDB
+     - Parameters:
+     - URL
+     - String.Encoding
+     */
     func parseCSV (contentsOfURL: URL, encoding: String.Encoding) {
         print("parseCSV")
         
@@ -342,17 +287,21 @@ class BestimmungsVC: UIViewController {
                     dataArrayCSV.append(values)
                 }
             }
-  
+            
         } catch {
             print("die csv datei konnte nicht gelesen werden \(error)")
         }
         
         dataArrayCSV = removeHeaderOfColoumn(at: 0, array: dataArrayCSV)
-        createDataForDataBase(array: dataArrayCSV)
+        createDataForDB(array: dataArrayCSV)
     }
     
     
-    //removes empty coloums of csv file
+    /**
+     removes empty coloumns from parsed Data
+     - Parameters: array of Strings
+     - Returns: array of Strings
+     */
     func cleanArray(data : [ String ]) -> [String]{
         var arrayTemp = [String]()
         for item in data {
@@ -363,6 +312,14 @@ class BestimmungsVC: UIViewController {
         return arrayTemp
     }
     
+    
+    /**
+     removes firtst row with the titles of the coloumns
+     - Parameters:
+     - Int: index of row
+     - array of array with Strings
+     - Returns: array of array with Strings
+     */
     func removeHeaderOfColoumn(at index: Int, array: [[ String ]]) -> [[String]] {
         var arrayTemp = [[String]]()
         arrayTemp = array
@@ -376,38 +333,47 @@ class BestimmungsVC: UIViewController {
         return arrayTemp
     }
     
-    func createDataForDataBase (array: [[ String ]]){
-            for item in array {
-                let newItem = Pilz(context: context)
-                
-                newItem.klasse = item[0]
-                newItem.busch = item[1]
-                newItem.hutFormAlt = item[2]
-                newItem.hutFormJung = item[3]
-                newItem.hutOberflaeche = item[4]
-                newItem.hutUnterseite = item[5]
-                newItem.hutUnterseiteFarbe = item[6]
-                newItem.huVerfaerbung = item[7]
-                newItem.huVerfaerbungFarbe = item[8]
-                newItem.hutFarbe = item[9]
-                newItem.stielForm = item[10]
-                newItem.stielBasis = item[11]
-                newItem.stielFarbe = item[12]
-                newItem.stielOberflaeche = item[13]
-                newItem.stielNetzFlockenFarbe = item[14]
-                newItem.stielRing = item[15]
-                newItem.stielBasisVolva = item[16]
-                newItem.stielHohl = item[17]
-                newItem.fleischFarbe = item[18]
-                newItem.fleischVerfaerbung = item[19]
-                newItem.fleischVerfaerbungFarbe = item[20]
-                newItem.geruch = item[21]
-                
-                saveItem()
-            }
-   
+    
+    /**
+     creates all object for core data and saves it to it
+     - Parameters:
+     - array of array with Strings
+     */
+    func createDataForDB(array: [[ String ]]){
+        for item in array {
+            let newItem = Pilz(context: context)
+            
+            newItem.klasse = item[0]
+            newItem.busch = item[1]
+            newItem.hutFormAlt = item[2]
+            newItem.hutFormJung = item[3]
+            newItem.hutOberflaeche = item[4]
+            newItem.hutUnterseite = item[5]
+            newItem.hutUnterseiteFarbe = item[6]
+            newItem.huVerfaerbung = item[7]
+            newItem.huVerfaerbungFarbe = item[8]
+            newItem.hutFarbe = item[9]
+            newItem.stielForm = item[10]
+            newItem.stielBasis = item[11]
+            newItem.stielFarbe = item[12]
+            newItem.stielOberflaeche = item[13]
+            newItem.stielNetzFlockenFarbe = item[14]
+            newItem.stielRing = item[15]
+            newItem.stielBasisVolva = item[16]
+            newItem.stielHohl = item[17]
+            newItem.fleischFarbe = item[18]
+            newItem.fleischVerfaerbung = item[19]
+            newItem.fleischVerfaerbungFarbe = item[20]
+            newItem.geruch = item[21]
+            
+            saveItem()
+        }
+        
     }
     
+    /**
+     saves context to core data
+     */
     func saveItem() {
         do {
             try context.save()
@@ -416,6 +382,9 @@ class BestimmungsVC: UIViewController {
         }
     }
     
+    /**
+     loads all items from core data
+     */
     func loadItems(){
         let request : NSFetchRequest<Pilz> = Pilz.fetchRequest()
         do {
@@ -427,6 +396,9 @@ class BestimmungsVC: UIViewController {
         }
     }
     
+    /**
+     deletes all items from core data
+     */
     func clearDatabase(){
         let request : NSFetchRequest<Pilz> = Pilz.fetchRequest()
         
@@ -439,9 +411,6 @@ class BestimmungsVC: UIViewController {
         } catch {
             print("Error in fetching Items \(error)")
         }
-        //print(dataArray)
     }
-    
-
 
 }

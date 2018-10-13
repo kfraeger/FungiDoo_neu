@@ -312,18 +312,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFH-KE-13h">
-                                <rect key="frame" x="69" y="503.5" width="237" height="51"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
-                                <state key="normal" title="Pilzbestimmung starten">
-                                    <color key="titleColor" red="0.55294117649999996" green="0.40000000000000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="tvt-JF-Dzk" kind="popoverPresentation" popoverAnchorView="hFH-KE-13h" id="3bm-KN-DNf">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Steinpilzgruppe-3" translatesAutoresizingMaskIntoConstraints="NO" id="TXv-VI-pF5">
                                 <rect key="frame" x="67" y="183.5" width="240" height="300"/>
                                 <constraints>
@@ -331,11 +319,34 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FungiDoo" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="6eq-1M-6BH">
-                                <rect key="frame" x="106.5" y="99.5" width="162" height="64"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
+                                <rect key="frame" x="99.5" y="94.5" width="176" height="69"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="43"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.55294117649999996" green="0.40000000000000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="2" height="0.0"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hFH-KE-13h">
+                                <rect key="frame" x="55" y="503.5" width="265" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="0.49882277397260272" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="6dK-sP-Yie"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
+                                <state key="normal" title="Pilzbestimmung starten">
+                                    <color key="titleColor" red="0.55294117649999996" green="0.40000000000000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="tvt-JF-Dzk" kind="popoverPresentation" popoverAnchorView="hFH-KE-13h" id="3bm-KN-DNf">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90955048800000005" green="0.8785554767" blue="0.88660114999999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -345,6 +356,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TXv-VI-pF5" secondAttribute="trailing" constant="68" id="IwY-gp-pLB"/>
                             <constraint firstItem="hFH-KE-13h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YRA-GT-d3D"/>
                             <constraint firstItem="hFH-KE-13h" firstAttribute="top" secondItem="TXv-VI-pF5" secondAttribute="bottom" constant="20" id="mru-pI-J3J"/>
+                            <constraint firstItem="hFH-KE-13h" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="n5i-Fm-CEf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hFH-KE-13h" secondAttribute="trailing" constant="55" id="q6K-aT-lhw"/>
                             <constraint firstItem="6eq-1M-6BH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ux0-bZ-xLA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -366,7 +379,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmd-yH-gmy">
                                 <rect key="frame" x="15" y="461" width="345" height="101"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Besitz dein Pilz eine Netzzeichnung am Stiel wie im Beispiel abgebildet?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPp-K4-Xfk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Besitzt dein Pilz eine Netzzeichnung am Stiel wie im Beispiel abgebildet?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZPp-K4-Xfk">
                                         <rect key="frame" x="20" y="16" width="305" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -383,21 +396,39 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="L7S-ZA-3lS">
                                 <rect key="frame" x="20" y="582" width="335" height="65"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv9-zh-Dp0">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fv9-zh-Dp0">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="65"/>
-                                        <color key="backgroundColor" red="0.41787129639999998" green="0.63509410619999995" blue="0.55022364850000005" alpha="0.2473512414" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.41787129639999998" green="0.63509410619999995" blue="0.55022364850000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                        <size key="titleShadowOffset" width="1" height="0.0"/>
                                         <state key="normal" title="JA">
-                                            <color key="titleColor" red="0.41787129639999998" green="0.63509410619999995" blue="0.55022364850000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="answerPressed:" destination="tvt-JF-Dzk" eventType="touchUpInside" id="WQG-yM-rDd"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnx-Ns-zb9">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Mnx-Ns-zb9">
                                         <rect key="frame" x="175" y="0.0" width="160" height="65"/>
-                                        <color key="backgroundColor" red="0.41787129639999998" green="0.63509410619999995" blue="0.55022364850000005" alpha="0.24735124143835616" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.56792902950000002" green="0.43579339979999998" blue="0.46801441910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                        <size key="titleShadowOffset" width="1" height="0.0"/>
                                         <state key="normal" title="NEIN">
-                                            <color key="titleColor" red="0.41787129639999998" green="0.63509410619999995" blue="0.55022364850000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="answerPressed:" destination="tvt-JF-Dzk" eventType="touchUpInside" id="9VV-2r-hnD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -412,8 +443,8 @@
                                 <rect key="frame" x="20" y="30" width="335" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eP-cI-loF">
-                                        <rect key="frame" x="0.0" y="0.0" width="68" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <state key="normal" title="Beenden">
                                             <color key="titleColor" red="0.55294117649999996" green="0.40000000000000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -422,8 +453,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zz-9n-H4n">
-                                        <rect key="frame" x="300" y="0.0" width="35" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="299" y="0.0" width="36" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <state key="normal" title="Hilfe">
                                             <color key="titleColor" red="0.55294117649999996" green="0.40000000000000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -450,6 +481,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XR7-PO-xd7"/>
                     </view>
+                    <connections>
+                        <outlet property="questionImage" destination="xor-oN-EBX" id="jhC-fZ-XlK"/>
+                        <outlet property="questionLabel" destination="ZPp-K4-Xfk" id="iKs-2s-nC4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mi0-BX-3wW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

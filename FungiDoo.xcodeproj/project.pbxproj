@@ -24,6 +24,8 @@
 		D067522A214F9CF80086B007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0675228214F9CF80086B007 /* LaunchScreen.storyboard */; };
 		D0675233214F9DF10086B007 /* pilzeList.json in Resources */ = {isa = PBXBuildFile; fileRef = D0675232214F9DF10086B007 /* pilzeList.json */; };
 		D0800133217126940039E6B5 /* Daten.csv in Resources */ = {isa = PBXBuildFile; fileRef = D0800132217126940039E6B5 /* Daten.csv */; };
+		D080013521724CC00039E6B5 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D080013421724CC00039E6B5 /* Question.swift */; };
+		D08001372172A0BC0039E6B5 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D08001362172A0BC0039E6B5 /* questions.json */; };
 		D097841621527F7A00CD3374 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D097841521527F7A00CD3374 /* CameraVC.swift */; };
 		D0EA3880214FE3E6002E462C /* GlossarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA387F214FE3E6002E462C /* GlossarVC.swift */; };
 		D0EA3882214FE47B002E462C /* PilzGlossar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3881214FE47B002E462C /* PilzGlossar.swift */; };
@@ -56,6 +58,8 @@
 		D067522B214F9CF80086B007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0675232214F9DF10086B007 /* pilzeList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pilzeList.json; sourceTree = "<group>"; };
 		D0800132217126940039E6B5 /* Daten.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Daten.csv; sourceTree = "<group>"; };
+		D080013421724CC00039E6B5 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		D08001362172A0BC0039E6B5 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		D097841521527F7A00CD3374 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		D0EA387F214FE3E6002E462C /* GlossarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarVC.swift; sourceTree = "<group>"; };
 		D0EA3881214FE47B002E462C /* PilzGlossar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilzGlossar.swift; sourceTree = "<group>"; };
@@ -195,9 +199,11 @@
 		D0EA387B214FDF36002E462C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D08001362172A0BC0039E6B5 /* questions.json */,
 				D0800132217126940039E6B5 /* Daten.csv */,
 				D0675223214F9CF60086B007 /* FungiDoo.xcdatamodeld */,
 				D0EA3881214FE47B002E462C /* PilzGlossar.swift */,
+				D080013421724CC00039E6B5 /* Question.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D067522A214F9CF80086B007 /* LaunchScreen.storyboard in Resources */,
+				D08001372172A0BC0039E6B5 /* questions.json in Resources */,
 				D03468022150FA2500197129 /* UserItemTableViewCell.xib in Resources */,
 				D0675227214F9CF80086B007 /* Assets.xcassets in Resources */,
 				D0675233214F9DF10086B007 /* pilzeList.json in Resources */,
@@ -354,6 +361,7 @@
 				D024038921550A6F002B00AB /* UserListAddItemMapVC.swift in Sources */,
 				D014BAE5215134E800C77187 /* UserListAddItemImageTableViewCell.swift in Sources */,
 				D0EA388F21501367002E462C /* GlossarDetailVC.swift in Sources */,
+				D080013521724CC00039E6B5 /* Question.swift in Sources */,
 				D0EA3880214FE3E6002E462C /* GlossarVC.swift in Sources */,
 				D03468012150FA2500197129 /* UserItemTableViewCell.swift in Sources */,
 				D034680421510F6900197129 /* UserListAddItemVC.swift in Sources */,
