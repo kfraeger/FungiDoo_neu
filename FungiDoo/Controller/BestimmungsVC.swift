@@ -29,6 +29,9 @@ class BestimmungsVC: UIViewController {
     let delimiterCSV = ";"
     var dataArrayCSV = [[String]]()
     
+    //decode JSON data from file
+    let jsonFile = "questions"
+    
     
     //MARK: - IBOutlets
     /***************************************************************/
@@ -46,6 +49,7 @@ class BestimmungsVC: UIViewController {
         
         clearDatabase()
         readDataFromCSVFile(file: csvFile)
+        readJSONData(from: jsonFile)
         loadItems()
         countedClasses = getTotalOfClasses()
         print("-----------------------------------    gezählte Klassen für Kalkulation Entropie: \(countedClasses) ---------------")
@@ -245,6 +249,27 @@ class BestimmungsVC: UIViewController {
     }
     
     
+    //MARK: - methods for JSON encoding
+    /***************************************************************/
+    
+    func readJSONData(from file: String){
+        guard let path = Bundle.main.path(forResource: file, ofType: "json") else {return}
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            let jsonData : Data = try Data(contentsOf: url)
+            let questions = try! JSONDecoder().decode(Questions.self, from: jsonData)
+            
+            print(questions)
+            
+        }catch {
+            print("json daten konnten nicht gelesen werden.")
+        }
+        
+    }
+    
+    
+    
     
     //MARK: - methods for CSV parsing and Core Data
     /***************************************************************/
@@ -254,7 +279,7 @@ class BestimmungsVC: UIViewController {
      and calls the parseCSV method
      - Parameters: String
      */
-    func readDataFromCSVFile(file:String) {
+    func readDataFromCSVFile(file: String) {
         guard let path = Bundle.main.path(forResource: file, ofType: "csv") else {return}
         //print (path)
         let contentsOfURL = URL(fileURLWithPath: path)
@@ -345,26 +370,25 @@ class BestimmungsVC: UIViewController {
             
             newItem.klasse = item[0]
             newItem.busch = item[1]
-            newItem.hutFormAlt = item[2]
-            newItem.hutFormJung = item[3]
-            newItem.hutOberflaeche = item[4]
-            newItem.hutUnterseite = item[5]
-            newItem.hutUnterseiteFarbe = item[6]
-            newItem.huVerfaerbung = item[7]
-            newItem.huVerfaerbungFarbe = item[8]
-            newItem.hutFarbe = item[9]
-            newItem.stielForm = item[10]
-            newItem.stielBasis = item[11]
-            newItem.stielFarbe = item[12]
-            newItem.stielOberflaeche = item[13]
-            newItem.stielNetzFlockenFarbe = item[14]
-            newItem.stielRing = item[15]
-            newItem.stielBasisVolva = item[16]
-            newItem.stielHohl = item[17]
-            newItem.fleischFarbe = item[18]
-            newItem.fleischVerfaerbung = item[19]
-            newItem.fleischVerfaerbungFarbe = item[20]
-            newItem.geruch = item[21]
+            newItem.hutForm = item[2]
+            newItem.hutOberflaeche = item[3]
+            newItem.hutUnterseite = item[4]
+            newItem.hutUnterseiteFarbe = item[5]
+            newItem.huVerfaerbung = item[6]
+            newItem.huVerfaerbungFarbe = item[7]
+            newItem.hutFarbe = item[8]
+            newItem.stielForm = item[9]
+            newItem.stielBasis = item[10]
+            newItem.stielFarbe = item[11]
+            newItem.stielOberflaeche = item[12]
+            newItem.stielNetzFlockenFarbe = item[13]
+            newItem.stielRing = item[14]
+            newItem.stielBasisVolva = item[15]
+            newItem.stielHohl = item[16]
+            newItem.fleischFarbe = item[17]
+            newItem.fleischVerfaerbung = item[18]
+            newItem.fleischVerfaerbungFarbe = item[19]
+            newItem.geruch = item[20]
             
             saveItem()
         }
