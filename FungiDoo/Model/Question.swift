@@ -44,7 +44,7 @@ struct Question : Decodable {
         case questionType = "questionsType"
         case questionText = "text"
         case questionImageURL = "image"
-        case questionAnswer = "ja"
+        case questionAnswer = "answer"
     }
 }
 

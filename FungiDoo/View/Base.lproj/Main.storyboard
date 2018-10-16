@@ -377,11 +377,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmd-yH-gmy">
-                                <rect key="frame" x="15" y="461" width="345" height="101"/>
+                                <rect key="frame" x="15" y="461" width="345" height="106"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Besitzt dein Pilz eine Netzzeichnung am Stiel wie im Beispiel abgebildet?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZPp-K4-Xfk">
-                                        <rect key="frame" x="20" y="16" width="305" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Besitzt dein Pilz eine Netzzeichnung am Stiel wie im Beispiel abgebildet?" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZPp-K4-Xfk">
+                                        <rect key="frame" x="20" y="16" width="305" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -394,7 +394,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="L7S-ZA-3lS">
-                                <rect key="frame" x="20" y="582" width="335" height="65"/>
+                                <rect key="frame" x="20" y="572" width="335" height="65"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fv9-zh-Dp0">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="65"/>
@@ -466,9 +466,9 @@
                         <constraints>
                             <constraint firstItem="XR7-PO-xd7" firstAttribute="trailing" secondItem="BWQ-Ab-yWj" secondAttribute="trailing" constant="20" id="3F0-bK-tcY"/>
                             <constraint firstItem="xor-oN-EBX" firstAttribute="leading" secondItem="XR7-PO-xd7" secondAttribute="leading" id="64g-st-MzB"/>
-                            <constraint firstItem="XR7-PO-xd7" firstAttribute="bottom" secondItem="L7S-ZA-3lS" secondAttribute="bottom" constant="20" id="A65-Ay-uP1"/>
+                            <constraint firstItem="XR7-PO-xd7" firstAttribute="bottom" secondItem="L7S-ZA-3lS" secondAttribute="bottom" constant="30" id="A65-Ay-uP1"/>
                             <constraint firstItem="BWQ-Ab-yWj" firstAttribute="top" secondItem="XR7-PO-xd7" secondAttribute="top" constant="10" id="GNW-Ga-bvO"/>
-                            <constraint firstItem="L7S-ZA-3lS" firstAttribute="top" secondItem="Wmd-yH-gmy" secondAttribute="bottom" constant="20" id="L8G-Bm-SUo"/>
+                            <constraint firstItem="L7S-ZA-3lS" firstAttribute="top" secondItem="Wmd-yH-gmy" secondAttribute="bottom" constant="5" id="L8G-Bm-SUo"/>
                             <constraint firstItem="XR7-PO-xd7" firstAttribute="trailing" secondItem="L7S-ZA-3lS" secondAttribute="trailing" constant="20" id="Yhu-Kw-A1g"/>
                             <constraint firstItem="BWQ-Ab-yWj" firstAttribute="leading" secondItem="XR7-PO-xd7" secondAttribute="leading" constant="20" id="a8a-tN-5Gz"/>
                             <constraint firstItem="Wmd-yH-gmy" firstAttribute="top" secondItem="xor-oN-EBX" secondAttribute="bottom" constant="8" id="bEl-06-0H0"/>

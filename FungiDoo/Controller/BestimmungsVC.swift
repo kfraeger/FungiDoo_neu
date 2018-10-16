@@ -16,21 +16,32 @@ class BestimmungsVC: UIViewController {
     /***************************************************************/
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var dataArray = [Pilz]()
+    var tempPropertyQuestion = ""
+    var tempAnswerQuestion = ""
+    var resultsArrayOfPickedAnswersOfProperty = [[String: Any]]()
+
     
     //all variables for entropy calculation
     var countedClasses = 0
-    var keyClass = "klasse"
-    var keyArray = [String]()
+    var propertyClass = "klasse"
+    var propertyNameArray = [String]()
+    
+    var countedPropertyValue = Dictionary<String, Any>()
+    var countedPropertyValuePerClass = Dictionary<String, Any>()
+    
     var entropyClasses : Float = 0 //needed for calculation of information gain
-    var bestInfoGainProperty = [String : Float]()
+    var bestInfoGainProperty = [String : Any]()
     
     //parsed CSV data from file
-    let csvFile = "Daten"
+    let csvFilePilze = "Daten"
+    //let csvFile = "test"
     let delimiterCSV = ";"
     var dataArrayCSV = [[String]]()
     
     //decode JSON data from file
     let jsonFile = "questions"
+    var questions : Questions?
+    var pickedAnswer : Bool = false
     
     
     //MARK: - IBOutlets
@@ -38,6 +49,7 @@ class BestimmungsVC: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionImage: UIImageView!
+    @IBOutlet weak var answerLabel: UILabel!
     
     
     
@@ -48,20 +60,17 @@ class BestimmungsVC: UIViewController {
         super.viewDidLoad()
         
         clearDatabase()
-        readDataFromCSVFile(file: csvFile)
-        readJSONData(from: jsonFile)
+        readDataFromCSVFile(file: csvFilePilze)
+        //readJSONData(from: jsonFile)
         loadItems()
-        countedClasses = getTotalOfClasses()
-        print("-----------------------------------    gezählte Klassen für Kalkulation Entropie: \(countedClasses) ---------------")
-        
-        entropyClasses = calcEntropyOfClasses(for: keyClass, and: countedClasses)
-        print("-----------------------------------    Entropie aller Klassen: \(entropyClasses) ---------------")
-        
-        
-        bestInfoGainProperty = calcInformationGain(from: entropyClasses)
-        print("-----------------------------------    bestInfoGainProperty ---------------")
-        print(bestInfoGainProperty)
-        
+        //print(dataArray)
+        //countedClasses = getTotalOfClasses()
+        ablauf()
+        print("------- vorher kalkulatinstuff \n")
+        print(propertyNameArray)
+        //getRowValues(for: "age")
+        //getRowValues(for: "klasse")
+        //calcEntropy(property: countedPropertyValue, propertyProClass: countedPropertyValuePerClass)
         
         
     }
@@ -69,15 +78,61 @@ class BestimmungsVC: UIViewController {
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+        resultsArrayOfPickedAnswersOfProperty.removeAll()
     }
     
-    @IBAction func answerPressed(_ sender: Any) {
-        
+    @IBAction func answerPressed(_ sender: UIButton) {
+        if sender.tag == 1 {
+            pickedAnswer = true
+            saveAnswersWithProperty(from: pickedAnswer)
+        } else if sender.tag == 2 {
+            pickedAnswer = false
+            saveAnswersWithProperty(from: pickedAnswer)
+        }
     }
     
     
     //MARK: - methods for the question
     /***************************************************************/
+    
+    func getFirstQuestion(for type : [String : Any]){
+        
+        let property = type["property"] as! String
+        var resultQuestions = [Question]()
+        
+        print(property)
+        
+        if let allquestion = questions?.questions {
+            for item in allquestion {
+                if item.questionType.rawValue == property {
+                    print(item)
+                    print(item.questionText)
+                    resultQuestions.append(item)
+                }
+            }
+        }
+        print(resultQuestions)
+        
+        let randomQuestionIndex = getRandomIndexOfQuestion(from: resultQuestions)
+        
+        //gets an random question of the result of the questions and shows text and image
+        questionLabel.text = resultQuestions[randomQuestionIndex].questionText
+        questionImage.image = UIImage(named: resultQuestions[randomQuestionIndex].questionImageURL)
+        //stores the given answer related to the property
+        tempPropertyQuestion = property
+        tempAnswerQuestion = resultQuestions[randomQuestionIndex].questionAnswer.description
+    }
+    
+    
+    /**
+     gets an random index number of the counted questions
+     */
+    func getRandomIndexOfQuestion(from resultArray : [Question]) -> Int{
+        let number : UInt32 = UInt32(resultArray.count)
+        return Int(arc4random_uniform(number))
+    }
+    
+    
     
     /**
      updates all views on screen
@@ -96,8 +151,15 @@ class BestimmungsVC: UIViewController {
     /**
      proceed the bestimmung for the answers
      */
-    func checkAnswer(){
+    func saveAnswersWithProperty(from buttonInput : Bool){
+        var temp = [String : Any]()
+ 
+        temp["property"] = tempPropertyQuestion
+        temp["questionAnswer"] = tempAnswerQuestion
+        temp["userAnswer"] = buttonInput
         
+        resultsArrayOfPickedAnswersOfProperty.append(temp)
+        print(resultsArrayOfPickedAnswersOfProperty)
     }
     
     
@@ -114,158 +176,161 @@ class BestimmungsVC: UIViewController {
         return dataArray.count
     }
     
+    func ablauf(){
+        countedClasses = getTotalOfClasses()
+        print("Kalkulation Entropy Klasse")
+        print(countClassValues(propertyKey : "klasse"))
+        entropyClasses = calcEntropyClass(dic: countClassValues(propertyKey : "klasse"))
+        print("---------- entropyClasses : \(entropyClasses)")
+        
+        print(getEntropyForAllProperties())
     
-    /**
-     calculates the entropy of all identical classes
-     from data array
-     - Returns: Float
-     */
-    func calcEntropyOfClasses(for key : String, and counted: Int) -> Float{
-        let classArray = countIdenticalRows(for: key)
-        var entropyClasses :Float?
-        
-        entropyClasses = calcEntropy(of: classArray, total: counted)
-        
-        return entropyClasses ?? 0
     }
     
-    
-    /**
-     calculates the entropy of all identical properties in
-     relation to 'klasse'
-     - Returns: array of property keys with the calculated entropy
-     */
-    func calcEntropyOfPropertiesOfClasses() -> [String : Float] {
+    func getEntropyForAllProperties() -> String {
+        var entropiesDic = Dictionary<String, Any>()
+        var bestGain : Float = 0
+        var propertyKey = ""
         
-        var propertyArray = [String : [String : Int]]()
-        var entropyPropertyArray = [String : Float]()
-        
-        //for all properties except the 'klasse'
-        for propertyKey in keyArray {
-            if propertyKey != keyClass {
-                propertyArray[propertyKey] = countIdenticalRows(for: propertyKey)
+        for item in propertyNameArray {
+            if item != "klasse" {
+                let dic = getClassesForPropertyAndCount(from: countPropertyValues(propertyKey: item), and: item)
+                for (key, value) in dic {
+                    let gainTemp = calcInformationGain(from: value)
+                    print("key : \(key) ---------------------value : \(value) -------- gainTemp: \(gainTemp)")
+                    
+                    if bestGain < gainTemp {
+                        bestGain = gainTemp
+                        propertyKey = key
+                        entropiesDic["property"] = propertyKey
+                        entropiesDic["gain"] = bestGain
+                    }
+                }
             }
         }
-        
-        print("------------------propertyArray-------------------------------------")
-        print(propertyArray)
-        
-        
-        for countedProperty in propertyArray {
-            print(countedProperty)
-            entropyPropertyArray[countedProperty.key] = calcEntropy(of: countedProperty.value, total: countedClasses)
-            //entropyPropertyArray[countedProperty.key] = entropy
-        }
-        print("------------------entropyPropertyArray-------------------------------------")
-        print(entropyPropertyArray)
-        
-        return entropyPropertyArray
+        print(entropiesDic)
+        return propertyKey
+    }
+    
+    /**
+     calculates the information gain of a property and
+     returns the gain
+     - Parameters: entropy of a property
+     - Returns: calculatd gain
+     */
+    func calcInformationGain(from entropy : Float) -> Float{
+        return entropyClasses - entropy
     }
     
     
-    /**
-     calculates the information gain of all properties and
-     returns best property to split information
-     - Parameters: entropy of all classes
-     - Returns: array of property key with the calculated gain
-     */
-    func calcInformationGain(from entropyClasses : Float) -> [String : Float]{
-        var gain : Float = 0
-        var keyProp = String()
-        var bestGainProperty = [String : Float]()
+    
+    func countPropertyValues(propertyKey : String) -> Dictionary<String, Int> {
+        var temp = [String]()
         
-        let entropiesPropertiesArray = calcEntropyOfPropertiesOfClasses()
-        
-        print("-----------------------------------    calcInformationGain() ---------------")
-        
-        for property in entropiesPropertiesArray {
+        for item in dataArray {
+            let value = (item.value(forKey: propertyKey)) as! String
+            temp.append(value)
             
-            let gainTemp = entropyClasses - property.value
-            print("property: \(property.key) gaintemp : \(gainTemp) gain: \(gain)\n")
-            
-            if gainTemp > gain {
-                gain = gainTemp
-                keyProp = property.key
-            }
         }
+        let mappedItems = temp.map { ($0, 1) }
+        let dic = Dictionary(mappedItems, uniquingKeysWith: +)
         
-        bestGainProperty[keyProp] = gain
+        return dic
         
-        
-        return bestGainProperty
+    }
+    
+    func getClassesForPropertyAndCount(from dict : Dictionary<String, Int>, and propertyKey: String) -> Dictionary<String, Float>{
+        var dic = Dictionary<String, Float>()
+        var entroTotal : Float = 0
+       
+                for key in dict.keys {
+                    let temp = getClassesForOnePropertyValue(from : key, and : propertyKey)
+                    let mappedItems = temp.map { ($0, 1) }
+                    let counts = Dictionary(mappedItems, uniquingKeysWith: +)
+                    let entroTemp = calcEntropyClass(dic: counts)
+                    let entropy = calcEntropyProperty(propertyEntropy: entroTemp, propertyTotal: temp.count, total: getTotalOfClasses())
+                    entroTotal += entropy
+                }
+        dic[propertyKey] = entroTotal
+        return dic
     }
     
     
-    /**
-     calculates the entropy in relation to 'klasse' property of data
-     - Parameters:
-     - array:  String: contains the key of property Int: total counted number of the property
-     - total:  number of rows of 'klasse' property
-     - Returns: Float
-     */
-    func calcEntropy(of array : [String : Int], total : Int) -> Float{
+    func calcEntropyProperty(propertyEntropy : Float, propertyTotal : Int, total : Int) -> Float{
+        return Float(propertyTotal) / Float(total) * propertyEntropy
+    }
+    
+    
+    
+    func countClassValues(propertyKey : String) -> Dictionary<String, Int>{
+        var temp = [String]()
+        
+        for item in dataArray {
+            let value = (item.value(forKey: propertyKey)) as! String
+            temp.append(value)
+            
+        }
+        let mappedItems = temp.map { ($0, 1) }
+        let dic = Dictionary(mappedItems, uniquingKeysWith: +)
+        
+        return dic
+    }
+    
+    
+    func calcEntropyClass(dic : Dictionary<String, Int>) -> Float{
+        let temp = dic
+        var sum = 0
         var number : Float = 0
-        let total = Float(total)
         
-        for klasse in array {
-            let x = Float(klasse.value)/total
-            number += -(x * log2(x))
-            //print("klasse: \(klasse) entropy:  \(number)")
+        for val in temp.values{
+            sum += val
         }
-        //print(number)
+        for val in temp.values {
+            let x = Float(val)/Float(sum)
+            number += -(x * log2(x))
+            
+        }
         return number
     }
     
     
-    
-    
-    /**
-     counts the identical rows of property and
-     returns a array with the counted value and the number of it
-     - Parameters: String:  key of property
-     - Returns: [String : Int]
-     */
-    func countIdenticalRows(for key : String) -> [String : Int]{
-        
-        var identicalRowsArray = [String : Int]()
-        var counter = 0
-        //let totalNumbers = counted
+
+    func getClassesForOnePropertyValue(from value : String, and key : String) -> [String]{
+        var temp = [String]()
+        var tempVal = ""
+
         for item in dataArray {
-            
-            //print(item.value(forKeyPath: key))
-            
-            let val = item.value(forKeyPath: key) as! String
-            
-            if !identicalRowsArray.keys.contains(val){
-                counter = 0
-                identicalRowsArray[val] = counter + 1
-            } else {
-                counter = identicalRowsArray[val]!
-                counter = counter + 1
-                identicalRowsArray.updateValue(counter, forKey: val)
+            tempVal = item.value(forKey: key) as! String
+            if tempVal == value {
+                temp.append((item.klasse?.description)!)
             }
         }
-        return identicalRowsArray
+        return temp
     }
-    
+
+
     
     //MARK: - methods for JSON encoding
     /***************************************************************/
     
-    func readJSONData(from file: String){
+    /**
+     reads JSON File from path
+     - Parameters: String
+     */
+    func readJSONData(from file: String) {
+        
         guard let path = Bundle.main.path(forResource: file, ofType: "json") else {return}
         let url = URL(fileURLWithPath: path)
         
         do {
             let jsonData : Data = try Data(contentsOf: url)
-            let questions = try! JSONDecoder().decode(Questions.self, from: jsonData)
+            questions = try! JSONDecoder().decode(Questions.self, from: jsonData)
             
-            print(questions)
+            print(questions!)
             
         }catch {
             print("json daten konnten nicht gelesen werden.")
         }
-        
     }
     
     
@@ -280,8 +345,9 @@ class BestimmungsVC: UIViewController {
      - Parameters: String
      */
     func readDataFromCSVFile(file: String) {
+        print(file)
         guard let path = Bundle.main.path(forResource: file, ofType: "csv") else {return}
-        //print (path)
+        print (path)
         let contentsOfURL = URL(fileURLWithPath: path)
         parseCSV(contentsOfURL: contentsOfURL, encoding: String.Encoding.macOSRoman)
     }
@@ -351,7 +417,7 @@ class BestimmungsVC: UIViewController {
         
         //save the table header keys
         for item in arrayTemp[index]{
-            keyArray.append(item)
+            propertyNameArray.append(item)
         }
         //delete the first item with the table headers
         arrayTemp.remove(at: index)
@@ -365,9 +431,12 @@ class BestimmungsVC: UIViewController {
      - array of array with Strings
      */
     func createDataForDB(array: [[ String ]]){
+        
+        //print(array)
         for item in array {
-            let newItem = Pilz(context: context)
             
+            let newItem = Pilz(context: context)
+
             newItem.klasse = item[0]
             newItem.busch = item[1]
             newItem.hutForm = item[2]

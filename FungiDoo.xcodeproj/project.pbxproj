@@ -16,6 +16,7 @@
 		D03468022150FA2500197129 /* UserItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03468002150FA2500197129 /* UserItemTableViewCell.xib */; };
 		D034680421510F6900197129 /* UserListAddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D034680321510F6900197129 /* UserListAddItemVC.swift */; };
 		D049C7802153FA6A001167EF /* UserListDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049C77F2153FA6A001167EF /* UserListDetailVC.swift */; };
+		D05000BD2174BA840024FB83 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D05000BC2174BA840024FB83 /* questions.json */; };
 		D05DBEC1216E3340001C4837 /* BestimmungsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05DBEC0216E3340001C4837 /* BestimmungsVC.swift */; };
 		D067521D214F9CF60086B007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067521C214F9CF60086B007 /* AppDelegate.swift */; };
 		D0675222214F9CF60086B007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0675220214F9CF60086B007 /* Main.storyboard */; };
@@ -24,9 +25,10 @@
 		D067522A214F9CF80086B007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0675228214F9CF80086B007 /* LaunchScreen.storyboard */; };
 		D0675233214F9DF10086B007 /* pilzeList.json in Resources */ = {isa = PBXBuildFile; fileRef = D0675232214F9DF10086B007 /* pilzeList.json */; };
 		D080013521724CC00039E6B5 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D080013421724CC00039E6B5 /* Question.swift */; };
+		D08F19F92176519200CF22AD /* Daten.csv in Resources */ = {isa = PBXBuildFile; fileRef = D08F19F82176519200CF22AD /* Daten.csv */; };
 		D097841621527F7A00CD3374 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D097841521527F7A00CD3374 /* CameraVC.swift */; };
-		D09A3CCD217339020089456E /* Daten.csv in Resources */ = {isa = PBXBuildFile; fileRef = D09A3CCC217339010089456E /* Daten.csv */; };
-		D09A3CCF217340F10089456E /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D09A3CCE217340F10089456E /* questions.json */; };
+		D09A3CD32173A2C50089456E /* buschig-stehend.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D09A3CD22173A2C50089456E /* buschig-stehend.jpg */; };
+		D09A3CD52173A4160089456E /* einzelnd-stehend.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D09A3CD42173A4160089456E /* einzelnd-stehend.jpg */; };
 		D0EA3880214FE3E6002E462C /* GlossarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA387F214FE3E6002E462C /* GlossarVC.swift */; };
 		D0EA3882214FE47B002E462C /* PilzGlossar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3881214FE47B002E462C /* PilzGlossar.swift */; };
 		D0EA3885214FE694002E462C /* GlossarListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3883214FE694002E462C /* GlossarListTableViewCell.swift */; };
@@ -48,6 +50,7 @@
 		D03468002150FA2500197129 /* UserItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserItemTableViewCell.xib; sourceTree = "<group>"; };
 		D034680321510F6900197129 /* UserListAddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAddItemVC.swift; sourceTree = "<group>"; };
 		D049C77F2153FA6A001167EF /* UserListDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDetailVC.swift; sourceTree = "<group>"; };
+		D05000BC2174BA840024FB83 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		D05DBEC0216E3340001C4837 /* BestimmungsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestimmungsVC.swift; sourceTree = "<group>"; };
 		D0675219214F9CF60086B007 /* FungiDoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FungiDoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067521C214F9CF60086B007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +61,10 @@
 		D067522B214F9CF80086B007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0675232214F9DF10086B007 /* pilzeList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pilzeList.json; sourceTree = "<group>"; };
 		D080013421724CC00039E6B5 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		D08F19F82176519200CF22AD /* Daten.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Daten.csv; sourceTree = "<group>"; };
 		D097841521527F7A00CD3374 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
-		D09A3CCC217339010089456E /* Daten.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Daten.csv; sourceTree = "<group>"; };
-		D09A3CCE217340F10089456E /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		D09A3CD22173A2C50089456E /* buschig-stehend.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "buschig-stehend.jpg"; sourceTree = "<group>"; };
+		D09A3CD42173A4160089456E /* einzelnd-stehend.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "einzelnd-stehend.jpg"; sourceTree = "<group>"; };
 		D0EA387F214FE3E6002E462C /* GlossarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarVC.swift; sourceTree = "<group>"; };
 		D0EA3881214FE47B002E462C /* PilzGlossar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilzGlossar.swift; sourceTree = "<group>"; };
 		D0EA3883214FE694002E462C /* GlossarListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarListTableViewCell.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		D067521B214F9CF60086B007 /* FungiDoo */ = {
 			isa = PBXGroup;
 			children = (
+				D09A3CD02173A0A50089456E /* data */,
 				D0EA387B214FDF36002E462C /* Model */,
 				D0675235214F9FA60086B007 /* Controller */,
 				D0675234214F9F8F0086B007 /* View */,
@@ -196,11 +201,28 @@
 			path = UserListViews;
 			sourceTree = "<group>";
 		};
+		D09A3CD02173A0A50089456E /* data */ = {
+			isa = PBXGroup;
+			children = (
+				D08F19F82176519200CF22AD /* Daten.csv */,
+				D05000BC2174BA840024FB83 /* questions.json */,
+				D09A3CD12173A0F70089456E /* images */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		D09A3CD12173A0F70089456E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D09A3CD42173A4160089456E /* einzelnd-stehend.jpg */,
+				D09A3CD22173A2C50089456E /* buschig-stehend.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		D0EA387B214FDF36002E462C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D09A3CCE217340F10089456E /* questions.json */,
-				D09A3CCC217339010089456E /* Daten.csv */,
 				D0675223214F9CF60086B007 /* FungiDoo.xcdatamodeld */,
 				D0EA3881214FE47B002E462C /* PilzGlossar.swift */,
 				D080013421724CC00039E6B5 /* Question.swift */,
@@ -288,13 +310,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D067522A214F9CF80086B007 /* LaunchScreen.storyboard in Resources */,
-				D09A3CCF217340F10089456E /* questions.json in Resources */,
+				D09A3CD52173A4160089456E /* einzelnd-stehend.jpg in Resources */,
+				D09A3CD32173A2C50089456E /* buschig-stehend.jpg in Resources */,
+				D08F19F92176519200CF22AD /* Daten.csv in Resources */,
 				D03468022150FA2500197129 /* UserItemTableViewCell.xib in Resources */,
 				D0675227214F9CF80086B007 /* Assets.xcassets in Resources */,
+				D05000BD2174BA840024FB83 /* questions.json in Resources */,
 				D0675233214F9DF10086B007 /* pilzeList.json in Resources */,
 				D0675222214F9CF60086B007 /* Main.storyboard in Resources */,
 				D0EA3886214FE694002E462C /* GlossarListTableViewCell.xib in Resources */,
-				D09A3CCD217339020089456E /* Daten.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
