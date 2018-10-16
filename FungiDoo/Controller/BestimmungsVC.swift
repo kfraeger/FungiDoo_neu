@@ -25,6 +25,7 @@ class BestimmungsVC: UIViewController {
     var countedClasses = 0
     var propertyClass = "klasse"
     var propertyNameArray = [String]()
+    var propertyCalculatet = ""
     
     var countedPropertyValue = Dictionary<String, Any>()
     var countedPropertyValuePerClass = Dictionary<String, Any>()
@@ -61,13 +62,14 @@ class BestimmungsVC: UIViewController {
         
         clearDatabase()
         readDataFromCSVFile(file: csvFilePilze)
-        //readJSONData(from: jsonFile)
+        readJSONData(from: jsonFile)
         loadItems()
         //print(dataArray)
         //countedClasses = getTotalOfClasses()
         ablauf()
         print("------- vorher kalkulatinstuff \n")
         print(propertyNameArray)
+        getFirstQuestion(for: propertyCalculatet)
         //getRowValues(for: "age")
         //getRowValues(for: "klasse")
         //calcEntropy(property: countedPropertyValue, propertyProClass: countedPropertyValuePerClass)
@@ -95,9 +97,9 @@ class BestimmungsVC: UIViewController {
     //MARK: - methods for the question
     /***************************************************************/
     
-    func getFirstQuestion(for type : [String : Any]){
+    func getFirstQuestion(for type : String){
         
-        let property = type["property"] as! String
+        let property = type
         var resultQuestions = [Question]()
         
         print(property)
@@ -183,7 +185,7 @@ class BestimmungsVC: UIViewController {
         entropyClasses = calcEntropyClass(dic: countClassValues(propertyKey : "klasse"))
         print("---------- entropyClasses : \(entropyClasses)")
         
-        print(getEntropyForAllProperties())
+        propertyCalculatet = getEntropyForAllProperties()
     
     }
     

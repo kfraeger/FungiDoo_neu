@@ -26,6 +26,23 @@
 		D0675233214F9DF10086B007 /* pilzeList.json in Resources */ = {isa = PBXBuildFile; fileRef = D0675232214F9DF10086B007 /* pilzeList.json */; };
 		D080013521724CC00039E6B5 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D080013421724CC00039E6B5 /* Question.swift */; };
 		D08F19F92176519200CF22AD /* Daten.csv in Resources */ = {isa = PBXBuildFile; fileRef = D08F19F82176519200CF22AD /* Daten.csv */; };
+		D08F19FB2176625F00CF22AD /* huellreste_braunerHut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F19FA2176625F00CF22AD /* huellreste_braunerHut.jpg */; };
+		D08F19FE217664B600CF22AD /* samtig_dunkelbraunerHut_poren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F19FD217664B500CF22AD /* samtig_dunkelbraunerHut_poren.jpg */; };
+		D08F1A002176661000CF22AD /* trichter_gelb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F19FF2176660F00CF22AD /* trichter_gelb.jpg */; };
+		D08F1A032176680900CF22AD /* eifoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A022176680900CF22AD /* eifoermig.jpg */; };
+		D08F1A05217668F400CF22AD /* schuppig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A04217668F400CF22AD /* schuppig.jpg */; };
+		D08F1A0A21768A3500CF22AD /* honiggelb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A0921768A3400CF22AD /* honiggelb.jpg */; };
+		D08F1A0C21768B5600CF22AD /* bauchig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A0B21768B5600CF22AD /* bauchig.jpg */; };
+		D08F1A0E21768ECB00CF22AD /* hellbraun_flockig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A0D21768ECB00CF22AD /* hellbraun_flockig.jpg */; };
+		D08F1A11217691AA00CF22AD /* orangebraunHut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A10217691A900CF22AD /* orangebraunHut.jpg */; };
+		D08F1A13217692AA00CF22AD /* zylindrischGruen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A12217692A900CF22AD /* zylindrischGruen.jpg */; };
+		D08F1A152176944E00CF22AD /* faserschuppig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A142176944E00CF22AD /* faserschuppig.jpg */; };
+		D08F1A172176971700CF22AD /* orangefarben.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A162176971700CF22AD /* orangefarben.jpg */; };
+		D08F1A19217697B800CF22AD /* rotHutweissStiel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A18217697B800CF22AD /* rotHutweissStiel.jpg */; };
+		D08F1A1B217698C000CF22AD /* knolle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A1A217698C000CF22AD /* knolle.jpg */; };
+		D08F1A1D2176999800CF22AD /* gebuckeltRing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A1C2176999800CF22AD /* gebuckeltRing.jpg */; };
+		D08F1A1F21769ACA00CF22AD /* Schopftintling_Wiese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A1E21769ACA00CF22AD /* Schopftintling_Wiese.jpg */; };
+		D08F1A2121769CDE00CF22AD /* steinpilz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A2021769CDE00CF22AD /* steinpilz.jpg */; };
 		D097841621527F7A00CD3374 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D097841521527F7A00CD3374 /* CameraVC.swift */; };
 		D09A3CD32173A2C50089456E /* buschig-stehend.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D09A3CD22173A2C50089456E /* buschig-stehend.jpg */; };
 		D09A3CD52173A4160089456E /* einzelnd-stehend.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D09A3CD42173A4160089456E /* einzelnd-stehend.jpg */; };
@@ -62,6 +79,27 @@
 		D0675232214F9DF10086B007 /* pilzeList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pilzeList.json; sourceTree = "<group>"; };
 		D080013421724CC00039E6B5 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D08F19F82176519200CF22AD /* Daten.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Daten.csv; sourceTree = "<group>"; };
+		D08F19FA2176625F00CF22AD /* huellreste_braunerHut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huellreste_braunerHut.jpg; sourceTree = "<group>"; };
+		D08F19FD217664B500CF22AD /* samtig_dunkelbraunerHut_poren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = samtig_dunkelbraunerHut_poren.jpg; sourceTree = "<group>"; };
+		D08F19FF2176660F00CF22AD /* trichter_gelb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trichter_gelb.jpg; sourceTree = "<group>"; };
+		D08F1A022176680900CF22AD /* eifoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eifoermig.jpg; sourceTree = "<group>"; };
+		D08F1A04217668F400CF22AD /* schuppig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schuppig.jpg; sourceTree = "<group>"; };
+		D08F1A06217686DB00CF22AD /* volva.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = volva.jpg; sourceTree = "<group>"; };
+		D08F1A072176882100CF22AD /* halbkugelig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halbkugelig.jpg; sourceTree = "<group>"; };
+		D08F1A082176896100CF22AD /* lamellen_rosa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lamellen_rosa.jpg; sourceTree = "<group>"; };
+		D08F1A0921768A3400CF22AD /* honiggelb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = honiggelb.jpg; sourceTree = "<group>"; };
+		D08F1A0B21768B5600CF22AD /* bauchig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bauchig.jpg; sourceTree = "<group>"; };
+		D08F1A0D21768ECB00CF22AD /* hellbraun_flockig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hellbraun_flockig.jpg; sourceTree = "<group>"; };
+		D08F1A0F2176909C00CF22AD /* rotPoren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rotPoren.jpg; sourceTree = "<group>"; };
+		D08F1A10217691A900CF22AD /* orangebraunHut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = orangebraunHut.jpg; sourceTree = "<group>"; };
+		D08F1A12217692A900CF22AD /* zylindrischGruen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zylindrischGruen.jpg; sourceTree = "<group>"; };
+		D08F1A142176944E00CF22AD /* faserschuppig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = faserschuppig.jpg; sourceTree = "<group>"; };
+		D08F1A162176971700CF22AD /* orangefarben.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = orangefarben.jpg; sourceTree = "<group>"; };
+		D08F1A18217697B800CF22AD /* rotHutweissStiel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rotHutweissStiel.jpg; sourceTree = "<group>"; };
+		D08F1A1A217698C000CF22AD /* knolle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = knolle.jpg; sourceTree = "<group>"; };
+		D08F1A1C2176999800CF22AD /* gebuckeltRing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gebuckeltRing.jpg; sourceTree = "<group>"; };
+		D08F1A1E21769ACA00CF22AD /* Schopftintling_Wiese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Schopftintling_Wiese.jpg; sourceTree = "<group>"; };
+		D08F1A2021769CDE00CF22AD /* steinpilz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = steinpilz.jpg; sourceTree = "<group>"; };
 		D097841521527F7A00CD3374 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		D09A3CD22173A2C50089456E /* buschig-stehend.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "buschig-stehend.jpg"; sourceTree = "<group>"; };
 		D09A3CD42173A4160089456E /* einzelnd-stehend.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "einzelnd-stehend.jpg"; sourceTree = "<group>"; };
@@ -214,6 +252,27 @@
 		D09A3CD12173A0F70089456E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D08F1A162176971700CF22AD /* orangefarben.jpg */,
+				D08F1A18217697B800CF22AD /* rotHutweissStiel.jpg */,
+				D08F1A142176944E00CF22AD /* faserschuppig.jpg */,
+				D08F1A1E21769ACA00CF22AD /* Schopftintling_Wiese.jpg */,
+				D08F1A1C2176999800CF22AD /* gebuckeltRing.jpg */,
+				D08F1A2021769CDE00CF22AD /* steinpilz.jpg */,
+				D08F1A1A217698C000CF22AD /* knolle.jpg */,
+				D08F1A12217692A900CF22AD /* zylindrischGruen.jpg */,
+				D08F1A10217691A900CF22AD /* orangebraunHut.jpg */,
+				D08F1A0F2176909C00CF22AD /* rotPoren.jpg */,
+				D08F1A0D21768ECB00CF22AD /* hellbraun_flockig.jpg */,
+				D08F1A0B21768B5600CF22AD /* bauchig.jpg */,
+				D08F1A0921768A3400CF22AD /* honiggelb.jpg */,
+				D08F1A082176896100CF22AD /* lamellen_rosa.jpg */,
+				D08F1A072176882100CF22AD /* halbkugelig.jpg */,
+				D08F1A06217686DB00CF22AD /* volva.jpg */,
+				D08F1A04217668F400CF22AD /* schuppig.jpg */,
+				D08F1A022176680900CF22AD /* eifoermig.jpg */,
+				D08F19FF2176660F00CF22AD /* trichter_gelb.jpg */,
+				D08F19FD217664B500CF22AD /* samtig_dunkelbraunerHut_poren.jpg */,
+				D08F19FA2176625F00CF22AD /* huellreste_braunerHut.jpg */,
 				D09A3CD42173A4160089456E /* einzelnd-stehend.jpg */,
 				D09A3CD22173A2C50089456E /* buschig-stehend.jpg */,
 			);
@@ -309,14 +368,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08F19FB2176625F00CF22AD /* huellreste_braunerHut.jpg in Resources */,
+				D08F1A0E21768ECB00CF22AD /* hellbraun_flockig.jpg in Resources */,
 				D067522A214F9CF80086B007 /* LaunchScreen.storyboard in Resources */,
+				D08F1A13217692AA00CF22AD /* zylindrischGruen.jpg in Resources */,
+				D08F1A05217668F400CF22AD /* schuppig.jpg in Resources */,
+				D08F1A002176661000CF22AD /* trichter_gelb.jpg in Resources */,
 				D09A3CD52173A4160089456E /* einzelnd-stehend.jpg in Resources */,
 				D09A3CD32173A2C50089456E /* buschig-stehend.jpg in Resources */,
 				D08F19F92176519200CF22AD /* Daten.csv in Resources */,
+				D08F1A152176944E00CF22AD /* faserschuppig.jpg in Resources */,
+				D08F1A11217691AA00CF22AD /* orangebraunHut.jpg in Resources */,
+				D08F1A19217697B800CF22AD /* rotHutweissStiel.jpg in Resources */,
 				D03468022150FA2500197129 /* UserItemTableViewCell.xib in Resources */,
+				D08F19FE217664B600CF22AD /* samtig_dunkelbraunerHut_poren.jpg in Resources */,
+				D08F1A1D2176999800CF22AD /* gebuckeltRing.jpg in Resources */,
+				D08F1A1B217698C000CF22AD /* knolle.jpg in Resources */,
 				D0675227214F9CF80086B007 /* Assets.xcassets in Resources */,
 				D05000BD2174BA840024FB83 /* questions.json in Resources */,
+				D08F1A0A21768A3500CF22AD /* honiggelb.jpg in Resources */,
 				D0675233214F9DF10086B007 /* pilzeList.json in Resources */,
+				D08F1A172176971700CF22AD /* orangefarben.jpg in Resources */,
+				D08F1A2121769CDE00CF22AD /* steinpilz.jpg in Resources */,
+				D08F1A032176680900CF22AD /* eifoermig.jpg in Resources */,
+				D08F1A0C21768B5600CF22AD /* bauchig.jpg in Resources */,
+				D08F1A1F21769ACA00CF22AD /* Schopftintling_Wiese.jpg in Resources */,
 				D0675222214F9CF60086B007 /* Main.storyboard in Resources */,
 				D0EA3886214FE694002E462C /* GlossarListTableViewCell.xib in Resources */,
 			);

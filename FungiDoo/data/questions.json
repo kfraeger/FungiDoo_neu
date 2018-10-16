@@ -16,17 +16,17 @@
 
       "questionsType": "hutForm",
       "text": "Ist der Pilz ausgewachsen und die Hutform gewölbt?",
-      "image": "",
+      "image": "halbkugelig.jpg",
       "answer": "gewölbt"
     },
     {"questionsType": "hutForm",
       "text": "Ist die Hutform eher trichterförmig?",
-      "image": "",
+      "image": "trichter_gelb.jpg",
       "answer": "trichterförmig"
     },
     {"questionsType": "hutForm",
       "text": "Ist die Hutform kegelig?",
-      "image": "",
+      "image": "Schopftintling_Wiese.jpg",
       "answer": "kegelig"
     },
     {"questionsType": "hutForm",
@@ -36,7 +36,7 @@
     },
     {"questionsType": "hutForm",
       "text": "Besitzt der Hut einen Buckel in der Mitte?",
-      "image": "",
+      "image": "gebuckeltRing.jpg",
       "answer": "gebuckelt"
     },
     {"questionsType": "hutForm",
@@ -51,7 +51,7 @@
     },
     {"questionsType": "hutForm",
       "text": "Ist die Form des Hutes eiförmig?",
-      "image": "",
+      "image": "eifoermig.jpg",
       "answer": "eifoermig"
 
 
@@ -59,17 +59,17 @@
     {
       "questionsType": "hutOberflaeche",
       "text": "Ist die Hutoberfläche glatt?",
-      "image": "",
+      "image": "orangebraunHut.jpg",
       "answer": "glatt"
     },
     {"questionsType": "hutOberflaeche",
       "text": "Sieht die Hutoberfläche samtig, matt oder filzig aus?",
-      "image": "",
+      "image": "samtig_dunkelbraunerHut_poren.jpg",
       "answer": "samtig"
     },
     {"questionsType": "hutOberflaeche",
-      "text": "Sind auf dem Hut flockige Hüllreste zu sehen?",
-      "image": "",
+      "text": "Sind auf dem Hut flockige Hüllreste zu sehen (siehe Bildbeispiel)?",
+      "image": "huellreste_braunerHut.jpg",
       "answer": "huellreste"
     },
     {"questionsType": "hutOberflaeche",
@@ -79,7 +79,7 @@
     },
     {"questionsType": "hutOberflaeche",
       "text": "Ist der Hund schuppig?",
-      "image": "",
+      "image": "schuppig.jpg",
       "answer": "schuppig"
     },
     {"questionsType": "hutOberflaeche",
@@ -89,19 +89,19 @@
     },
     {"questionsType": "hutOberflaeche",
       "text": "Besteht der Hut aus fasrigen Schuppen?",
-      "image": "",
+      "image": "faserschuppig.jpg",
       "answer": "faserschuppig"
 
     },
     {
       "questionsType": "hutUnterseite",
       "text": "Schau dir die Hutunterseite an. Besteht diese aus Poren?",
-      "image": "",
+      "image": "samtig_dunkelbraunerHut_poren.jpg",
       "answer": "Poren"
     },
     {"questionsType": "hutUnterseite",
       "text": "Besteht die Hutunterseite aus Lamellen oder Leisten?",
-      "image": "",
+      "image": "lamellen_rosa.jpg",
       "answer": "Lamellen"
 
     },
@@ -157,12 +157,12 @@
     },
     {"questionsType": "stielForm",
       "text": "Ist die Form des Stieles bauchig oder dickbauchig?",
-      "image": "",
+      "image": "bauchig.jpg",
       "answer": "bauchig"
     },
     {"questionsType": "stielForm",
       "text": "Ist die Form des Stieles zylindrisch?",
-      "image": "",
+      "image": "zylindrischGruen.jpg",
       "answer": "zylindrisch"
     },
     {"questionsType": "stielForm",
@@ -177,7 +177,7 @@
     },
     {"questionsType": "stielBasis",
       "text": "Besitzt der Stiel eine Knolle?",
-      "image": "",
+      "image": "knolle.jpg",
       "answer": "Knolle"
     },
     {"questionsType": "stielBasis",
@@ -191,16 +191,9 @@
       "answer": "normal"
 
     },
-    {
-
-      "questionsType": "stielFarbe",
-      "text": "Ist die Pilzbasis verdickt?",
-      "image": "",
-      "answer": "verdickt"
-    },
     {"questionsType": "stielFarbe",
       "text": "Die Stielfarbe ist weiß?",
-      "image": "",
+      "image": "rotHutweissStiel.jpg",
       "answer": "weiss"
     },
     {"questionsType": "stielFarbe",
@@ -210,7 +203,7 @@
     },
     {"questionsType": "stielFarbe",
       "text": "Ist die Stielfarbe weissgrau?",
-      "image": "",
+      "image": "hellbraun_flockig.jpg",
       "answer": "weissgrau"
     },
     {"questionsType": "stielFarbe",
@@ -257,12 +250,12 @@
     {
       "questionsType": "stielOberflaeche",
       "text": "Hat der Pilz einen schuppigen Stiel?",
-      "image": "",
+      "image": "hellbraun_flockig.jpg",
       "answer": "schuppig"
     },
     {"questionsType": "stielOberflaeche",
       "text": "Die Oberfläche des Stiels besitzt keine besonderen Merkmale?",
-      "image": "",
+      "image": "Schopftintling_Wiese.jpg",
       "answer": "normal"
     },
     {"questionsType": "stielOberflaeche",
@@ -272,8 +265,8 @@
     },
     {"questionsType": "stielOberflaeche",
       "text": "Ist auf dem Stiel ein Netz erkennbar?",
-      "image": "",
-      "answer": "normal"
+      "image": "steinpilz.jpg",
+      "answer": "netz"
     },
     {"questionsType": "stielOberflaeche",
       "text": "Hat der Stiel eine genatterte Oberfläche?",
@@ -282,7 +275,7 @@
     },
     {"questionsType": "stielOberflaeche",
       "text": "Hat der Stiel eine längsfaserige Struktur?",
-      "image": "",
+      "image": "samtig_dunkelbraunerHut_poren.jpg",
       "answer": "längsfaserig"
 
     },
@@ -305,7 +298,7 @@
     },
     {"questionsType": "stielNetzFlockenFarbe",
       "text": "Schaue dir den Stiel an. Ist das Netz, die Flocken, die Schuppen oder die genatterte Struktur weiss?",
-      "image": "",
+      "image": "steinpilz.jpg",
       "answer": "weiss"
     },
     {"questionsType": "stielNetzFlockenFarbe",
@@ -328,7 +321,7 @@
 
       "questionsType": "stielRing",
       "text": "Besitz der Stiel des Pilzes einen Ring oder eine Manschette?",
-      "image": "",
+      "image": "gebuckeltRing.jpg",
       "answer": "ja"
     },
     {"questionsType": "stielRing",
@@ -340,7 +333,7 @@
     {
       "questionsType": "stielBasisVolva",
       "text": "Besitzt der Stiel eine Knolle, die von einer Hülle umgeben ist?",
-      "image": "",
+      "image": "volva.jpg",
       "answer": "ja"
     },
     {"questionsType": "stielBasisVolva",
@@ -479,7 +472,7 @@
 
       "questionsType": "hutUnterseiteFarbe",
       "text": "Die Poren- oder Lamellenfarbe ist weiss?",
-      "image": "",
+      "image": "steinpilz.jpg",
       "answer": "weiss"
     },
     {"questionsType": "hutUnterseiteFarbe",
@@ -504,12 +497,12 @@
     },
     {"questionsType": "hutUnterseiteFarbe",
       "text": "Ist die Poren- oder Lamellenfarbe rot?",
-      "image": "",
+      "image": "rotPoren.jpg",
       "answer": "rot"
     },
     {"questionsType": "hutUnterseiteFarbe",
       "text": "Sind die Poren- oder Lamellen sind rosa?",
-      "image": "",
+      "image": "lamellen_rosa.jpg",
       "answer": "rosa"
     },
     {"questionsType": "hutUnterseiteFarbe",
@@ -585,37 +578,37 @@
     },
     {"questionsType": "hutFarbe",
       "text": "Ist der Hut des Pilzes gelb?",
-      "image": "",
+      "image": "trichter_gelb.jpg",
       "answer": "gelb"
     },
     {"questionsType": "hutFarbe",
       "text": "Die Farbe des Hutes ist rot?",
-      "image": "",
+      "image": "rotHutweissStiel.jpg",
       "answer": "rot"
     },
     {"questionsType": "hutFarbe",
       "text": "Der Hut ist hellbraun?",
-      "image": "",
+      "image": "steinpilz.jpg",
       "answer": "hellbraun"
     },
     {"questionsType": "hutFarbe",
       "text": "Die Farbe des Hutes ist dunkelbraun?",
-      "image": "",
+      "image": "samtig_dunkelbraunerHut_poren.jpg",
       "answer": "dunkelbraun"
     },
     {"questionsType": "hutFarbe",
       "text": "Ist die Farbe des Hutes orangebraun?",
-      "image": "",
+      "image": "orangebraunHut.jpg",
       "answer": "orangebraun"
     },
     {"questionsType": "hutFarbe",
       "text": "Ist die Farbe des Hutes orangegelb?",
-      "image": "",
+      "image": "orangefarben.jpg",
       "answer": "orangegelb"
     },
     {"questionsType": "hutFarbe",
       "text": "Ist die Farbe des Hutes orangefarben?",
-      "image": "",
+      "image": "orangefarben.jpg",
       "answer": "orangefarben"
     },
     {"questionsType": "hutFarbe",
@@ -625,13 +618,8 @@
     },
     {"questionsType": "hutFarbe",
       "text": "Ist die Farbe des Hutes braun?",
-      "image": "",
+      "image": "huellreste_braunerHut.jpg",
       "answer": "braun"
-    },
-    {"questionsType": "hutFarbe",
-      "text": "Ist die Farbe des Hutes cremefarben?",
-      "image": "",
-      "answer": "cremefarben"
     },
     {"questionsType": "hutFarbe",
       "text": "Ist die Farbe des Hutes goldgelb?",
@@ -650,12 +638,12 @@
     },
     {"questionsType": "hutFarbe",
       "text": "Ist die Farbe des Hutes grün?",
-      "image": "",
+      "image": "zylindrischGruen.jpg",
       "answer": "grün"
     },
     {"questionsType": "hutFarbe",
       "text": "Die Farbe des Hutes ist honiggelb?",
-      "image": "",
+      "image": "honiggelb.jpg",
       "answer": "honiggelb"
     },
     {"questionsType": "hutFarbe",
