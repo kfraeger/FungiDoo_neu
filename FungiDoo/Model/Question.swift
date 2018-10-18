@@ -18,7 +18,7 @@ enum QuestionType : String, Decodable{
     case hutUnterseite = "hutUnterseite"
     case hutUnterseiteFarbe = "hutUnterseiteFarbe"
     case huVerfaerbung = "huVerfaerbung"
-    case huVerfaerbungsFarbe = "huVerfaerbungsFarbe"
+    case huVerfaerbungFarbe = "huVerfaerbungFarbe"
     case stielForm = "stielForm"
     case stielBasis = "stielBasis"
     case stielFarbe = "stielFarbe"
@@ -29,7 +29,7 @@ enum QuestionType : String, Decodable{
     case stielHohl = "stielHohl"
     case fleischFarbe = "fleischFarbe"
     case fleischVerfaerbung = "fleischVerfaerbung"
-    case fleischVerfaerbungsFarbe = "fleischVerfaerbungsFarbe"
+    case fleischVerfaerbungFarbe = "fleischVerfaerbungFarbe"
     
     
 }

@@ -16,7 +16,7 @@
 
       "questionsType": "hutForm",
       "text": "Ist der Pilz ausgewachsen und die Hutform gewölbt?",
-      "image": "halbkugelig.jpg",
+      "image": "gewoelbt.jpg",
       "answer": "gewölbt"
     },
     {"questionsType": "hutForm",
@@ -26,27 +26,27 @@
     },
     {"questionsType": "hutForm",
       "text": "Ist die Hutform kegelig?",
-      "image": "Schopftintling_Wiese.jpg",
+      "image": "kegelfoermig.jpg",
       "answer": "kegelig"
     },
     {"questionsType": "hutForm",
       "text": "Ist die Hutform des ausgewachsenen Pilzes ausgebreitet, flach oder ausgestreckt?",
-      "image": "",
+      "image": "schuesselfoermig",
       "answer": "ausgestreckt"
     },
     {"questionsType": "hutForm",
       "text": "Besitzt der Hut einen Buckel in der Mitte?",
-      "image": "gebuckeltRing.jpg",
+      "image": "gebuckelt.jpg",
       "answer": "gebuckelt"
     },
     {"questionsType": "hutForm",
       "text": "Ist die Form des Hutes eher halbkugelig?",
-      "image": "",
+      "image": "halbkugelig.jpg",
       "answer": "halbkugelig"
     },
     {"questionsType": "hutForm",
       "text": "Handelt es sich um einen jungen Pilz mit kugeligem Hut?",
-      "image": "",
+      "image": "kugelig.jpg",
       "answer": "kugelig"
     },
     {"questionsType": "hutForm",
@@ -69,7 +69,7 @@
     },
     {"questionsType": "hutOberflaeche",
       "text": "Sind auf dem Hut flockige Hüllreste zu sehen (siehe Bildbeispiel)?",
-      "image": "huellreste_braunerHut.jpg",
+      "image": "huellresteHut.jpg",
       "answer": "huellreste"
     },
     {"questionsType": "hutOberflaeche",
@@ -84,7 +84,7 @@
     },
     {"questionsType": "hutOberflaeche",
       "text": "Fühlt sich der Hut schmierig oder klebrig an?",
-      "image": "",
+      "image": "klebrig_schmierig.jpg",
       "answer": "schmierig"
     },
     {"questionsType": "hutOberflaeche",
@@ -96,12 +96,12 @@
     {
       "questionsType": "hutUnterseite",
       "text": "Schau dir die Hutunterseite an. Besteht diese aus Poren?",
-      "image": "samtig_dunkelbraunerHut_poren.jpg",
+      "image": "porenGelb.jpg",
       "answer": "Poren"
     },
     {"questionsType": "hutUnterseite",
       "text": "Besteht die Hutunterseite aus Lamellen oder Leisten?",
-      "image": "lamellen_rosa.jpg",
+      "image": "lamellenCremefarben.jpg",
       "answer": "Lamellen"
 
     },
@@ -120,37 +120,37 @@
     },
     {
 
-      "questionsType": "huVerfaerbungsFarbe",
+      "questionsType": "huVerfaerbungFarbe",
       "text": "Verfärben sich die Druckstellen der Hutunterseite bräunlich?",
       "image": "",
       "answer": "bräunlich"
     },
-    {"questionsType": "huVerfaerbungsFarbe",
+    {"questionsType": "huVerfaerbungFarbe",
       "text": "Verfärben sich die Druckstellen der Hutunterseite schwarzblau?",
       "image": "",
       "answer": "schwarzblau"
     },
-    {"questionsType": "huVerfaerbungsFarbe",
+    {"questionsType": "huVerfaerbungFarbe",
       "text": "Verfärben sich die Druckstellen der Hutunterseite dunkelgrau?",
       "image": "",
       "answer": "dunkelgrau"
     },
-    {"questionsType": "huVerfaerbungsFarbe",
+    {"questionsType": "huVerfaerbungFarbe",
       "text": "Verfärben sich die Druckstellen der Hutunterseite schwarz?",
       "image": "",
       "answer": "schwarz"
     },
-    {"questionsType": "huVerfaerbungsFarbe",
+    {"questionsType": "huVerfaerbungFarbe",
       "text": "Die Druckstellen der Hutunterseite ändern ihre Farbe nicht?",
       "image": "",
       "answer": "nein"
     },
-    {"questionsType": "huVerfaerbungsFarbe",
+    {"questionsType": "huVerfaerbungFarbe",
       "text": "Verfärben sich die Druckstellen der Hutunterseite blaugrün?",
       "image": "",
       "answer": "blaugrün"
     },
-    {"questionsType": "huVerfaerbungsFarbe",
+    {"questionsType": "huVerfaerbungFarbe",
       "text": "Verfärben sich die Druckstellen der Hutunterseite orangerot bzw. rötlich?",
       "image": "",
       "answer": "orangerot"
@@ -167,12 +167,12 @@
     },
     {"questionsType": "stielForm",
       "text": "Ist die Form des Stieles keulig?",
-      "image": "",
+      "image": "keulenfoermig.jpg",
       "answer": "keulig"
     },
     {"questionsType": "stielBasis",
       "text": "Ist die Pilzbasis verdickt?",
-      "image": "",
+      "image": "keulenfoermig.jpg",
       "answer": "verdickt"
     },
     {"questionsType": "stielBasis",
@@ -203,7 +203,7 @@
     },
     {"questionsType": "stielFarbe",
       "text": "Ist die Stielfarbe weissgrau?",
-      "image": "hellbraun_flockig.jpg",
+      "image": "stielSchuppig.jpg",
       "answer": "weissgrau"
     },
     {"questionsType": "stielFarbe",
@@ -250,7 +250,7 @@
     {
       "questionsType": "stielOberflaeche",
       "text": "Hat der Pilz einen schuppigen Stiel?",
-      "image": "hellbraun_flockig.jpg",
+      "image": "stielSchuppig.jpg",
       "answer": "schuppig"
     },
     {"questionsType": "stielOberflaeche",
@@ -345,19 +345,19 @@
 
       "questionsType": "stielHohl",
       "text": "Wenn du den Pilz aufschneidest, ist der Stiel hohl?",
-      "image": "",
+      "image": "stiehlHohl.jpg",
       "answer": "ja"
     },
     {"questionsType": "stielHohl",
       "text": "Wenn du den Pilz aufschneidest, ist der Stiel nicht hohl?",
-      "image": "",
+      "image": "fleischWeissNichtHohlKeineVerfaerbung.jpg",
       "answer": "nein"
 
     },
     {
       "questionsType": "fleischFarbe",
       "text": "Wenn du den Pilz aufschneidest, ist das Fleisch weiss?",
-      "image": "",
+      "image": "fleischWeissNichtHohlKeineVerfaerbung.jpg",
       "answer": "weiss"
     },
     {"questionsType": "fleischFarbe",
@@ -404,7 +404,7 @@
     },
     {"questionsType": "fleischVerfaerbung",
       "text": "Beim Anschnitt des Fleisches kommt es zu keiner Farbveränderung?",
-      "image": "",
+      "image": "fleischWeissNichtHohlKeineVerfaerbung.jpg",
       "answer": "nein"
     },
     {
@@ -427,42 +427,42 @@
     },
     {
 
-      "questionsType": "fleischVerfaerbungsFarbe",
+      "questionsType": "fleischVerfaerbungFarbe",
       "text": "Beim Anschnitt des Fleisches verfärbt es sich nicht?",
       "image": "",
       "answer": "nein"
     },
-    {"questionsType": "fleischVerfaerbungsFarbe",
+    {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich rötlich?",
       "image": "",
       "answer": "rötlich"
     },
-    {"questionsType": "fleischVerfaerbungsFarbe",
+    {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich beim Anschnitt blau?",
       "image": "",
       "answer": "blau"
     },
-    {"questionsType": "fleischVerfaerbungsFarbe",
+    {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich beim Anschnitt gelb?",
       "image": "",
       "answer": "gelb"
     },
-    {"questionsType": "fleischVerfaerbungsFarbe",
+    {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich beim Anschnitt orangerot?",
       "image": "",
       "answer": "orangerot"
     },
-    {"questionsType": "fleischVerfaerbungsFarbe",
+    {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich beim Anschnitt safranbraun?",
       "image": "",
       "answer": "safranbraun"
     },
-    {"questionsType": "fleischVerfaerbungsFarbe",
+    {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich beim Anschnitt rot?",
       "image": "",
       "answer": "rot"
     },
-    {"questionsType": "fleischVerfaerbungsFarbe",
+    {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich beim Anschnitt schwärzend?",
       "image": "",
       "answer": "schwärzend"
@@ -477,12 +477,12 @@
     },
     {"questionsType": "hutUnterseiteFarbe",
       "text": "Ist die Poren- oder Lamellenfarbe grau?",
-      "image": "",
+      "image": "porenGrau.jpg",
       "answer": "grau"
     },
     {"questionsType": "hutUnterseiteFarbe",
       "text": "Die Poren- oder Lamellen sind cremefarben?",
-      "image": "",
+      "image": "lamellenCremefarben.jpg",
       "answer": "cremefarben"
     },
     {"questionsType": "hutUnterseiteFarbe",
@@ -532,13 +532,18 @@
     },
     {"questionsType": "hutUnterseiteFarbe",
       "text": "Ist die Poren- oder Lamellenfarbe gelb?",
-      "image": "",
+      "image": "porenGelb.jpg",
       "answer": "gelb"
     },
     {"questionsType": "hutUnterseiteFarbe",
+        "text": "Ist die Poren- oder Lamellenfarbe weiss-schwarz?",
+        "image": "schwarzLamellenTintling.jpg",
+        "answer": "schwarz"
+    },
+    {"questionsType": "hutUnterseiteFarbe",
       "text": "Ist die Poren- oder Lamellenfarbe weiss-schwarz?",
-      "image": "",
-      "answer": "weiss-schwarz"
+      "image": "schwarzLamellenTintling.jpg",
+      "answer": "schwarz-weiss"
     },
     {"questionsType": "hutUnterseiteFarbe",
       "text": "Ist die Poren- oder Lamellenfarbe dunkelbraun?",
@@ -547,7 +552,7 @@
     },
     {"questionsType": "hutUnterseiteFarbe",
       "text": "Ist die Poren- oder Lamellenfarbe weissgrau?",
-      "image": "",
+      "image": "porenGrau.jpg",
       "answer": "weissgrau"
     },
     {"questionsType": "hutUnterseiteFarbe",
@@ -560,101 +565,102 @@
       "image": "",
       "answer": "rosabraun"
     },
+    
+    
+    
+    
+    
+    
     {
       "questionsType": "hutFarbe",
-      "text": "Ist die Farbe des Hutes weiss?",
-      "image": "",
+      "text": "Ist die Farbe des Hutes weiß?",
+      "image": "hutfarbe_weiss.jpg",
       "answer": "weiss"
     },
     {"questionsType": "hutFarbe",
-      "text": "Ist der Hut graubraun?",
-      "image": "",
+      "text": "Ist die Hutfarbe graubraun?",
+      "image": "hutfarbe_graubraun.jpg",
       "answer": "graubraun"
     },
     {"questionsType": "hutFarbe",
       "text": "Die Farbe des Hutes ist gelbbraun?",
-      "image": "",
+      "image": "hutfarbe_gelbbraun.jpg",
       "answer": "gelbbraun"
     },
     {"questionsType": "hutFarbe",
       "text": "Ist der Hut des Pilzes gelb?",
-      "image": "trichter_gelb.jpg",
+      "image": "hutfarbe_gelb.jpg",
       "answer": "gelb"
     },
     {"questionsType": "hutFarbe",
       "text": "Die Farbe des Hutes ist rot?",
-      "image": "rotHutweissStiel.jpg",
+      "image": "hutfarbe_rot.jpg",
       "answer": "rot"
     },
     {"questionsType": "hutFarbe",
-      "text": "Der Hut ist hellbraun?",
-      "image": "steinpilz.jpg",
+      "text": "Die Farbe des Hutes ist hellbraun?",
+      "image": "hutfarbe_hellbraun.jpg",
       "answer": "hellbraun"
     },
     {"questionsType": "hutFarbe",
       "text": "Die Farbe des Hutes ist dunkelbraun?",
-      "image": "samtig_dunkelbraunerHut_poren.jpg",
+      "image": "hutfarbe_dunkelbraun.jpg",
       "answer": "dunkelbraun"
     },
     {"questionsType": "hutFarbe",
       "text": "Ist die Farbe des Hutes orangebraun?",
-      "image": "orangebraunHut.jpg",
+      "image": "hutfarbe_orangebraun.jpg",
       "answer": "orangebraun"
     },
     {"questionsType": "hutFarbe",
       "text": "Ist die Farbe des Hutes orangegelb?",
-      "image": "orangefarben.jpg",
+      "image": "hutfarbe_orangegelb.jpg",
       "answer": "orangegelb"
     },
     {"questionsType": "hutFarbe",
       "text": "Ist die Farbe des Hutes orangefarben?",
-      "image": "orangefarben.jpg",
+      "image": "hutfarbe_orange.jpg",
       "answer": "orangefarben"
     },
     {"questionsType": "hutFarbe",
       "text": "Ist die Farbe des Hutes rotbraun?",
-      "image": "",
+      "image": "hutfarbe_rotbraun.jpg",
       "answer": "rotbraun"
     },
     {"questionsType": "hutFarbe",
       "text": "Ist die Farbe des Hutes braun?",
-      "image": "huellreste_braunerHut.jpg",
+      "image": "hutfarbe_braun.jpg",
       "answer": "braun"
     },
     {"questionsType": "hutFarbe",
-      "text": "Ist die Farbe des Hutes goldgelb?",
-      "image": "",
-      "answer": "goldgelb"
-    },
-    {"questionsType": "hutFarbe",
-      "text": "Ist die Farbe des Hutes graugelb?",
-      "image": "",
+      "text": "Ist die Farbe des Hutes grau-gelb?",
+      "image": "hutfarbe_graugelb.jpg",
       "answer": "graugelb"
     },
     {"questionsType": "hutFarbe",
-      "text": "Ist die Farbe des Hutes gräulich?",
-      "image": "",
-      "answer": "gräulich"
+      "text": "Ist die Farbe des Hutes grau?",
+      "image": "hutfarbe_grau.jpg",
+      "answer": "grau"
     },
     {"questionsType": "hutFarbe",
       "text": "Ist die Farbe des Hutes grün?",
-      "image": "zylindrischGruen.jpg",
-      "answer": "grün"
+      "image": "hutfarbe_gruen.jpg",
+      "answer": "gruen"
     },
     {"questionsType": "hutFarbe",
       "text": "Die Farbe des Hutes ist honiggelb?",
-      "image": "honiggelb.jpg",
+      "image": "hutfarbe_honiggelb.jpg",
       "answer": "honiggelb"
     },
     {"questionsType": "hutFarbe",
-      "text": "Die Farbe des Hutes ist olivgrün?",
-      "image": "",
-      "answer": "olivgrün"
+      "text": "Ist die Hutfarbe olivgrün?",
+      "image": "hutfarbe_olivgruen.jpg",
+      "answer": "olivgruen"
     },
     {"questionsType": "hutFarbe",
-      "text": "Die Farbe des Hutes ist weissgrün?",
-      "image": "",
-      "answer": "weissgrün"
+      "text": "Ist die Farbe des Hutes weiss-grün?",
+      "image": "hutfarbe_weissgruen.jpg",
+      "answer": "weissgruen"
     }
   ]
 }

@@ -437,7 +437,7 @@
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xor-oN-EBX">
                                 <rect key="frame" x="0.0" y="78" width="375" height="375"/>
-                                <color key="backgroundColor" red="0.90955048800000005" green="0.8785554767" blue="0.88660114999999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.8784313725490196" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="BWQ-Ab-yWj">
                                 <rect key="frame" x="20" y="30" width="335" height="33"/>
@@ -461,13 +461,21 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMW-IR-GDq">
+                                <rect key="frame" x="161.5" y="320.5" width="52.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XR7-PO-xd7" firstAttribute="trailing" secondItem="BWQ-Ab-yWj" secondAttribute="trailing" constant="20" id="3F0-bK-tcY"/>
                             <constraint firstItem="xor-oN-EBX" firstAttribute="leading" secondItem="XR7-PO-xd7" secondAttribute="leading" id="64g-st-MzB"/>
+                            <constraint firstItem="gMW-IR-GDq" firstAttribute="centerY" secondItem="tEz-xu-JS1" secondAttribute="centerY" id="9Qo-yi-yhi"/>
                             <constraint firstItem="XR7-PO-xd7" firstAttribute="bottom" secondItem="L7S-ZA-3lS" secondAttribute="bottom" constant="30" id="A65-Ay-uP1"/>
                             <constraint firstItem="BWQ-Ab-yWj" firstAttribute="top" secondItem="XR7-PO-xd7" secondAttribute="top" constant="10" id="GNW-Ga-bvO"/>
+                            <constraint firstItem="gMW-IR-GDq" firstAttribute="centerX" secondItem="tEz-xu-JS1" secondAttribute="centerX" id="Id6-fN-YtN"/>
                             <constraint firstItem="L7S-ZA-3lS" firstAttribute="top" secondItem="Wmd-yH-gmy" secondAttribute="bottom" constant="5" id="L8G-Bm-SUo"/>
                             <constraint firstItem="XR7-PO-xd7" firstAttribute="trailing" secondItem="L7S-ZA-3lS" secondAttribute="trailing" constant="20" id="Yhu-Kw-A1g"/>
                             <constraint firstItem="BWQ-Ab-yWj" firstAttribute="leading" secondItem="XR7-PO-xd7" secondAttribute="leading" constant="20" id="a8a-tN-5Gz"/>
@@ -484,6 +492,7 @@
                     <connections>
                         <outlet property="questionImage" destination="xor-oN-EBX" id="jhC-fZ-XlK"/>
                         <outlet property="questionLabel" destination="ZPp-K4-Xfk" id="iKs-2s-nC4"/>
+                        <outlet property="resultLabel" destination="gMW-IR-GDq" id="owu-X2-kAL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mi0-BX-3wW" userLabel="First Responder" sceneMemberID="firstResponder"/>

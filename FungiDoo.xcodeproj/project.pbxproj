@@ -15,6 +15,24 @@
 		D03468012150FA2500197129 /* UserItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03467FF2150FA2500197129 /* UserItemTableViewCell.swift */; };
 		D03468022150FA2500197129 /* UserItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03468002150FA2500197129 /* UserItemTableViewCell.xib */; };
 		D034680421510F6900197129 /* UserListAddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D034680321510F6900197129 /* UserListAddItemVC.swift */; };
+		D041F87D21788E4200BAFFDD /* hutfarbe_gelbbraun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F86B21788E4100BAFFDD /* hutfarbe_gelbbraun.jpg */; };
+		D041F87E21788E4200BAFFDD /* hutfarbe_olivgruen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F86C21788E4100BAFFDD /* hutfarbe_olivgruen.jpg */; };
+		D041F87F21788E4200BAFFDD /* hutfarbe_graubraun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F86D21788E4100BAFFDD /* hutfarbe_graubraun.jpg */; };
+		D041F88021788E4200BAFFDD /* hutfarbe_honiggelb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F86E21788E4100BAFFDD /* hutfarbe_honiggelb.jpg */; };
+		D041F88121788E4200BAFFDD /* hutfarbe_weiss.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F86F21788E4100BAFFDD /* hutfarbe_weiss.jpg */; };
+		D041F88221788E4200BAFFDD /* hutfarbe_gruen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87021788E4100BAFFDD /* hutfarbe_gruen.jpg */; };
+		D041F88321788E4200BAFFDD /* hutfarbe_dunkelbraun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87121788E4100BAFFDD /* hutfarbe_dunkelbraun.jpg */; };
+		D041F88421788E4200BAFFDD /* hutfarbe_rot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87221788E4100BAFFDD /* hutfarbe_rot.jpg */; };
+		D041F88521788E4200BAFFDD /* hutfarbe_orange.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87321788E4100BAFFDD /* hutfarbe_orange.jpg */; };
+		D041F88621788E4200BAFFDD /* hutfarbe_rotbraun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87421788E4100BAFFDD /* hutfarbe_rotbraun.jpg */; };
+		D041F88721788E4200BAFFDD /* hutfarbe_gelb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87521788E4100BAFFDD /* hutfarbe_gelb.jpg */; };
+		D041F88821788E4200BAFFDD /* hutfarbe_graugelb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87621788E4100BAFFDD /* hutfarbe_graugelb.jpg */; };
+		D041F88921788E4200BAFFDD /* hutfarbe_hellbraun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87721788E4100BAFFDD /* hutfarbe_hellbraun.jpg */; };
+		D041F88A21788E4200BAFFDD /* hutfarbe_grau.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87821788E4100BAFFDD /* hutfarbe_grau.jpg */; };
+		D041F88B21788E4200BAFFDD /* hutfarbe_orangegelb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87921788E4100BAFFDD /* hutfarbe_orangegelb.jpg */; };
+		D041F88C21788E4200BAFFDD /* hutfarbe_weissgruen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87A21788E4100BAFFDD /* hutfarbe_weissgruen.jpg */; };
+		D041F88D21788E4200BAFFDD /* hutfarbe_orangebraun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87B21788E4100BAFFDD /* hutfarbe_orangebraun.jpg */; };
+		D041F88E21788E4200BAFFDD /* hutfarbe_braun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D041F87C21788E4100BAFFDD /* hutfarbe_braun.jpg */; };
 		D049C7802153FA6A001167EF /* UserListDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049C77F2153FA6A001167EF /* UserListDetailVC.swift */; };
 		D05000BD2174BA840024FB83 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D05000BC2174BA840024FB83 /* questions.json */; };
 		D05DBEC1216E3340001C4837 /* BestimmungsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05DBEC0216E3340001C4837 /* BestimmungsVC.swift */; };
@@ -24,24 +42,42 @@
 		D0675227214F9CF80086B007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0675226214F9CF80086B007 /* Assets.xcassets */; };
 		D067522A214F9CF80086B007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0675228214F9CF80086B007 /* LaunchScreen.storyboard */; };
 		D0675233214F9DF10086B007 /* pilzeList.json in Resources */ = {isa = PBXBuildFile; fileRef = D0675232214F9DF10086B007 /* pilzeList.json */; };
+		D075483A21774336003C6E71 /* schwarzLamellenTintling.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075483921774336003C6E71 /* schwarzLamellenTintling.jpg */; };
+		D075483D21774437003C6E71 /* schopftintling.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075483C21774437003C6E71 /* schopftintling.jpg */; };
+		D075483F217744B8003C6E71 /* faserschuppig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075483E217744B8003C6E71 /* faserschuppig.jpg */; };
+		D07548412177453F003C6E71 /* lamellenCremefarben.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D07548402177453F003C6E71 /* lamellenCremefarben.jpg */; };
+		D0754843217746BF003C6E71 /* klebrig_schmierig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0754842217746BF003C6E71 /* klebrig_schmierig.jpg */; };
+		D07548452177475E003C6E71 /* huellresteHut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D07548442177475E003C6E71 /* huellresteHut.jpg */; };
+		D0754847217748C9003C6E71 /* stielSchuppig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0754846217748C9003C6E71 /* stielSchuppig.jpg */; };
+		D0754849217749AF003C6E71 /* porenGelb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0754848217749AE003C6E71 /* porenGelb.jpg */; };
+		D075484B21774A8F003C6E71 /* porenGrau.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075484A21774A8F003C6E71 /* porenGrau.jpg */; };
+		D075484D21774CDC003C6E71 /* stiehlHohl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075484C21774CDC003C6E71 /* stiehlHohl.jpg */; };
+		D075484F21774DAE003C6E71 /* fleischWeissNichtHohlKeineVerfaerbung.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075484E21774DAE003C6E71 /* fleischWeissNichtHohlKeineVerfaerbung.jpg */; };
+		D0754851217758A7003C6E71 /* keulenfoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0754850217758A6003C6E71 /* keulenfoermig.jpg */; };
+		D075485321775EB2003C6E71 /* Daten.csv in Resources */ = {isa = PBXBuildFile; fileRef = D075485221775EB1003C6E71 /* Daten.csv */; };
+		D075487D21778B62003C6E71 /* eifoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075487521778B54003C6E71 /* eifoermig.jpg */; };
+		D075487E21778B62003C6E71 /* schuesselfoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075487621778B55003C6E71 /* schuesselfoermig.jpg */; };
+		D075487F21778B62003C6E71 /* kegelfoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075487721778B57003C6E71 /* kegelfoermig.jpg */; };
+		D075488021778B62003C6E71 /* trichterfoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075487821778B58003C6E71 /* trichterfoermig.jpg */; };
+		D075488121778B62003C6E71 /* gewoelbt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075487921778B5A003C6E71 /* gewoelbt.jpg */; };
+		D075488221778B62003C6E71 /* halbkugelig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075487A21778B5C003C6E71 /* halbkugelig.jpg */; };
+		D075488321778B62003C6E71 /* kugelig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075487B21778B5E003C6E71 /* kugelig.jpg */; };
+		D075488421778B62003C6E71 /* gebuckelt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075487C21778B60003C6E71 /* gebuckelt.jpg */; };
 		D080013521724CC00039E6B5 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D080013421724CC00039E6B5 /* Question.swift */; };
-		D08F19F92176519200CF22AD /* Daten.csv in Resources */ = {isa = PBXBuildFile; fileRef = D08F19F82176519200CF22AD /* Daten.csv */; };
 		D08F19FB2176625F00CF22AD /* huellreste_braunerHut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F19FA2176625F00CF22AD /* huellreste_braunerHut.jpg */; };
 		D08F19FE217664B600CF22AD /* samtig_dunkelbraunerHut_poren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F19FD217664B500CF22AD /* samtig_dunkelbraunerHut_poren.jpg */; };
 		D08F1A002176661000CF22AD /* trichter_gelb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F19FF2176660F00CF22AD /* trichter_gelb.jpg */; };
-		D08F1A032176680900CF22AD /* eifoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A022176680900CF22AD /* eifoermig.jpg */; };
 		D08F1A05217668F400CF22AD /* schuppig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A04217668F400CF22AD /* schuppig.jpg */; };
 		D08F1A0A21768A3500CF22AD /* honiggelb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A0921768A3400CF22AD /* honiggelb.jpg */; };
 		D08F1A0C21768B5600CF22AD /* bauchig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A0B21768B5600CF22AD /* bauchig.jpg */; };
 		D08F1A0E21768ECB00CF22AD /* hellbraun_flockig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A0D21768ECB00CF22AD /* hellbraun_flockig.jpg */; };
 		D08F1A11217691AA00CF22AD /* orangebraunHut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A10217691A900CF22AD /* orangebraunHut.jpg */; };
 		D08F1A13217692AA00CF22AD /* zylindrischGruen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A12217692A900CF22AD /* zylindrischGruen.jpg */; };
-		D08F1A152176944E00CF22AD /* faserschuppig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A142176944E00CF22AD /* faserschuppig.jpg */; };
+		D08F1A152176944E00CF22AD /* faserschuppig1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A142176944E00CF22AD /* faserschuppig1.jpg */; };
 		D08F1A172176971700CF22AD /* orangefarben.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A162176971700CF22AD /* orangefarben.jpg */; };
 		D08F1A19217697B800CF22AD /* rotHutweissStiel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A18217697B800CF22AD /* rotHutweissStiel.jpg */; };
 		D08F1A1B217698C000CF22AD /* knolle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A1A217698C000CF22AD /* knolle.jpg */; };
 		D08F1A1D2176999800CF22AD /* gebuckeltRing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A1C2176999800CF22AD /* gebuckeltRing.jpg */; };
-		D08F1A1F21769ACA00CF22AD /* Schopftintling_Wiese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A1E21769ACA00CF22AD /* Schopftintling_Wiese.jpg */; };
 		D08F1A2121769CDE00CF22AD /* steinpilz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D08F1A2021769CDE00CF22AD /* steinpilz.jpg */; };
 		D097841621527F7A00CD3374 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D097841521527F7A00CD3374 /* CameraVC.swift */; };
 		D09A3CD32173A2C50089456E /* buschig-stehend.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D09A3CD22173A2C50089456E /* buschig-stehend.jpg */; };
@@ -66,6 +102,24 @@
 		D03467FF2150FA2500197129 /* UserItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItemTableViewCell.swift; sourceTree = "<group>"; };
 		D03468002150FA2500197129 /* UserItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserItemTableViewCell.xib; sourceTree = "<group>"; };
 		D034680321510F6900197129 /* UserListAddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAddItemVC.swift; sourceTree = "<group>"; };
+		D041F86B21788E4100BAFFDD /* hutfarbe_gelbbraun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_gelbbraun.jpg; sourceTree = "<group>"; };
+		D041F86C21788E4100BAFFDD /* hutfarbe_olivgruen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_olivgruen.jpg; sourceTree = "<group>"; };
+		D041F86D21788E4100BAFFDD /* hutfarbe_graubraun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_graubraun.jpg; sourceTree = "<group>"; };
+		D041F86E21788E4100BAFFDD /* hutfarbe_honiggelb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_honiggelb.jpg; sourceTree = "<group>"; };
+		D041F86F21788E4100BAFFDD /* hutfarbe_weiss.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_weiss.jpg; sourceTree = "<group>"; };
+		D041F87021788E4100BAFFDD /* hutfarbe_gruen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_gruen.jpg; sourceTree = "<group>"; };
+		D041F87121788E4100BAFFDD /* hutfarbe_dunkelbraun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_dunkelbraun.jpg; sourceTree = "<group>"; };
+		D041F87221788E4100BAFFDD /* hutfarbe_rot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_rot.jpg; sourceTree = "<group>"; };
+		D041F87321788E4100BAFFDD /* hutfarbe_orange.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_orange.jpg; sourceTree = "<group>"; };
+		D041F87421788E4100BAFFDD /* hutfarbe_rotbraun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_rotbraun.jpg; sourceTree = "<group>"; };
+		D041F87521788E4100BAFFDD /* hutfarbe_gelb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_gelb.jpg; sourceTree = "<group>"; };
+		D041F87621788E4100BAFFDD /* hutfarbe_graugelb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_graugelb.jpg; sourceTree = "<group>"; };
+		D041F87721788E4100BAFFDD /* hutfarbe_hellbraun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_hellbraun.jpg; sourceTree = "<group>"; };
+		D041F87821788E4100BAFFDD /* hutfarbe_grau.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_grau.jpg; sourceTree = "<group>"; };
+		D041F87921788E4100BAFFDD /* hutfarbe_orangegelb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_orangegelb.jpg; sourceTree = "<group>"; };
+		D041F87A21788E4100BAFFDD /* hutfarbe_weissgruen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_weissgruen.jpg; sourceTree = "<group>"; };
+		D041F87B21788E4100BAFFDD /* hutfarbe_orangebraun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_orangebraun.jpg; sourceTree = "<group>"; };
+		D041F87C21788E4100BAFFDD /* hutfarbe_braun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe_braun.jpg; sourceTree = "<group>"; };
 		D049C77F2153FA6A001167EF /* UserListDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDetailVC.swift; sourceTree = "<group>"; };
 		D05000BC2174BA840024FB83 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		D05DBEC0216E3340001C4837 /* BestimmungsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestimmungsVC.swift; sourceTree = "<group>"; };
@@ -77,15 +131,33 @@
 		D0675229214F9CF80086B007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D067522B214F9CF80086B007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0675232214F9DF10086B007 /* pilzeList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pilzeList.json; sourceTree = "<group>"; };
+		D075483921774336003C6E71 /* schwarzLamellenTintling.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schwarzLamellenTintling.jpg; sourceTree = "<group>"; };
+		D075483C21774437003C6E71 /* schopftintling.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schopftintling.jpg; sourceTree = "<group>"; };
+		D075483E217744B8003C6E71 /* faserschuppig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = faserschuppig.jpg; sourceTree = "<group>"; };
+		D07548402177453F003C6E71 /* lamellenCremefarben.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lamellenCremefarben.jpg; sourceTree = "<group>"; };
+		D0754842217746BF003C6E71 /* klebrig_schmierig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = klebrig_schmierig.jpg; sourceTree = "<group>"; };
+		D07548442177475E003C6E71 /* huellresteHut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huellresteHut.jpg; sourceTree = "<group>"; };
+		D0754846217748C9003C6E71 /* stielSchuppig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielSchuppig.jpg; sourceTree = "<group>"; };
+		D0754848217749AE003C6E71 /* porenGelb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = porenGelb.jpg; sourceTree = "<group>"; };
+		D075484A21774A8F003C6E71 /* porenGrau.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = porenGrau.jpg; sourceTree = "<group>"; };
+		D075484C21774CDC003C6E71 /* stiehlHohl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiehlHohl.jpg; sourceTree = "<group>"; };
+		D075484E21774DAE003C6E71 /* fleischWeissNichtHohlKeineVerfaerbung.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fleischWeissNichtHohlKeineVerfaerbung.jpg; sourceTree = "<group>"; };
+		D0754850217758A6003C6E71 /* keulenfoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = keulenfoermig.jpg; sourceTree = "<group>"; };
+		D075485221775EB1003C6E71 /* Daten.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Daten.csv; sourceTree = "<group>"; };
+		D075487521778B54003C6E71 /* eifoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eifoermig.jpg; sourceTree = "<group>"; };
+		D075487621778B55003C6E71 /* schuesselfoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schuesselfoermig.jpg; sourceTree = "<group>"; };
+		D075487721778B57003C6E71 /* kegelfoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kegelfoermig.jpg; sourceTree = "<group>"; };
+		D075487821778B58003C6E71 /* trichterfoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trichterfoermig.jpg; sourceTree = "<group>"; };
+		D075487921778B5A003C6E71 /* gewoelbt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gewoelbt.jpg; sourceTree = "<group>"; };
+		D075487A21778B5C003C6E71 /* halbkugelig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halbkugelig.jpg; sourceTree = "<group>"; };
+		D075487B21778B5E003C6E71 /* kugelig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kugelig.jpg; sourceTree = "<group>"; };
+		D075487C21778B60003C6E71 /* gebuckelt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gebuckelt.jpg; sourceTree = "<group>"; };
 		D080013421724CC00039E6B5 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		D08F19F82176519200CF22AD /* Daten.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Daten.csv; sourceTree = "<group>"; };
 		D08F19FA2176625F00CF22AD /* huellreste_braunerHut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huellreste_braunerHut.jpg; sourceTree = "<group>"; };
 		D08F19FD217664B500CF22AD /* samtig_dunkelbraunerHut_poren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = samtig_dunkelbraunerHut_poren.jpg; sourceTree = "<group>"; };
 		D08F19FF2176660F00CF22AD /* trichter_gelb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trichter_gelb.jpg; sourceTree = "<group>"; };
-		D08F1A022176680900CF22AD /* eifoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eifoermig.jpg; sourceTree = "<group>"; };
 		D08F1A04217668F400CF22AD /* schuppig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schuppig.jpg; sourceTree = "<group>"; };
 		D08F1A06217686DB00CF22AD /* volva.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = volva.jpg; sourceTree = "<group>"; };
-		D08F1A072176882100CF22AD /* halbkugelig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halbkugelig.jpg; sourceTree = "<group>"; };
 		D08F1A082176896100CF22AD /* lamellen_rosa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lamellen_rosa.jpg; sourceTree = "<group>"; };
 		D08F1A0921768A3400CF22AD /* honiggelb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = honiggelb.jpg; sourceTree = "<group>"; };
 		D08F1A0B21768B5600CF22AD /* bauchig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bauchig.jpg; sourceTree = "<group>"; };
@@ -93,12 +165,11 @@
 		D08F1A0F2176909C00CF22AD /* rotPoren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rotPoren.jpg; sourceTree = "<group>"; };
 		D08F1A10217691A900CF22AD /* orangebraunHut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = orangebraunHut.jpg; sourceTree = "<group>"; };
 		D08F1A12217692A900CF22AD /* zylindrischGruen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zylindrischGruen.jpg; sourceTree = "<group>"; };
-		D08F1A142176944E00CF22AD /* faserschuppig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = faserschuppig.jpg; sourceTree = "<group>"; };
+		D08F1A142176944E00CF22AD /* faserschuppig1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = faserschuppig1.jpg; sourceTree = "<group>"; };
 		D08F1A162176971700CF22AD /* orangefarben.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = orangefarben.jpg; sourceTree = "<group>"; };
 		D08F1A18217697B800CF22AD /* rotHutweissStiel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rotHutweissStiel.jpg; sourceTree = "<group>"; };
 		D08F1A1A217698C000CF22AD /* knolle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = knolle.jpg; sourceTree = "<group>"; };
 		D08F1A1C2176999800CF22AD /* gebuckeltRing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gebuckeltRing.jpg; sourceTree = "<group>"; };
-		D08F1A1E21769ACA00CF22AD /* Schopftintling_Wiese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Schopftintling_Wiese.jpg; sourceTree = "<group>"; };
 		D08F1A2021769CDE00CF22AD /* steinpilz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = steinpilz.jpg; sourceTree = "<group>"; };
 		D097841521527F7A00CD3374 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		D09A3CD22173A2C50089456E /* buschig-stehend.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "buschig-stehend.jpg"; sourceTree = "<group>"; };
@@ -151,6 +222,31 @@
 				D0EA3884214FE694002E462C /* GlossarListTableViewCell.xib */,
 			);
 			path = GlossarViews;
+			sourceTree = "<group>";
+		};
+		D041F86A21788E4100BAFFDD /* hutfarben */ = {
+			isa = PBXGroup;
+			children = (
+				D041F86B21788E4100BAFFDD /* hutfarbe_gelbbraun.jpg */,
+				D041F86C21788E4100BAFFDD /* hutfarbe_olivgruen.jpg */,
+				D041F86D21788E4100BAFFDD /* hutfarbe_graubraun.jpg */,
+				D041F86E21788E4100BAFFDD /* hutfarbe_honiggelb.jpg */,
+				D041F86F21788E4100BAFFDD /* hutfarbe_weiss.jpg */,
+				D041F87021788E4100BAFFDD /* hutfarbe_gruen.jpg */,
+				D041F87121788E4100BAFFDD /* hutfarbe_dunkelbraun.jpg */,
+				D041F87221788E4100BAFFDD /* hutfarbe_rot.jpg */,
+				D041F87321788E4100BAFFDD /* hutfarbe_orange.jpg */,
+				D041F87421788E4100BAFFDD /* hutfarbe_rotbraun.jpg */,
+				D041F87521788E4100BAFFDD /* hutfarbe_gelb.jpg */,
+				D041F87621788E4100BAFFDD /* hutfarbe_graugelb.jpg */,
+				D041F87721788E4100BAFFDD /* hutfarbe_hellbraun.jpg */,
+				D041F87821788E4100BAFFDD /* hutfarbe_grau.jpg */,
+				D041F87921788E4100BAFFDD /* hutfarbe_orangegelb.jpg */,
+				D041F87A21788E4100BAFFDD /* hutfarbe_weissgruen.jpg */,
+				D041F87B21788E4100BAFFDD /* hutfarbe_orangebraun.jpg */,
+				D041F87C21788E4100BAFFDD /* hutfarbe_braun.jpg */,
+			);
+			path = hutfarben;
 			sourceTree = "<group>";
 		};
 		D0675210214F9CF60086B007 = {
@@ -217,6 +313,29 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		D075483B2177439B003C6E71 /* imagesGlossar */ = {
+			isa = PBXGroup;
+			children = (
+				D075483C21774437003C6E71 /* schopftintling.jpg */,
+			);
+			path = imagesGlossar;
+			sourceTree = "<group>";
+		};
+		D075485421778685003C6E71 /* hutformen */ = {
+			isa = PBXGroup;
+			children = (
+				D075487521778B54003C6E71 /* eifoermig.jpg */,
+				D075487C21778B60003C6E71 /* gebuckelt.jpg */,
+				D075487921778B5A003C6E71 /* gewoelbt.jpg */,
+				D075487A21778B5C003C6E71 /* halbkugelig.jpg */,
+				D075487721778B57003C6E71 /* kegelfoermig.jpg */,
+				D075487B21778B5E003C6E71 /* kugelig.jpg */,
+				D075487621778B55003C6E71 /* schuesselfoermig.jpg */,
+				D075487821778B58003C6E71 /* trichterfoermig.jpg */,
+			);
+			path = hutformen;
+			sourceTree = "<group>";
+		};
 		D097841721527FAC00CD3374 /* UserListVCs */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,20 +361,33 @@
 		D09A3CD02173A0A50089456E /* data */ = {
 			isa = PBXGroup;
 			children = (
-				D08F19F82176519200CF22AD /* Daten.csv */,
+				D075485221775EB1003C6E71 /* Daten.csv */,
+				D075483B2177439B003C6E71 /* imagesGlossar */,
 				D05000BC2174BA840024FB83 /* questions.json */,
-				D09A3CD12173A0F70089456E /* images */,
+				D09A3CD12173A0F70089456E /* imagesFragen */,
 			);
 			path = data;
 			sourceTree = "<group>";
 		};
-		D09A3CD12173A0F70089456E /* images */ = {
+		D09A3CD12173A0F70089456E /* imagesFragen */ = {
 			isa = PBXGroup;
 			children = (
+				D041F86A21788E4100BAFFDD /* hutfarben */,
+				D075485421778685003C6E71 /* hutformen */,
+				D0754850217758A6003C6E71 /* keulenfoermig.jpg */,
+				D075484E21774DAE003C6E71 /* fleischWeissNichtHohlKeineVerfaerbung.jpg */,
+				D075484C21774CDC003C6E71 /* stiehlHohl.jpg */,
+				D075484A21774A8F003C6E71 /* porenGrau.jpg */,
+				D0754848217749AE003C6E71 /* porenGelb.jpg */,
+				D0754846217748C9003C6E71 /* stielSchuppig.jpg */,
+				D07548442177475E003C6E71 /* huellresteHut.jpg */,
+				D0754842217746BF003C6E71 /* klebrig_schmierig.jpg */,
+				D07548402177453F003C6E71 /* lamellenCremefarben.jpg */,
+				D075483E217744B8003C6E71 /* faserschuppig.jpg */,
 				D08F1A162176971700CF22AD /* orangefarben.jpg */,
 				D08F1A18217697B800CF22AD /* rotHutweissStiel.jpg */,
-				D08F1A142176944E00CF22AD /* faserschuppig.jpg */,
-				D08F1A1E21769ACA00CF22AD /* Schopftintling_Wiese.jpg */,
+				D08F1A142176944E00CF22AD /* faserschuppig1.jpg */,
+				D075483921774336003C6E71 /* schwarzLamellenTintling.jpg */,
 				D08F1A1C2176999800CF22AD /* gebuckeltRing.jpg */,
 				D08F1A2021769CDE00CF22AD /* steinpilz.jpg */,
 				D08F1A1A217698C000CF22AD /* knolle.jpg */,
@@ -266,17 +398,15 @@
 				D08F1A0B21768B5600CF22AD /* bauchig.jpg */,
 				D08F1A0921768A3400CF22AD /* honiggelb.jpg */,
 				D08F1A082176896100CF22AD /* lamellen_rosa.jpg */,
-				D08F1A072176882100CF22AD /* halbkugelig.jpg */,
 				D08F1A06217686DB00CF22AD /* volva.jpg */,
 				D08F1A04217668F400CF22AD /* schuppig.jpg */,
-				D08F1A022176680900CF22AD /* eifoermig.jpg */,
 				D08F19FF2176660F00CF22AD /* trichter_gelb.jpg */,
 				D08F19FD217664B500CF22AD /* samtig_dunkelbraunerHut_poren.jpg */,
 				D08F19FA2176625F00CF22AD /* huellreste_braunerHut.jpg */,
 				D09A3CD42173A4160089456E /* einzelnd-stehend.jpg */,
 				D09A3CD22173A2C50089456E /* buschig-stehend.jpg */,
 			);
-			path = images;
+			path = imagesFragen;
 			sourceTree = "<group>";
 		};
 		D0EA387B214FDF36002E462C /* Model */ = {
@@ -368,33 +498,69 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D075483F217744B8003C6E71 /* faserschuppig.jpg in Resources */,
 				D08F19FB2176625F00CF22AD /* huellreste_braunerHut.jpg in Resources */,
+				D075484D21774CDC003C6E71 /* stiehlHohl.jpg in Resources */,
 				D08F1A0E21768ECB00CF22AD /* hellbraun_flockig.jpg in Resources */,
 				D067522A214F9CF80086B007 /* LaunchScreen.storyboard in Resources */,
 				D08F1A13217692AA00CF22AD /* zylindrischGruen.jpg in Resources */,
+				D075488121778B62003C6E71 /* gewoelbt.jpg in Resources */,
+				D041F88C21788E4200BAFFDD /* hutfarbe_weissgruen.jpg in Resources */,
+				D041F88621788E4200BAFFDD /* hutfarbe_rotbraun.jpg in Resources */,
 				D08F1A05217668F400CF22AD /* schuppig.jpg in Resources */,
+				D07548412177453F003C6E71 /* lamellenCremefarben.jpg in Resources */,
+				D075487F21778B62003C6E71 /* kegelfoermig.jpg in Resources */,
+				D041F88421788E4200BAFFDD /* hutfarbe_rot.jpg in Resources */,
+				D041F88A21788E4200BAFFDD /* hutfarbe_grau.jpg in Resources */,
+				D075488021778B62003C6E71 /* trichterfoermig.jpg in Resources */,
+				D075484B21774A8F003C6E71 /* porenGrau.jpg in Resources */,
 				D08F1A002176661000CF22AD /* trichter_gelb.jpg in Resources */,
 				D09A3CD52173A4160089456E /* einzelnd-stehend.jpg in Resources */,
 				D09A3CD32173A2C50089456E /* buschig-stehend.jpg in Resources */,
-				D08F19F92176519200CF22AD /* Daten.csv in Resources */,
-				D08F1A152176944E00CF22AD /* faserschuppig.jpg in Resources */,
+				D08F1A152176944E00CF22AD /* faserschuppig1.jpg in Resources */,
+				D075487E21778B62003C6E71 /* schuesselfoermig.jpg in Resources */,
 				D08F1A11217691AA00CF22AD /* orangebraunHut.jpg in Resources */,
+				D075483A21774336003C6E71 /* schwarzLamellenTintling.jpg in Resources */,
+				D041F88021788E4200BAFFDD /* hutfarbe_honiggelb.jpg in Resources */,
 				D08F1A19217697B800CF22AD /* rotHutweissStiel.jpg in Resources */,
+				D041F88D21788E4200BAFFDD /* hutfarbe_orangebraun.jpg in Resources */,
 				D03468022150FA2500197129 /* UserItemTableViewCell.xib in Resources */,
 				D08F19FE217664B600CF22AD /* samtig_dunkelbraunerHut_poren.jpg in Resources */,
+				D07548452177475E003C6E71 /* huellresteHut.jpg in Resources */,
+				D041F88121788E4200BAFFDD /* hutfarbe_weiss.jpg in Resources */,
 				D08F1A1D2176999800CF22AD /* gebuckeltRing.jpg in Resources */,
 				D08F1A1B217698C000CF22AD /* knolle.jpg in Resources */,
+				D075487D21778B62003C6E71 /* eifoermig.jpg in Resources */,
 				D0675227214F9CF80086B007 /* Assets.xcassets in Resources */,
+				D041F88821788E4200BAFFDD /* hutfarbe_graugelb.jpg in Resources */,
+				D075488221778B62003C6E71 /* halbkugelig.jpg in Resources */,
+				D041F87F21788E4200BAFFDD /* hutfarbe_graubraun.jpg in Resources */,
 				D05000BD2174BA840024FB83 /* questions.json in Resources */,
+				D041F88721788E4200BAFFDD /* hutfarbe_gelb.jpg in Resources */,
+				D075485321775EB2003C6E71 /* Daten.csv in Resources */,
 				D08F1A0A21768A3500CF22AD /* honiggelb.jpg in Resources */,
+				D041F88221788E4200BAFFDD /* hutfarbe_gruen.jpg in Resources */,
+				D041F88B21788E4200BAFFDD /* hutfarbe_orangegelb.jpg in Resources */,
 				D0675233214F9DF10086B007 /* pilzeList.json in Resources */,
+				D041F88921788E4200BAFFDD /* hutfarbe_hellbraun.jpg in Resources */,
+				D075483D21774437003C6E71 /* schopftintling.jpg in Resources */,
 				D08F1A172176971700CF22AD /* orangefarben.jpg in Resources */,
 				D08F1A2121769CDE00CF22AD /* steinpilz.jpg in Resources */,
-				D08F1A032176680900CF22AD /* eifoermig.jpg in Resources */,
+				D041F88521788E4200BAFFDD /* hutfarbe_orange.jpg in Resources */,
+				D0754851217758A7003C6E71 /* keulenfoermig.jpg in Resources */,
 				D08F1A0C21768B5600CF22AD /* bauchig.jpg in Resources */,
-				D08F1A1F21769ACA00CF22AD /* Schopftintling_Wiese.jpg in Resources */,
+				D0754847217748C9003C6E71 /* stielSchuppig.jpg in Resources */,
+				D075488321778B62003C6E71 /* kugelig.jpg in Resources */,
 				D0675222214F9CF60086B007 /* Main.storyboard in Resources */,
+				D0754843217746BF003C6E71 /* klebrig_schmierig.jpg in Resources */,
+				D041F87D21788E4200BAFFDD /* hutfarbe_gelbbraun.jpg in Resources */,
+				D041F88321788E4200BAFFDD /* hutfarbe_dunkelbraun.jpg in Resources */,
+				D041F87E21788E4200BAFFDD /* hutfarbe_olivgruen.jpg in Resources */,
+				D075488421778B62003C6E71 /* gebuckelt.jpg in Resources */,
 				D0EA3886214FE694002E462C /* GlossarListTableViewCell.xib in Resources */,
+				D0754849217749AF003C6E71 /* porenGelb.jpg in Resources */,
+				D075484F21774DAE003C6E71 /* fleischWeissNichtHohlKeineVerfaerbung.jpg in Resources */,
+				D041F88E21788E4200BAFFDD /* hutfarbe_braun.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

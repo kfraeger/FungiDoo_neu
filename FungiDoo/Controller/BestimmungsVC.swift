@@ -32,6 +32,7 @@ class BestimmungsVC: UIViewController {
     
     var entropyClasses : Float = 0 //needed for calculation of information gain
     var bestInfoGainProperty = [String : Any]()
+    var propertyNoCalculation = ["klasse"]
     
     //parsed CSV data from file
     let csvFilePilze = "Daten"
@@ -43,6 +44,8 @@ class BestimmungsVC: UIViewController {
     let jsonFile = "questions"
     var questions : Questions?
     var pickedAnswer : Bool = false
+    var resultPicked = false
+    var resultText = ""
     
     
     //MARK: - IBOutlets
@@ -50,7 +53,8 @@ class BestimmungsVC: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionImage: UIImageView!
-    @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var resultLabel: UILabel!
+    
     
     
     
@@ -64,17 +68,11 @@ class BestimmungsVC: UIViewController {
         readDataFromCSVFile(file: csvFilePilze)
         readJSONData(from: jsonFile)
         loadItems()
-        //print(dataArray)
-        //countedClasses = getTotalOfClasses()
-        ablauf()
-        print("------- vorher kalkulatinstuff \n")
+        identificationMethods()
+        //identificationMethodsStart()
+        print("------- vorher kalkulationstuff ---------------------------------\n")
         print(propertyNameArray)
-        getFirstQuestion(for: propertyCalculatet)
-        //getRowValues(for: "age")
-        //getRowValues(for: "klasse")
-        //calcEntropy(property: countedPropertyValue, propertyProClass: countedPropertyValuePerClass)
-        
-        
+        getQuestion(for: propertyCalculatet)
     }
     
     
@@ -84,6 +82,9 @@ class BestimmungsVC: UIViewController {
     }
     
     @IBAction func answerPressed(_ sender: UIButton) {
+        var check = ""
+        var count = 0
+        
         if sender.tag == 1 {
             pickedAnswer = true
             saveAnswersWithProperty(from: pickedAnswer)
@@ -91,14 +92,41 @@ class BestimmungsVC: UIViewController {
             pickedAnswer = false
             saveAnswersWithProperty(from: pickedAnswer)
         }
+        
+        for item in dataArray {
+            if item.klasse != nil{
+                let klasse = item.klasse
+                if klasse != check {
+                    print("klasse : \(String(describing: klasse)) ....... check \(check)" )
+                    
+                    check = klasse!
+                    count += 1
+                    print("count \(count)")
+                }
+            }
+            
+        }
+        
+        if count < 2 {
+           
+                print(resultPicked)
+                resultPicked = true
+                questionLabel.text = check
+            questionImage.isHidden = true
+           
+        } else {
+            nextQuestion()
+            getQuestion(for: propertyCalculatet)
+        }
+        
     }
     
     
     //MARK: - methods for the question
     /***************************************************************/
     
-    func getFirstQuestion(for type : String){
-        
+    func getQuestion(for type : String){
+       
         let property = type
         var resultQuestions = [Question]()
         
@@ -107,22 +135,35 @@ class BestimmungsVC: UIViewController {
         if let allquestion = questions?.questions {
             for item in allquestion {
                 if item.questionType.rawValue == property {
-                    print(item)
-                    print(item.questionText)
+//                    print(item)
+//                    print(item.questionText)
                     resultQuestions.append(item)
                 }
             }
         }
+        
+        print("--------------resultQuestions-------------------------")
         print(resultQuestions)
         
-        let randomQuestionIndex = getRandomIndexOfQuestion(from: resultQuestions)
         
-        //gets an random question of the result of the questions and shows text and image
-        questionLabel.text = resultQuestions[randomQuestionIndex].questionText
-        questionImage.image = UIImage(named: resultQuestions[randomQuestionIndex].questionImageURL)
-        //stores the given answer related to the property
-        tempPropertyQuestion = property
-        tempAnswerQuestion = resultQuestions[randomQuestionIndex].questionAnswer.description
+        
+        
+        
+            let randomQuestionIndex = getRandomIndexOfQuestion(from: resultQuestions)
+                //gets an random question of the result of the questions and shows text and image
+                    questionLabel.text = resultQuestions[randomQuestionIndex].questionText
+                    questionImage.image = UIImage(named: resultQuestions[randomQuestionIndex].questionImageURL)
+                    //stores the given answer related to the property
+            tempPropertyQuestion = property
+            tempAnswerQuestion = resultQuestions[randomQuestionIndex].questionAnswer.description
+            
+            
+        
+            
+    
+        
+        
+    
     }
     
     
@@ -147,7 +188,7 @@ class BestimmungsVC: UIViewController {
      will update the question text
      */
     func nextQuestion(){
-        
+        identificationMethods()
     }
     
     /**
@@ -161,7 +202,8 @@ class BestimmungsVC: UIViewController {
         temp["userAnswer"] = buttonInput
         
         resultsArrayOfPickedAnswersOfProperty.append(temp)
-        print(resultsArrayOfPickedAnswersOfProperty)
+        print("_____________________resultsArrayOfPickedAnswersOfProperty :\(resultsArrayOfPickedAnswersOfProperty)")
+        getItemFromDB()
     }
     
     
@@ -178,24 +220,72 @@ class BestimmungsVC: UIViewController {
         return dataArray.count
     }
     
-    func ablauf(){
+//    func identificationMethodsStart(){
+//        countedClasses = getTotalOfClasses()
+//        print("Kalkulation Entropy Klasse")
+//        print(countClassValues(propertyKey : "klasse"))
+//        entropyClasses = calcEntropyClass(dic: countClassValues(propertyKey : "klasse"))
+//        print("---------- entropyClasses : \(entropyClasses)")
+//
+//        propertyCalculatet = getEntropyForAllProperties()
+//
+//    }
+    
+    func identificationMethods(){
         countedClasses = getTotalOfClasses()
         print("Kalkulation Entropy Klasse")
         print(countClassValues(propertyKey : "klasse"))
         entropyClasses = calcEntropyClass(dic: countClassValues(propertyKey : "klasse"))
         print("---------- entropyClasses : \(entropyClasses)")
-        
-        propertyCalculatet = getEntropyForAllProperties()
-    
+        calcEntropyPropertiesForQuestions()
+        propertyCalculatet = getEntropyForAllProperties(without : propertyNoCalculation)
     }
     
-    func getEntropyForAllProperties() -> String {
+    func calcEntropyPropertiesForQuestions() {
+        print(resultsArrayOfPickedAnswersOfProperty)
+        for item in resultsArrayOfPickedAnswersOfProperty {
+            propertyNoCalculation.append(item["property"] as! String)
+        }
+        propertyCalculatet = getEntropyForProperties(without : propertyNoCalculation)
+       
+    }
+    
+    func getEntropyForProperties(without : [String]) -> String {
         var entropiesDic = Dictionary<String, Any>()
         var bestGain : Float = 0
         var propertyKey = ""
         
         for item in propertyNameArray {
-            if item != "klasse" {
+            
+            print("for item in propertyNameArray: \(item)")
+    
+            if !without.contains(item){
+                print("item != klasse && !without.contains(item): \(item)")
+                let dic = getClassesForPropertyAndCount(from: countPropertyValues(propertyKey: item), and: item)
+                for (key, value) in dic {
+                    let gainTemp = calcInformationGain(from: value)
+                    print("key : \(key) ---------------------value : \(value) -------- gainTemp: \(gainTemp)")
+                    
+                    if bestGain < gainTemp {
+                        bestGain = gainTemp
+                        propertyKey = key
+                        entropiesDic["property"] = propertyKey
+                        entropiesDic["gain"] = bestGain
+                    }
+                }
+            }
+        }
+        print(entropiesDic)
+        return propertyKey
+    }
+    
+    func getEntropyForAllProperties(without : [String]) -> String {
+        var entropiesDic = Dictionary<String, Any>()
+        var bestGain : Float = 0
+        var propertyKey = ""
+        
+        for item in propertyNameArray {
+             if !without.contains(item){
                 let dic = getClassesForPropertyAndCount(from: countPropertyValues(propertyKey: item), and: item)
                 for (key, value) in dic {
                     let gainTemp = calcInformationGain(from: value)
@@ -328,7 +418,7 @@ class BestimmungsVC: UIViewController {
             let jsonData : Data = try Data(contentsOf: url)
             questions = try! JSONDecoder().decode(Questions.self, from: jsonData)
             
-            print(questions!)
+            //print(questions!)
             
         }catch {
             print("json daten konnten nicht gelesen werden.")
@@ -347,9 +437,9 @@ class BestimmungsVC: UIViewController {
      - Parameters: String
      */
     func readDataFromCSVFile(file: String) {
-        print(file)
+        //print(file)
         guard let path = Bundle.main.path(forResource: file, ofType: "csv") else {return}
-        print (path)
+        //print (path)
         let contentsOfURL = URL(fileURLWithPath: path)
         parseCSV(contentsOfURL: contentsOfURL, encoding: String.Encoding.macOSRoman)
     }
@@ -365,7 +455,7 @@ class BestimmungsVC: UIViewController {
      - String.Encoding
      */
     func parseCSV (contentsOfURL: URL, encoding: String.Encoding) {
-        print("parseCSV")
+        //print("parseCSV")
         
         do {
             let content = try String(contentsOf: contentsOfURL, encoding: encoding)
@@ -507,5 +597,49 @@ class BestimmungsVC: UIViewController {
             print("Error in fetching Items \(error)")
         }
     }
+    
+    /**
+     get certain objects
+     */
+    func getItemFromDB(){
+        var filter = ""
+        var format = ""
+        var compare = ""
+        var predicate = [NSPredicate]()
+        
+        for item in resultsArrayOfPickedAnswersOfProperty{
+            
+            if let bool = item["userAnswer"] {
+                if bool as! Bool == true {
+                    compare = "=="
+                    print("==")
+                } else {
+                    compare = "!="
+                    print("!=")
+                }
+            }
+            
+            format = "\(item["property"]!) \(compare) %@"
+            
+            filter = "\(item["questionAnswer"]!)"
+            print("format: \(format) ------------- filter :\(filter)")
+            predicate.append(NSPredicate(format: format, filter))
+        }
+        
+        let andPredicate = NSCompoundPredicate(type: .and, subpredicates: predicate)
+        let request : NSFetchRequest<Pilz> = Pilz.fetchRequest()
+        request.predicate = andPredicate
+        
+        do {
+           dataArray = try context.fetch(request)
+           
+        } catch {
+            print("Error in fetching Items \(error)")
+        }
+        
+        
+    }
+    
+    
 
 }
