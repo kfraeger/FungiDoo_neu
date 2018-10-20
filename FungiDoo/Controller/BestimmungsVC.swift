@@ -19,6 +19,8 @@ class BestimmungsVC: UIViewController {
     var tempPropertyQuestion = ""
     var tempAnswerQuestion = ""
     var resultsArrayOfPickedAnswersOfProperty = [[String: Any]]()
+    var questionNumber = 0
+    var resultKlasse = ""
 
     
     //all variables for entropy calculation
@@ -35,7 +37,7 @@ class BestimmungsVC: UIViewController {
     var propertyNoCalculation = ["klasse"]
     
     //parsed CSV data from file
-    let csvFilePilze = "Daten"
+    let csvFilePilze = "Data"
     //let csvFile = "test"
     let delimiterCSV = ";"
     var dataArrayCSV = [[String]]()
@@ -53,7 +55,7 @@ class BestimmungsVC: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionImage: UIImageView!
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
     
     
     
@@ -82,9 +84,6 @@ class BestimmungsVC: UIViewController {
     }
     
     @IBAction func answerPressed(_ sender: UIButton) {
-        var check = ""
-        var count = 0
-        
         if sender.tag == 1 {
             pickedAnswer = true
             saveAnswersWithProperty(from: pickedAnswer)
@@ -92,77 +91,92 @@ class BestimmungsVC: UIViewController {
             pickedAnswer = false
             saveAnswersWithProperty(from: pickedAnswer)
         }
+        startOverCalculation()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        for item in dataArray {
-            if item.klasse != nil{
-                let klasse = item.klasse
-                if klasse != check {
-                    print("klasse : \(String(describing: klasse)) ....... check \(check)" )
-                    
-                    check = klasse!
-                    count += 1
-                    print("count \(count)")
-                }
-            }
+        if segue.identifier == "goToResultVC"{
+            let destinationVC = segue.destination as! ResultVC
             
+            destinationVC.result = resultKlasse
         }
-        
-        if count < 2 {
-           
-                print(resultPicked)
-                resultPicked = true
-                questionLabel.text = check
-            questionImage.isHidden = true
-           
-        } else {
-            nextQuestion()
-            getQuestion(for: propertyCalculatet)
-        }
-        
     }
     
     
     //MARK: - methods for the question
     /***************************************************************/
     
+    func startOverCalculation() {
+        var check = ""
+        var count = 0
+        
+        if !dataArray.isEmpty {
+            for item in dataArray {
+                if item.klasse != nil{
+                    let klasse = item.klasse
+                    if klasse != check {
+                        check = klasse!
+                        
+                        count += 1
+                    }
+                }
+            }
+            
+            if count < 2 || questionNumber > 20{
+                
+                print(resultPicked)
+                resultPicked = true
+                resultKlasse = check
+                self.performSegue(withIdentifier: "goToResultVC", sender: self)
+                
+            } else {
+                nextQuestion()
+                getQuestion(for: propertyCalculatet)
+                updateProgressView(number: dataArray.count)
+            }
+        
+            questionNumber += 1
+        } else {
+            print("Es gibt keinen Eintrag mit dieser Kombination")
+            self.performSegue(withIdentifier: "goToResultVC", sender: self)
+        }
+    }
+    
+    func updateProgressView(number : Int){
+        
+        let progress : Float = 1 / Float(number)
+        
+        progressView.setProgress(progress, animated: true)
+        progressView.progress = progress
+        
+    }
+    
+    
     func getQuestion(for type : String){
-       
         let property = type
         var resultQuestions = [Question]()
-        
-        print(property)
+
+         print("####################  resultQuestions type -----------------------------------------------------------")
+        print(type)
         
         if let allquestion = questions?.questions {
             for item in allquestion {
                 if item.questionType.rawValue == property {
-//                    print(item)
-//                    print(item.questionText)
                     resultQuestions.append(item)
                 }
             }
         }
-        
-        print("--------------resultQuestions-------------------------")
-        print(resultQuestions)
-        
-        
-        
-        
+//        print("####################  resultQuestions-----------------------------------------------------------")
+//        print(resultQuestions)
         
             let randomQuestionIndex = getRandomIndexOfQuestion(from: resultQuestions)
                 //gets an random question of the result of the questions and shows text and image
-                    questionLabel.text = resultQuestions[randomQuestionIndex].questionText
-                    questionImage.image = UIImage(named: resultQuestions[randomQuestionIndex].questionImageURL)
-                    //stores the given answer related to the property
-            tempPropertyQuestion = property
-            tempAnswerQuestion = resultQuestions[randomQuestionIndex].questionAnswer.description
-            
-            
-        
-            
-    
-        
-        
+                questionLabel.text = resultQuestions[randomQuestionIndex].questionText
+                questionImage.image = UIImage(named: resultQuestions[randomQuestionIndex].questionImageURL)
+                //stores the given answer related to the property
+                tempPropertyQuestion = property
+                tempAnswerQuestion = resultQuestions[randomQuestionIndex].questionAnswer.description
     
     }
     
@@ -175,14 +189,7 @@ class BestimmungsVC: UIViewController {
         return Int(arc4random_uniform(number))
     }
     
-    
-    
-    /**
-     updates all views on screen
-     */
-    func updateUI(){
-        
-    }
+
     
     /**
      will update the question text
@@ -202,7 +209,7 @@ class BestimmungsVC: UIViewController {
         temp["userAnswer"] = buttonInput
         
         resultsArrayOfPickedAnswersOfProperty.append(temp)
-        print("_____________________resultsArrayOfPickedAnswersOfProperty :\(resultsArrayOfPickedAnswersOfProperty)")
+        //print(resultsArrayOfPickedAnswersOfProperty)
         getItemFromDB()
     }
     
@@ -220,23 +227,9 @@ class BestimmungsVC: UIViewController {
         return dataArray.count
     }
     
-//    func identificationMethodsStart(){
-//        countedClasses = getTotalOfClasses()
-//        print("Kalkulation Entropy Klasse")
-//        print(countClassValues(propertyKey : "klasse"))
-//        entropyClasses = calcEntropyClass(dic: countClassValues(propertyKey : "klasse"))
-//        print("---------- entropyClasses : \(entropyClasses)")
-//
-//        propertyCalculatet = getEntropyForAllProperties()
-//
-//    }
-    
     func identificationMethods(){
         countedClasses = getTotalOfClasses()
-        print("Kalkulation Entropy Klasse")
-        print(countClassValues(propertyKey : "klasse"))
         entropyClasses = calcEntropyClass(dic: countClassValues(propertyKey : "klasse"))
-        print("---------- entropyClasses : \(entropyClasses)")
         calcEntropyPropertiesForQuestions()
         propertyCalculatet = getEntropyForAllProperties(without : propertyNoCalculation)
     }
@@ -632,12 +625,12 @@ class BestimmungsVC: UIViewController {
         
         do {
            dataArray = try context.fetch(request)
-           
+          
         } catch {
             print("Error in fetching Items \(error)")
         }
-        
-        
+        print("+++++++++++++++++++++++++++++++++++++fetchResults++++++++++++++++++++++++++++++++++++++++")
+        print(dataArray)
     }
     
     

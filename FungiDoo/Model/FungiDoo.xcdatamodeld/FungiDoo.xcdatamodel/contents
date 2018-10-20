@@ -23,6 +23,20 @@
         <attribute name="stielOberflaeche" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stielRing" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="PilzGlossar" representedClassName="PilzGlossar" syncable="YES" codeGenerationType="class">
+        <attribute name="eatable" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="family" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fleisch" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="geruch" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="geschmack" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hut" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lateinName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="poren" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="standort" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stiel" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="UserItem" representedClassName=".UserItem" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
@@ -35,5 +49,6 @@
     <elements>
         <element name="Pilz" positionX="-63" positionY="36" width="128" height="360"/>
         <element name="UserItem" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="PilzGlossar" positionX="-63" positionY="135" width="128" height="225"/>
     </elements>
 </model>

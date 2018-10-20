@@ -34,7 +34,6 @@ class UserListVC: UIViewController {
         
         configureInfoLabel()
         loadItems()
-        //swichtVisibilityInfoLabelAndTableView()
         configureTableView()
     }
     
@@ -61,8 +60,6 @@ class UserListVC: UIViewController {
     }
     
     func optionButtonPressed(cellForRowAt indexPath : Int){
-        print(indexPath)
-        //addButtonPressed = false
         indexRow = indexPath
         showActionSheet()
         

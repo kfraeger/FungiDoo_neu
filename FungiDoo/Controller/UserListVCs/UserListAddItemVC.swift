@@ -398,7 +398,6 @@ extension UserListAddItemVC : UIImagePickerControllerDelegate, UINavigationContr
         }
         
         if let selectedImage = selectedImageFromPicker {
-            print("selectedImage")
             avatarImageView.image = selectedImage
             imageIsSet = true
             tempData["image"] = avatarImageView.image?.jpegData(compressionQuality: 0.5)

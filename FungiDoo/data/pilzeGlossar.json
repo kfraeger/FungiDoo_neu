@@ -1,0 +1,165 @@
+[
+ {
+    "name" : "Fichtensteinpilz",
+    "latein" : "Boletus edulis",
+    "date_range" : "Juli - Oktober",
+    "family" : "Dickröhrlingsartige",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "640px-Boletus_edulis_steinpilz.jpg",
+    "essbar" : "essbar"
+},
+{
+    "name" : "Gallenröhrling",
+    "latein" : "Tylopilus felleus",
+    "date_range" : "Juli - Oktober",
+    "family" : "Dickröhrlingsverwandte (Boletaceae)",
+    "beschreibung" : "beschreibung",
+    "imageURL" :"623px-2006-09-14_Tylopilus_felleus_crop.jpg",
+    "essbar" : "ungenießbar"
+},
+{
+    "name" : "Schönfußröhrling",
+    "latein" : "Boletus calopus",
+    "date_range" : "Juli - Oktober",
+    "family" : "Dickröhrlingsartige",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "Schoenfussroehrling.jpg",
+    "essbar" : "giftig"
+},
+{
+    "name" : "Flockenstieliger Hexenröhrling",
+    "latein" : "Boletus erythropus",
+    "date_range" : "Mai - Oktober",
+    "family" : "Neoboletus",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "Flockenstielige_Hexenroehrling.jpg",
+    "essbar" : "essbar"
+},
+{
+    "name" : "Netzstieliger Hexenröhrling",
+    "latein" : "Boletus luridus",
+    "date_range" : "Juni - Oktober",
+    "family" : "Dickröhrlingsartige",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "2010-09-13_Boletus_luridus_Schaeff_104527_crop.jpg",
+    "essbar" : "ungenießbar"
+},
+{
+    "name" : "Maronenröhrling",
+    "latein" : "Xerocomus badius",
+    "date_range" : "Juni - November",
+    "family" : "Dickröhrlingsverwandte (Boletaceae)",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "632px-Maronenroehrling_cropped.jpg",
+    "essbar" : "essbar"
+},
+{
+    "name" : "Gemeiner Rotfußröhrling",
+    "latein" : "Xerocomellus chrysenteron",
+    "date_range" : "Juli - November",
+    "family" : "Rotfußröhrlinge (Xerocomellus)",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "800px-Xerocomus_chrysenteron1.jpg",
+    "essbar" : "essbar"
+},
+{
+    "name" : "Ziegenlippe",
+    "latein" : "Xerocomus subtomentosus",
+    "date_range" : "Juli - Oktober",
+    "family" : "Dickröhrlingsartige (Boletales)",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "Ziegenlippe.jpg",
+    "essbar" : "essbar"
+},
+{
+    "name" : "Hainbuchenröhrling",
+    "latein" : "Leccinum carpini",
+    "date_range" : "Juni - Oktober",
+    "family" : "Raufußröhrlinge",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "hainbuchroehrling.jpg",
+    "essbar" : "essbar"
+},
+{
+    "name" : "Birkenpilz",
+    "latein" : "Leccinum scabrum",
+    "date_range" : "Juni - Oktober",
+    "family" : "Raufußröhrlinge",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "800px-Leccinum_scabrum_18092009_crop.jpg",
+    "essbar" : "essbar"
+},
+{
+    "name" : "Birkenrotkappe",
+    "latein" : "Leccinum versipelle",
+    "date_range" : "Juni - Oktober",
+    "family" : "Raufußröhrlinge",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "800px-Birkenrotkappe,_Heidenrotkappe.jpg",
+    "essbar" : "essbar"
+},
+{
+    "name" : "Butterpilz",
+    "latein" : "Suillus luteus",
+    "date_range" : "August - November",
+    "family" : "Schmierröhrlingsverwandte (Suillaceae)",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "800px-Ringloser_Butterpilz_Suillus_collinitus.jpg",
+    "essbar" : "essbar"
+},
+{
+    "name" : "Sommersteinpilz",
+    "latein" : "Boletus reticulatus",
+    "date_range" : "Mai - September",
+    "family" : "Dickröhrlingsverwandte (Boletaceae)",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "",
+    "essbar" : "essbar"
+},
+{
+    "name" : "Fliegenpilz",
+    "latein" : "Amanita muscaria",
+    "date_range" : "August - November",
+    "family" : "Wulstlingsverwandte",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "IMG_3612.jpg",
+    "essbar" : "giftig"
+},
+{
+    "name" : "Grüner Knollenblätterpilz",
+    "latein" : "Amanita phalloides",
+    "date_range" : "Juli - Oktober",
+    "family" : "Wulstlingsverwandte",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "2006-08-09_Amanita_citrina_46465_cropped.jpg",
+    "essbar" : "tödlich giftig"
+},
+{
+    "name" : "Austernseitling",
+    "latein" : "Pleurotus ostreatus",
+    "date_range" : "Oktober - Februar",
+    "family" : "Seitlingsverwandte (Pleurotaceae)",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "Austernseitling.jpg",
+    "essbar" : "essbar"
+},
+{
+    "name" : "Karbolchampignon",
+    "latein" : "Agaricus xanthodermus",
+    "date_range" : "Mai - Oktober",
+    "family" : "Champignonverwandten",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "Agaricus_xanthoderma_eF.jpg",
+    "essbar" : "giftig"
+},
+{
+    "name" : "Krause Glucke",
+    "latein" : "Sparassis crispa",
+    "date_range" : "August - November",
+    "family" : "Gluckenverwandte (Sparassidaceae)",
+    "beschreibung" : "beschreibung",
+    "imageURL" : "Krause-Glucke.jpg",
+    "essbar" : "essbar"
+}
+ ]
+
