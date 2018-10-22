@@ -12,6 +12,7 @@ import UIKit
 enum QuestionType : String, Decodable{
     case busch = "busch"
     case geruch = "geruch"
+    case geruchRichtung = "geruchRichtung"
     case hutForm = "hutForm"
     case hutFarbe = "hutFarbe"
     case hutOberflaeche = "hutOberflaeche"

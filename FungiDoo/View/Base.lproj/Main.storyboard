@@ -521,7 +521,7 @@
                                     <color key="textColor" red="0.56792902950000002" green="0.43579339979999998" blue="0.46801441910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <textAttributes key="largeTitleTextAttributes">
-                                    <color key="textColor" red="0.56792902950000002" green="0.43579339979999998" blue="0.46801441910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" red="0.56862745098039214" green="0.43529411764705883" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Bestimmung beendet" id="ebo-11-oZs"/>

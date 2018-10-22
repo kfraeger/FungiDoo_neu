@@ -26,7 +26,7 @@ class BestimmungsVC: UIViewController {
     //all variables for entropy calculation
     var countedClasses = 0
     var propertyClass = "klasse"
-    var propertyNameArray = [String]()
+    var propertyNameArray = ["klasse","busch", "hutForm", "hutOberflaeche", "hutUnterseite", "hutUnterseiteFarbe", "huVerfaerbung" , "huVerfaerbungFarbe" ,"hutFarbe", "stielForm", "stielBasis", "stielFarbe", "stielOberflaeche", "stielNetzFlockenFarbe", "stielRing", "stielBasisVolva", "stielHohl", "fleischFarbe", "fleischVerfaerbung", "fleischVerfaerbungFarbe", "geruch", "geruchRichtung"]
     var propertyCalculatet = ""
     
     var countedPropertyValue = Dictionary<String, Any>()
@@ -43,8 +43,9 @@ class BestimmungsVC: UIViewController {
     var dataArrayCSV = [[String]]()
     
     //decode JSON data from file
-    let jsonFile = "questions"
-    var questions : Questions?
+    //let jsonFile = "questions"
+    //var questions : Questions?
+    var questions : QuestionDB?
     var pickedAnswer : Bool = false
     var resultPicked = false
     var resultText = ""
@@ -66,9 +67,9 @@ class BestimmungsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        clearDatabase()
-        readDataFromCSVFile(file: csvFilePilze)
-        readJSONData(from: jsonFile)
+//        clearDatabase()
+//        readDataFromCSVFile(file: csvFilePilze)
+  //      readJSONData(from: jsonFile)
         loadItems()
         identificationMethods()
         //identificationMethodsStart()
@@ -111,6 +112,9 @@ class BestimmungsVC: UIViewController {
         var check = ""
         var count = 0
         
+        print(questionNumber)
+        
+        
         if !dataArray.isEmpty {
             for item in dataArray {
                 if item.klasse != nil{
@@ -123,7 +127,7 @@ class BestimmungsVC: UIViewController {
                 }
             }
             
-            if count < 2 || questionNumber > 20{
+            if count < 2 || questionNumber >= 20{
                 
                 print(resultPicked)
                 resultPicked = true
@@ -153,38 +157,43 @@ class BestimmungsVC: UIViewController {
     }
     
     
+    
     func getQuestion(for type : String){
-        let property = type
-        var resultQuestions = [Question]()
-
-         print("####################  resultQuestions type -----------------------------------------------------------")
+        print("+++++++++++++++++++++++++++++++++++++getQuestion++++++++++++++++++++++++++++++++++++++++")
         print(type)
         
-        if let allquestion = questions?.questions {
-            for item in allquestion {
-                if item.questionType.rawValue == property {
-                    resultQuestions.append(item)
-                }
-            }
-        }
-//        print("####################  resultQuestions-----------------------------------------------------------")
-//        print(resultQuestions)
         
-            let randomQuestionIndex = getRandomIndexOfQuestion(from: resultQuestions)
-                //gets an random question of the result of the questions and shows text and image
-                questionLabel.text = resultQuestions[randomQuestionIndex].questionText
-                questionImage.image = UIImage(named: resultQuestions[randomQuestionIndex].questionImageURL)
-                //stores the given answer related to the property
-                tempPropertyQuestion = property
-                tempAnswerQuestion = resultQuestions[randomQuestionIndex].questionAnswer.description
+        var resultQuestions = [QuestionDB]()
     
+        let request : NSFetchRequest<QuestionDB> = QuestionDB.fetchRequest()
+        request.predicate = NSPredicate(format: "questionType==%@", type)
+        
+        do {
+            resultQuestions = try context.fetch(request)
+            
+        } catch {
+            print("Error in fetching Items \(error)")
+        }
+        print("+++++++++++++++++++++++++++++++++++++fetchResults++++++++++++++++++++++++++++++++++++++++")
+       
+    
+        print(resultQuestions.count)
+        
+        let randomQuestionIndex = getRandomIndexOfQuestion(from: resultQuestions)
+        //gets an random question of the result of the questions and shows text and image
+        questionLabel.text = resultQuestions[randomQuestionIndex].questionText
+        questionImage.image = UIImage(named: resultQuestions[randomQuestionIndex].questionImageURL!)
+        //stores the given answer related to the property
+        tempPropertyQuestion = type
+        tempAnswerQuestion = resultQuestions[randomQuestionIndex].questionAnswer!.description
+        
     }
     
     
     /**
      gets an random index number of the counted questions
      */
-    func getRandomIndexOfQuestion(from resultArray : [Question]) -> Int{
+    func getRandomIndexOfQuestion(from resultArray : [QuestionDB]) -> Int{
         let number : UInt32 = UInt32(resultArray.count)
         return Int(arc4random_uniform(number))
     }
@@ -284,7 +293,7 @@ class BestimmungsVC: UIViewController {
                     let gainTemp = calcInformationGain(from: value)
                     print("key : \(key) ---------------------value : \(value) -------- gainTemp: \(gainTemp)")
                     
-                    if bestGain < gainTemp {
+                    if bestGain <= gainTemp {
                         bestGain = gainTemp
                         propertyKey = key
                         entropiesDic["property"] = propertyKey
@@ -395,171 +404,36 @@ class BestimmungsVC: UIViewController {
 
 
     
-    //MARK: - methods for JSON encoding
-    /***************************************************************/
-    
-    /**
-     reads JSON File from path
-     - Parameters: String
-     */
-    func readJSONData(from file: String) {
-        
-        guard let path = Bundle.main.path(forResource: file, ofType: "json") else {return}
-        let url = URL(fileURLWithPath: path)
-        
-        do {
-            let jsonData : Data = try Data(contentsOf: url)
-            questions = try! JSONDecoder().decode(Questions.self, from: jsonData)
-            
-            //print(questions!)
-            
-        }catch {
-            print("json daten konnten nicht gelesen werden.")
-        }
-    }
-    
-    
+//    //MARK: - methods for JSON encoding
+//    /***************************************************************/
+//
+//    /**
+//     reads JSON File from path
+//     - Parameters: String
+//     */
+//    func readJSONData(from file: String) {
+//
+//        guard let path = Bundle.main.path(forResource: file, ofType: "json") else {return}
+//        let url = URL(fileURLWithPath: path)
+//
+//        do {
+//            let jsonData : Data = try Data(contentsOf: url)
+//            questions = try! JSONDecoder().decode(Questions.self, from: jsonData)
+//
+//            //print(questions!)
+//
+//        }catch {
+//            print("json daten konnten nicht gelesen werden.")
+//        }
+//    }
     
     
-    //MARK: - methods for CSV parsing and Core Data
-    /***************************************************************/
-    
-    /**
-     reads CSV File from path
-     and calls the parseCSV method
-     - Parameters: String
-     */
-    func readDataFromCSVFile(file: String) {
-        //print(file)
-        guard let path = Bundle.main.path(forResource: file, ofType: "csv") else {return}
-        //print (path)
-        let contentsOfURL = URL(fileURLWithPath: path)
-        parseCSV(contentsOfURL: contentsOfURL, encoding: String.Encoding.macOSRoman)
-    }
     
     
-    /**
-     parses data from CSV file to array
-     calls the cleanArray method
-     calls the removeHeaderOfColoum
-     calls the createDataforDB
-     - Parameters:
-     - URL
-     - String.Encoding
-     */
-    func parseCSV (contentsOfURL: URL, encoding: String.Encoding) {
-        //print("parseCSV")
-        
-        do {
-            let content = try String(contentsOf: contentsOfURL, encoding: encoding)
-            let lines : [String] = content.components(separatedBy: NSCharacterSet.newlines) as [String]
-            
-            for line in lines {
-                var values:[String] = []
-                values = line.components(separatedBy: delimiterCSV)
-                values = cleanArray(data: values)
-                
-                if values != [""] && !values.isEmpty{
-                    dataArrayCSV.append(values)
-                }
-            }
-            
-        } catch {
-            print("die csv datei konnte nicht gelesen werden \(error)")
-        }
-        
-        dataArrayCSV = removeHeaderOfColoumn(at: 0, array: dataArrayCSV)
-        createDataForDB(array: dataArrayCSV)
-    }
-    
-    
-    /**
-     removes empty coloumns from parsed Data
-     - Parameters: array of Strings
-     - Returns: array of Strings
-     */
-    func cleanArray(data : [ String ]) -> [String]{
-        var arrayTemp = [String]()
-        for item in data {
-            if item != "" {
-                arrayTemp.append(item)
-            }
-        }
-        return arrayTemp
-    }
-    
-    
-    /**
-     removes firtst row with the titles of the coloumns
-     - Parameters:
-     - Int: index of row
-     - array of array with Strings
-     - Returns: array of array with Strings
-     */
-    func removeHeaderOfColoumn(at index: Int, array: [[ String ]]) -> [[String]] {
-        var arrayTemp = [[String]]()
-        arrayTemp = array
-        
-        //save the table header keys
-        for item in arrayTemp[index]{
-            propertyNameArray.append(item)
-        }
-        //delete the first item with the table headers
-        arrayTemp.remove(at: index)
-        return arrayTemp
-    }
-    
-    
-    /**
-     creates all object for core data and saves it to it
-     - Parameters:
-     - array of array with Strings
-     */
-    func createDataForDB(array: [[ String ]]){
-        
-        //print(array)
-        for item in array {
-            
-            let newItem = Pilz(context: context)
+//    //MARK: - methods fetching data from core data
+//    /***************************************************************/
 
-            newItem.klasse = item[0]
-            newItem.busch = item[1]
-            newItem.hutForm = item[2]
-            newItem.hutOberflaeche = item[3]
-            newItem.hutUnterseite = item[4]
-            newItem.hutUnterseiteFarbe = item[5]
-            newItem.huVerfaerbung = item[6]
-            newItem.huVerfaerbungFarbe = item[7]
-            newItem.hutFarbe = item[8]
-            newItem.stielForm = item[9]
-            newItem.stielBasis = item[10]
-            newItem.stielFarbe = item[11]
-            newItem.stielOberflaeche = item[12]
-            newItem.stielNetzFlockenFarbe = item[13]
-            newItem.stielRing = item[14]
-            newItem.stielBasisVolva = item[15]
-            newItem.stielHohl = item[16]
-            newItem.fleischFarbe = item[17]
-            newItem.fleischVerfaerbung = item[18]
-            newItem.fleischVerfaerbungFarbe = item[19]
-            newItem.geruch = item[20]
-            
-            saveItem()
-        }
-        
-    }
-    
-    /**
-     saves context to core data
-     */
-    func saveItem() {
-        do {
-            try context.save()
-        } catch {
-            print("Error saving context \(error)")
-        }
-    }
-    
+
     /**
      loads all items from core data
      */
@@ -568,28 +442,12 @@ class BestimmungsVC: UIViewController {
         do {
             dataArray = try context.fetch(request)
             dataArray = dataArray.reversed()
-            //print(dataArray)
+            print(dataArray)
         } catch {
             print("Error in fetching Items \(error)")
         }
     }
     
-    /**
-     deletes all items from core data
-     */
-    func clearDatabase(){
-        let request : NSFetchRequest<Pilz> = Pilz.fetchRequest()
-        
-        do {
-            dataArray = try context.fetch(request)
-            for item in dataArray {
-                context.delete(item)
-                saveItem()
-            }
-        } catch {
-            print("Error in fetching Items \(error)")
-        }
-    }
     
     /**
      get certain objects

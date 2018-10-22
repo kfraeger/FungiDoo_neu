@@ -6,6 +6,7 @@
         <attribute name="fleischVerfaerbung" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fleischVerfaerbungFarbe" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="geruch" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="geruchRichtung" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="hutFarbe" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="hutForm" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="hutOberflaeche" optional="YES" attributeType="String" syncable="YES"/>
@@ -24,6 +25,7 @@
         <attribute name="stielRing" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="PilzGlossar" representedClassName="PilzGlossar" syncable="YES" codeGenerationType="class">
+        <attribute name="dateRange" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eatable" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="family" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fleisch" optional="YES" attributeType="String" syncable="YES"/>
@@ -37,6 +39,12 @@
         <attribute name="standort" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stiel" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="QuestionDB" representedClassName="QuestionDB" syncable="YES" codeGenerationType="class">
+        <attribute name="questionAnswer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionImageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionType" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="UserItem" representedClassName=".UserItem" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
@@ -47,8 +55,9 @@
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Pilz" positionX="-63" positionY="36" width="128" height="360"/>
-        <element name="UserItem" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="PilzGlossar" positionX="-63" positionY="135" width="128" height="225"/>
+        <element name="Pilz" positionX="-227.70703125" positionY="-3.33984375" width="128" height="375"/>
+        <element name="PilzGlossar" positionX="63.6875" positionY="207.1015625" width="128" height="240"/>
+        <element name="QuestionDB" positionX="317.29296875" positionY="156.29296875" width="128" height="105"/>
+        <element name="UserItem" positionX="61.07421875" positionY="-18.921875" width="128" height="150"/>
     </elements>
 </model>
