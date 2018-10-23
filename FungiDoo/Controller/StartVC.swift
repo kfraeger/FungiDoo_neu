@@ -53,16 +53,25 @@ class StartVC: UIViewController {
         
             do {
                 let attributes = try FileManager.default.attributesOfItem(atPath: path)
-                let creationDate = (attributes[FileAttributeKey.creationDate] as? Date)!
+                let modifiedDate = (attributes[FileAttributeKey.modificationDate] as? Date)!
                 //
                 if let value = defaults.object(forKey: key) as? Date {
+                    print("valueexists :\(value)")
+                    
                     dateVal = value
                 } else {
-                    defaults.set(creationDate, forKey: key)
+                    print("valuedoesntexists )")
+                    defaults.set(modifiedDate, forKey: key)
                 }
-        
+                print("dateVal: \(dateVal)")
+                print("creationDate: \(modifiedDate)")
                 
-                if dateVal < creationDate {
+                
+                
+                
+                if dateVal != modifiedDate {
+                    
+                    print("dateVal < creationDate")
                     
                     if ofType == "csv" {
                         
@@ -72,6 +81,8 @@ class StartVC: UIViewController {
                      
                         clearDatabase(entityname: entityQuestionDB)
                         readJSONData(from: jsonFile)}
+                    
+                     defaults.set(modifiedDate, forKey: key)
                 }
             } catch let error as NSError {
                 print("Probleme beim Lesen des Files: \(error)")
@@ -203,6 +214,9 @@ class StartVC: UIViewController {
         
         //print(array)
         for item in array {
+            
+            print(item)
+            
             
             let newItem = Pilz(context: context)
             

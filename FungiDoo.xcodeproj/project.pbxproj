@@ -35,7 +35,6 @@
 		D0045A0A217D01A800073D4C /* halbkugelig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0045A09217D01A700073D4C /* halbkugelig.jpg */; };
 		D00632EB2179CD5700A45285 /* pilzeGlossar.json in Resources */ = {isa = PBXBuildFile; fileRef = D00632EA2179CD5700A45285 /* pilzeGlossar.json */; };
 		D0063342217BB75D00A45285 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D0063341217BB75D00A45285 /* questions.json */; };
-		D0063416217CB7F400A45285 /* Data.csv in Resources */ = {isa = PBXBuildFile; fileRef = D0063415217CB7F400A45285 /* Data.csv */; };
 		D006341E217CBDFE00A45285 /* kugelig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0063417217CBDFB00A45285 /* kugelig.jpg */; };
 		D006341F217CBDFE00A45285 /* eifoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0063418217CBDFB00A45285 /* eifoermig.jpg */; };
 		D0063420217CBDFE00A45285 /* gewoelbt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0063419217CBDFC00A45285 /* gewoelbt.jpg */; };
@@ -93,6 +92,7 @@
 		D0B396E8217E32810066EF8E /* butterpilz-suillus-luteus-1ca33e77-6b2d-4a51-a1e2-8f02c3dc9f3e.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0B396CD217E32800066EF8E /* butterpilz-suillus-luteus-1ca33e77-6b2d-4a51-a1e2-8f02c3dc9f3e.jpg */; };
 		D0B396EA217E45090066EF8E /* IMG_7478.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0B396E9217E45080066EF8E /* IMG_7478.jpg */; };
 		D0B396EC217E5CAD0066EF8E /* Leccinum_-pseudoscabrum-2133.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0B396EB217E5CAC0066EF8E /* Leccinum_-pseudoscabrum-2133.jpg */; };
+		D0B396EE217E69170066EF8E /* Data.csv in Resources */ = {isa = PBXBuildFile; fileRef = D0B396ED217E69170066EF8E /* Data.csv */; };
 		D0EA3880214FE3E6002E462C /* GlossarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA387F214FE3E6002E462C /* GlossarVC.swift */; };
 		D0EA3882214FE47B002E462C /* PilzGlossarFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3881214FE47B002E462C /* PilzGlossarFile.swift */; };
 		D0EA3885214FE694002E462C /* GlossarListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3883214FE694002E462C /* GlossarListTableViewCell.swift */; };
@@ -133,7 +133,6 @@
 		D0045A09217D01A700073D4C /* halbkugelig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halbkugelig.jpg; sourceTree = "<group>"; };
 		D00632EA2179CD5700A45285 /* pilzeGlossar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pilzeGlossar.json; sourceTree = "<group>"; };
 		D0063341217BB75D00A45285 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
-		D0063415217CB7F400A45285 /* Data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Data.csv; sourceTree = "<group>"; };
 		D0063417217CBDFB00A45285 /* kugelig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kugelig.jpg; sourceTree = "<group>"; };
 		D0063418217CBDFB00A45285 /* eifoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eifoermig.jpg; sourceTree = "<group>"; };
 		D0063419217CBDFC00A45285 /* gewoelbt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gewoelbt.jpg; sourceTree = "<group>"; };
@@ -193,6 +192,7 @@
 		D0B396CD217E32800066EF8E /* butterpilz-suillus-luteus-1ca33e77-6b2d-4a51-a1e2-8f02c3dc9f3e.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "butterpilz-suillus-luteus-1ca33e77-6b2d-4a51-a1e2-8f02c3dc9f3e.jpg"; sourceTree = "<group>"; };
 		D0B396E9217E45080066EF8E /* IMG_7478.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_7478.jpg; sourceTree = "<group>"; };
 		D0B396EB217E5CAC0066EF8E /* Leccinum_-pseudoscabrum-2133.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Leccinum_-pseudoscabrum-2133.jpg"; sourceTree = "<group>"; };
+		D0B396ED217E69170066EF8E /* Data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Data.csv; sourceTree = "<group>"; };
 		D0EA387F214FE3E6002E462C /* GlossarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarVC.swift; sourceTree = "<group>"; };
 		D0EA3881214FE47B002E462C /* PilzGlossarFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilzGlossarFile.swift; sourceTree = "<group>"; };
 		D0EA3883214FE694002E462C /* GlossarListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarListTableViewCell.swift; sourceTree = "<group>"; };
@@ -448,7 +448,7 @@
 				D075483B2177439B003C6E71 /* imagesGlossar */,
 				D00632EA2179CD5700A45285 /* pilzeGlossar.json */,
 				D0063341217BB75D00A45285 /* questions.json */,
-				D0063415217CB7F400A45285 /* Data.csv */,
+				D0B396ED217E69170066EF8E /* Data.csv */,
 				D09A3CD12173A0F70089456E /* imagesFragen */,
 			);
 			path = data;
@@ -575,7 +575,6 @@
 				D0063423217CBDFE00A45285 /* schuesselfoermig.jpg in Resources */,
 				D0B396D9217E32810066EF8E /* 800px-Parasol_Schirmpilz.jpg in Resources */,
 				D0B396CE217E32810066EF8E /* Flockenstieliger_Hexenroehrling.jpg in Resources */,
-				D0063416217CB7F400A45285 /* Data.csv in Resources */,
 				D0045A01217CFD7200073D4C /* stiel_farbe.jpg in Resources */,
 				D0B396E6217E32810066EF8E /* 2007-07-14_Boletus_badius_2.jpg in Resources */,
 				D00459E5217CEB0600073D4C /* poren.jpg in Resources */,
@@ -618,6 +617,7 @@
 				D0B396CF217E32810066EF8E /* 800px-2007-07-14_Cantharellus_cibarius.jpg in Resources */,
 				D0045A05217CFD7200073D4C /* stielform_keule.jpg in Resources */,
 				D0B396EC217E5CAD0066EF8E /* Leccinum_-pseudoscabrum-2133.jpg in Resources */,
+				D0B396EE217E69170066EF8E /* Data.csv in Resources */,
 				D0B396D8217E32810066EF8E /* fliegenpilz.jpg in Resources */,
 				D00459EF217CFD3E00073D4C /* stiel_genattert.jpg in Resources */,
 				D0B396D3217E32810066EF8E /* 800px-Koivunpunikkitatti.jpg in Resources */,

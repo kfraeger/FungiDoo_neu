@@ -565,7 +565,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="hB2-yR-qsv" kind="presentation" id="x0G-3O-Jfh"/>
+                                            <segue destination="hB2-yR-qsv" kind="presentation" identifier="goToUserAddList" id="x0G-3O-Jfh"/>
                                         </connections>
                                     </button>
                                 </subviews>

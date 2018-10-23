@@ -36,6 +36,19 @@ class ResultVC: UIViewController {
         performSegue(withIdentifier: "unwindToStartVC", sender: sender)
     }
     
-    
+    //Write the PrepareForSegue Method here
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToUserAddList" {
+            let destinationVC = segue.destination as! UINavigationController
+            if let childDestination  = destinationVC.topViewController as? UserListAddItemVC {
+                childDestination.nameResult = result
+            }
+            
+            
+            
+        } 
+        
+        
+    }
 
 }

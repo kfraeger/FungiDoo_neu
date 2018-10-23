@@ -33,6 +33,7 @@
         <attribute name="geschmack" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="hut" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lamellen" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lateinName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="poren" optional="YES" attributeType="String" syncable="YES"/>
@@ -56,7 +57,7 @@
     </entity>
     <elements>
         <element name="Pilz" positionX="-227.70703125" positionY="-3.33984375" width="128" height="375"/>
-        <element name="PilzGlossar" positionX="63.6875" positionY="207.1015625" width="128" height="240"/>
+        <element name="PilzGlossar" positionX="63.6875" positionY="207.1015625" width="128" height="255"/>
         <element name="QuestionDB" positionX="317.29296875" positionY="156.29296875" width="128" height="105"/>
         <element name="UserItem" positionX="61.07421875" positionY="-18.921875" width="128" height="150"/>
     </elements>

@@ -21,6 +21,7 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate, LocationCh
     var tempData = [String : Any]()
     
     //textField
+    var nameResult : String?
     var textFieldIsSet = false
     var nameList : [String] = Array()
     var filteredList : [String] = Array()
@@ -159,6 +160,15 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate, LocationCh
         nameTextField.leftViewMode = .always
         nameTextField.clearButtonMode = .whileEditing
         nameTextField.clearsOnBeginEditing = true
+        
+        if let name = nameResult {
+            if name != "Keinen Eintrag gefunden" {
+                nameTextField.text = name
+                
+            }
+        }
+        
+        
     }
     
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {

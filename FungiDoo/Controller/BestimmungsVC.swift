@@ -442,6 +442,7 @@ class BestimmungsVC: UIViewController {
         do {
             dataArray = try context.fetch(request)
             dataArray = dataArray.reversed()
+            print(dataArray.count)
             print(dataArray)
         } catch {
             print("Error in fetching Items \(error)")
