@@ -10,11 +10,14 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import AlamofireImage
+import CoreData
 
 class GlossarVC: UIViewController {
 
     //MARK: Constants & Variables
     /***************************************************************/
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     //private var authorizedSet = false
     private let JSON_URL = "https://kfraeger.de/fungiDoo/pilzeList.json"
@@ -25,11 +28,11 @@ class GlossarVC: UIViewController {
     
     
     
-    var data = [PilzGlossarFile]()
-    var filteredData = [PilzGlossarFile]() //for searching
+    var data = [PilzGlossar]()
+    var filteredData = [PilzGlossar]() //for searching
     
-    var sectionIndices : [String] = []
-    var rowsSection : [[PilzGlossarFile]] = []
+    var sectionIndices = [String]()
+    var rowsSection   = [[PilzGlossar]]()
     var indexOfRow = 0
     var indexOfSection = 0
     var searching = false
@@ -45,10 +48,9 @@ class GlossarVC: UIViewController {
         super.viewDidLoad()
         
         infoLabel.isHidden = true
-        getJSONData(url: JSON_URL)
+        loadItems()
         configureTableView()
         configureSearchController()
-        // Do any additional setup after loading the view.
     }
 
     
@@ -83,11 +85,12 @@ class GlossarVC: UIViewController {
         //print("generatedABCIndexForSection()")
         for item in data {
             
-            let index = String(item.name[item.name.startIndex])
-            let key = index.uppercased()
-            
-            if !sectionIndices.contains(key){
-                sectionIndices.append(key)
+            if let index = item.name{
+                let key = String(index.first!)
+                if !sectionIndices.contains(key){
+                    sectionIndices.append(key)
+                }
+                
             }
         }
         
@@ -96,21 +99,16 @@ class GlossarVC: UIViewController {
     //Sorts rows to the generated sections
     func getRowsForSection(){
         //print("getRowsForSection()")
-        var tempArr : [PilzGlossarFile] = []
+        var tempArr : [PilzGlossar] = []
         for index in sectionIndices{
             for item in data {
-                if index == String(item.name[item.name.startIndex]) {
+                if index == String(item.name!.first!) {
                     tempArr.append(item)
                 }
             }
             rowsSection.append(tempArr)
             tempArr = []
         }
-    }
-    
-    //Sorts the listing data alphabetically
-    func sortDataListABCAsc(){
-        data = data.sorted(by: { $0.name < $1.name})
     }
     
     //MARK: - Segues
@@ -121,7 +119,54 @@ class GlossarVC: UIViewController {
             let destinationVC = segue.destination as! GlossarDetailVC
             
             destinationVC.pilzData = (searching ? filteredData[indexOfRow] : rowsSection[indexOfSection][indexOfRow])
+            destinationVC.eatableIcon = (searching ? self.updateEatableIcon(condition: filteredData[indexOfRow].eatable!) : self.updateEatableIcon(condition: rowsSection[indexOfSection][indexOfRow].eatable!))
+            
         }
+    }
+    
+    /**
+     loads all items from core data
+     */
+    func loadItems(){
+        let request : NSFetchRequest<PilzGlossar> = PilzGlossar.fetchRequest()
+        let sort = NSSortDescriptor(key: "name", ascending: true)
+        request.sortDescriptors = [sort]
+        
+        do {
+            data = try context.fetch(request)
+            
+        } catch {
+            print("Error in fetching Items \(error)")
+        }
+        
+        generatedABCIndexForSection()
+        getRowsForSection()
+        self.glossarTableView.reloadData()
+    }
+    
+    //This method turns a condition code into the name of the eatable condition image
+    func updateEatableIcon(condition: String) -> String {
+        
+        switch (condition) {
+            
+        case "toedlich giftig":
+            return "giftig-toedlich-icon"
+            
+        case "giftig":
+            return "giftig-icon"
+            
+        case "ungenießbar":
+            return "ungeniessbar-icon"
+            
+        case "eingeschrenkt essbar":
+            return "beschraenkt-essbar-icon"
+            
+        case "essbar":
+            return "essbar-icon"
+        default :
+            return "noimage_icon"
+        }
+        
     }
 
 }
@@ -166,15 +211,22 @@ extension GlossarVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GlossarListCell", for: indexPath) as! GlossarListTableViewCell
         
         if searching {
-            cell.glossarImageView.image = filteredData[indexPath.row].image
+            cell.glossarImageView.image = UIImage(named: filteredData[indexPath.row].imageURL!)
             cell.nameLabel.text = filteredData[indexPath.row].name
-            cell.lateinNameLabel.text = filteredData[indexPath.row].latein
-            cell.glossarEatableImaveView.image = UIImage(named: filteredData[indexPath.row].eatableIconString)
+            cell.lateinNameLabel.text = filteredData[indexPath.row].lateinName
+            
+            let eatIconUrl = self.updateEatableIcon(condition: filteredData[indexPath.row].eatable!)
+            cell.glossarEatableImaveView.image = UIImage(named: eatIconUrl)
+            
+            
+            
         } else {
-            cell.glossarImageView.image = rowsSection[indexPath.section][indexPath.row].image
+            cell.glossarImageView.image = UIImage(named: rowsSection[indexPath.section][indexPath.row].imageURL!)
             cell.nameLabel.text = rowsSection[indexPath.section][indexPath.row].name
-            cell.lateinNameLabel.text = rowsSection[indexPath.section][indexPath.row].latein
-            cell.glossarEatableImaveView.image = UIImage(named: rowsSection[indexPath.section][indexPath.row].eatableIconString)
+            cell.lateinNameLabel.text = rowsSection[indexPath.section][indexPath.row].lateinName
+            
+            let eatIconUrl = self.updateEatableIcon(condition: rowsSection[indexPath.section][indexPath.row].eatable!)
+            cell.glossarEatableImaveView.image = UIImage(named: eatIconUrl)
         }
         return cell
     }
@@ -191,86 +243,9 @@ extension GlossarVC : UISearchResultsUpdating {
             searching = false
         } else {
             searching = true
-            filteredData = data.filter { $0.name.lowercased().contains(searchController.searchBar.text!.lowercased()) }
+            filteredData = data.filter { $0.name!.lowercased().contains(searchController.searchBar.text!.lowercased()) }
         }
         self.glossarTableView.reloadData()
     }
     
 }
-
-//MARK: - Network JSON Parsing & ImageService
-/***************************************************************/
-extension GlossarVC {
-
-    // get JSON data from URL
-    func getJSONData(url : String) {
-        Alamofire.request(url).responseJSON { response in
-            if response.result.isSuccess{
-                //print("Success! Daten erhalten")
-                let dataJSON : JSON = JSON(response.result.value!)
-                self.updateDictonaryWithJSONData(json: dataJSON)
-            } else {
-                print("Error : \(String(describing: response.result.error))")
-                
-                AlertService.showErrorConnectionAlert(on: self)
-                
-            }
-        }
-    }
-    
-    //update dictonary with json data
-    func updateDictonaryWithJSONData(json : JSON) {
-        if let tempResult = json.array {
-            for item in 0 ... tempResult.count - 1 {
-                
-                let newDataItem = PilzGlossarFile()
-                
-                newDataItem.name = json[item]["name"].stringValue
-                newDataItem.beschreibung = json[item]["beschreibung"].stringValue
-                newDataItem.latein = json[item]["latein"].stringValue
-                newDataItem.essbar = json[item]["essbar"].stringValue
-                newDataItem.eatableIconString = newDataItem.updateEatableIcon(condition: newDataItem.essbar)
-                newDataItem.dateRange = json[item]["date_range"].stringValue
-                newDataItem.family = json[item]["family"].stringValue
-                newDataItem.imageURL = json[item]["imageURL"].stringValue
-                getImageData(for : newDataItem, from: json[item]["imageURL"].stringValue)
-                data.append(newDataItem)
-                
-            }
-            sortDataListABCAsc()
-            generatedABCIndexForSection()
-            getRowsForSection()
-            self.glossarTableView.reloadData()
-        }
-        
-    }
-    
-    //load image from url
-    func getImageData(for data: PilzGlossarFile, from url : String){
-        print("getImageData")
-        
-        if url != "" {
-            if let imageFromCache = imageCache.object(forKey: url as NSString) {
-                print("imageCache")
-                data.image = imageFromCache
-            
-            } else {
-                
-                Alamofire.request("\(IMAGE_BASE_URL)\(url)", method: .get).responseImage { response in
-                    guard let imageResponse = response.result.value else {
-                        print(response.error as Any)
-                        return
-                    }
-                    data.image = imageResponse
-                    self.imageCache.setObject(data.image, forKey: data.imageURL as NSString)
-                    
-                }
-            }
-            self.glossarTableView.reloadData()
-            
-        }
-        
-        
-    }
-}
-

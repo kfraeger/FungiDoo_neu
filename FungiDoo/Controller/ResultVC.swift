@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class ResultVC: UIViewController {
     
     var result = ""
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var imageName = ""
     
     
     @IBOutlet weak var resultImageView: UIImageView!    
@@ -22,8 +24,8 @@ class ResultVC: UIViewController {
         super.viewDidLoad()
 
         if result != "" {
-        
-        resultImageView.image = UIImage(named: "noimage_icon")
+        imageName = getImageItemFromDB(name: result)
+        resultImageView.image = UIImage(named: imageName)
         resultTextLabel.text = result
         } else {
             resultImageView.image = UIImage(named: "noimage_icon")
@@ -42,13 +44,31 @@ class ResultVC: UIViewController {
             let destinationVC = segue.destination as! UINavigationController
             if let childDestination  = destinationVC.topViewController as? UserListAddItemVC {
                 childDestination.nameResult = result
+                
+            }
+        }
+    }
+    
+    /**
+     get certain objects
+     */
+    func getImageItemFromDB(name : String) -> String {
+        
+        let request : NSFetchRequest<PilzGlossar> = PilzGlossar.fetchRequest()
+        request.predicate = NSPredicate(format: "name == %@", name)
+        
+        do {
+            let item = try context.fetch(request)
+            
+            if let imageUrl = item[0].imageURL {
+                return imageUrl
             }
             
-            
-            
-        } 
+        } catch {
+            print("Error in fetching Items \(error)")
+        }
         
-        
+        return ""
     }
 
 }

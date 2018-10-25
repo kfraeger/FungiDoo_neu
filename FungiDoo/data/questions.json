@@ -62,6 +62,10 @@
       "text": "Ist die Form des Hutes eiförmig?",
       "image": "eifoermig.jpg",
       "answer": "eifoermig"
+    },{"questionsType": "hutForm",
+        "text": "Ist die Form des Hutes glockenförmig?",
+        "image": "glockenfoermig.jpg",
+        "answer": "glockenfoermig"
     },
     {"questionsType": "stielForm",
       "text": "Ist die Form des Stieles bauchig oder dickbauchig?",
@@ -104,7 +108,7 @@
       "answer": "normal"
     },
     {"questionsType": "stielFarbe",
-      "text": "Ist die Stielfarbe unabhängig von einer möglichen Struktur hellbraun?",
+      "text": "Ist die Stielfarbe hellbraun?",
       "image": "stiel_farbe.jpg",
       "answer": "hellbraun"
     },{"questionsType": "stielFarbe",
@@ -113,16 +117,16 @@
       "answer": "orange"
     },
     {"questionsType": "stielFarbe",
-      "text": "Ist die Stielfarbe unabhängig von einer möglichen Struktur bräunlich?",
+      "text": "Ist die Stielfarbe bräunlich?",
       "image": "stiel_farbe.jpg",
       "answer": "braeunlich"
     },
     {"questionsType": "stielFarbe",
-      "text": "Ist die Stielfarbe unabhängig von einer möglichen Struktur cremefarben?",
+      "text": "Ist die Stielfarbe cremefarben?",
       "image": "stiel_farbe.jpg",
       "answer": "cremefarben"
     },{"questionsType": "stielFarbe",
-      "text": "Ist die Stielfarbe unabhängig von einer möglichen Struktur der Stielform gelb?",
+      "text": "Ist die Stielfarbe gelb?",
       "image": "stiel_farbe.jpg",
       "answer": "gelb"
     },{"questionsType": "stielFarbe",
@@ -153,16 +157,16 @@
       "answer": "weiss-grau"
     },
     {"questionsType": "stielFarbe",
-      "text": "Ist die Stielfarbe weiss-schwarz mit einer möglichen Struktur?",
+      "text": "Ist die Stielfarbe weiss-schwarz?",
       "image": "stiel_farbe.jpg",
       "answer": "weiss-schwarz"
     },{"questionsType": "stielFarbe",
-      "text": "Ist die Stielfarbe weiss-grün aufgrund einer sichtbaren Struktur?",
+      "text": "Ist die Stielfarbe weiss-grün?",
       "image": "stiel_farbe.jpg",
       "answer": "weiss-gruen"
     },
     {"questionsType": "stielFarbe",
-      "text": "Ist die Stielfarbe unabhängig von einer möglichen Struktur braun?",
+      "text": "Ist die Stielfarbe braun?",
       "image": "stiel_farbe.jpg",
       "answer": "braun"
     },
@@ -192,6 +196,10 @@
       "text": "Ist die Oberfläche des Hutes schuppig?",
       "image": "hut_schuppig.jpg",
       "answer": "schuppig"
+    },{"questionsType": "hutOberflaeche",
+        "text": "Ist die Oberfläche des Hutes faserschuppig?",
+        "image": "hut_faserschuppig.jpg",
+        "answer": "faserschuppig"
     },
     {"questionsType": "hutOberflaeche",
       "text": "Fühlt sich der Hut schmierig oder klebrig an?",
@@ -200,38 +208,38 @@
     },
     {"questionsType": "huVerfaerbung",
       "text": "Verfärben sich die Lamellen oder Röhren bei Druck?",
-      "image": "",
+      "image": "hut_verfaerbung.jpg",
       "answer": "ja"
     },
     {"questionsType": "huVerfaerbung",
       "text": "Anders als abgebildet, verfärben sich die Röhren oder Lamellen unter Druck nicht?",
-      "image": "",
+      "image": "hut_verfaerbung.jpg",
       "answer": "nein"
 
     },
     {"questionsType": "huVerfaerbungFarbe",
       "text": "Verfärben sich die Druckstellen der Röhren oder Lamellen an der Hutunterseite blau?",
-      "image": "",
+      "image": "hut_verfaerbung.jpg",
       "answer": "braeunlich"
     },{"questionsType": "huVerfaerbungFarbe",
       "text": "Verfärben sich die Druckstellen der Röhren oder Lamellen an der Hutunterseite blaugrün?",
-      "image": "",
+      "image": "hut_verfaerbung.jpg",
       "answer": "blaugruen"
     },{"questionsType": "huVerfaerbungFarbe",
       "text": "Wenn Sie die Röhren oder Lamellen drücken, verfärben sich diese bräunlich?",
-      "image": "",
+      "image": "hut_verfaerbung.jpg",
       "answer": "braeunlich"
     },{"questionsType": "huVerfaerbungFarbe",
       "text": "Anders als abgebildet, verfärben sich die Röhren oder Lamellen unter Druck nicht?",
-      "image": "",
+      "image": "hut_verfaerbung.jpg",
       "answer": "nein"
     },{"questionsType": "huVerfaerbungFarbe",
       "text": "Verfärben sich die Druckstellen der Hutunterseite rötlich?",
-      "image": "",
+      "image": "hut_verfaerbung.jpg",
       "answer": "roetlich"
     },{"questionsType": "huVerfaerbungFarbe",
       "text": "Verfärben sich die Druckstellen der Hutunterseite violett-schwarz?",
-      "image": "",
+      "image": "hut_verfaerbung.jpg",
       "answer": "violett-schwarz"
     },
     {"questionsType": "stielOberflaeche",
@@ -339,66 +347,60 @@
 
       "questionsType": "stielHohl",
       "text": "Wenn du den Pilz aufschneidest, ist der Stiel hohl?",
-      "image": "",
+      "image": "pilz_hohl.jpg",
       "answer": "ja"
-    },
-    {"questionsType": "stielHohl",
-      "text": "Wenn du den Pilz aufschneidest, ist der Stiel nicht hohl?",
-      "image": "",
-      "answer": "nein"
-
     },
     {
       "questionsType": "fleischFarbe",
       "text": "Wenn du den Pilz aufschneidest, ist das Fleisch weiss?",
-      "image": "",
+      "image": "pilz_fleisch.jpg",
       "answer": "weiss"
     },
     {"questionsType": "fleischFarbe",
       "text": "Wenn du den Pilz aufschneidest, ist das Fleisch gelblich?",
-      "image": "",
+      "image": "pilz_fleisch.jpg",
       "answer": "gelblich"
     },
     {"questionsType": "fleischFarbe",
       "text": "Wenn du den Pilz aufschneidest, ist das Fleisch orangegelb?",
-      "image": "",
+      "image": "pilz_fleisch.jpg",
       "answer": "orangegelb"
     },
     {"questionsType": "fleischFarbe",
       "text": "Wenn du den Pilz aufschneidest, ist das Fleisch rosafarben?",
-      "image": "",
+      "image": "pilz_fleisch.jpg",
       "answer": "rosa"
     },
     {"questionsType": "fleischFarbe",
       "text": "Wenn du den Pilz aufschneidest, ist die Farbe des Fleisches gelb?",
-      "image": "",
+      "image": "pilz_fleisch.jpg",
       "answer": "gelb"
     },
     {"questionsType": "fleischFarbe",
       "text": "Wenn du den Pilz aufschneidest, ist die Farbe des Fleisches bräunlich?",
-      "image": "",
+      "image": "pilz_fleisch.jpg",
       "answer": "braeunlich"
     },
     {"questionsType": "fleischFarbe",
       "text": "Wenn du den Pilz aufschneidest, ist die Farbe des Fleisches gelb?",
-      "image": "",
+      "image": "pilz_fleisch.jpg",
       "answer": "gelb"
     },
     {"questionsType": "fleischFarbe",
       "text": "Wenn du den Pilz aufschneidest, ist die Farbe des Fleisches orange?",
-      "image": "",
+      "image": "pilz_fleisch.jpg",
       "answer": "orange"
 
     },
     {
       "questionsType": "fleischVerfaerbung",
       "text": "Wenn du den Pilz aufschneidest, verfärbt sich das innere Fleisch?",
-      "image": "",
+      "image": "pilz_fleisch.jpg",
       "answer": "ja"
     },
     {"questionsType": "fleischVerfaerbung",
       "text": "Beim Anschnitt des Fleisches kommt es zu keiner Farbveränderung?",
-      "image": "",
+      "image": "pilz_fleisch.jpg",
       "answer": "nein"
     },
     {
@@ -511,43 +513,43 @@
     {
 
       "questionsType": "fleischVerfaerbungFarbe",
-      "text": "Beim Anschnitt des Fleisches verfärbt es sich nicht?",
-      "image": "",
+      "text": "Anders als abgebildet, verfärbt sich das Fleisches beim Anschnitt farblich nicht?",
+      "image": "pilz_fleischverfaerbung.jpg",
       "answer": "nein"
     },
     {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich rötlich?",
-      "image": "",
+      "image": "pilz_fleischverfaerbung.jpg",
       "answer": "roetlich"
     },
     {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich beim Anschnitt blau?",
-      "image": "",
+      "image": "pilz_fleischverfaerbung.jpg",
       "answer": "blau"
     },
     {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich beim Anschnitt gelb?",
-      "image": "",
+      "image": "pilz_fleischverfaerbung.jpg",
       "answer": "gelb"
     },
     {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich beim Anschnitt orangerot?",
-      "image": "",
+      "image": "pilz_fleischverfaerbung.jpg",
       "answer": "orangerot"
     },
     {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich beim Anschnitt safranbraun?",
-      "image": "",
+      "image": "pilz_fleischverfaerbung.jpg",
       "answer": "safranbraun"
     },
     {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich beim Anschnitt rot?",
-      "image": "",
+      "image": "pilz_fleischverfaerbung.jpg",
       "answer": "rot"
     },
     {"questionsType": "fleischVerfaerbungFarbe",
       "text": "Das Fleisch verfärbt sich beim Anschnitt schwärzend?",
-      "image": "",
+      "image": "pilz_fleischverfaerbung.jpg",
       "answer": "schwaerzend"
 
     },

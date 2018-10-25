@@ -9,13 +9,12 @@
 import UIKit
 import Photos
 import CoreLocation
-import Alamofire
-import SwiftyJSON
+import CoreData
 
 class UserListAddItemVC: UIViewController, CameraInputChangeDelegate, LocationChangeDelegate {
     
     private var authorizedSet = false
-    private let JSON_URL = "https://kfraeger.de/fungiDoo/pilzeList.json"
+    //private let JSON_URL = "https://kfraeger.de/fungiDoo/pilzeList.json"
     private var gestureRecognizer = UITapGestureRecognizer()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var tempData = [String : Any]()
@@ -85,7 +84,9 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate, LocationCh
     override func viewDidLoad() {
         super.viewDidLoad()
         configureInputTextField()
-        getNameListDateFromJSON(url: JSON_URL)
+        getItemsNameFromDB()
+        
+        //getNameListDateFromJSON(url: JSON_URL)
         configureTableView()
         configureImageView()
         configureDateView()
@@ -164,8 +165,11 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate, LocationCh
         if let name = nameResult {
             if name != "Keinen Eintrag gefunden" {
                 nameTextField.text = name
+                tempData["name"] = name
                 
             }
+            textFieldIsSet = true
+            
         }
         
         
@@ -452,30 +456,53 @@ extension UserListAddItemVC: UITableViewDataSource, UITableViewDelegate {
 /***************************************************************/
 extension UserListAddItemVC {
     
-    func getNameListDateFromJSON(url : String) {
-        Alamofire.request(url).responseJSON { response in
-            if response.result.isSuccess{
-                print("Success! Daten erhalten")
-                let dataJSON : JSON = JSON(response.result.value!)
-                self.updateNameList(json: dataJSON)
+    
+    /**
+     get certain objects
+     */
+    func getItemsNameFromDB()  {
+        
+        let request : NSFetchRequest<PilzGlossar> = PilzGlossar.fetchRequest()
+        
+        do {
+            let items = try context.fetch(request)
+            
+            for item in items {
+                nameList.append(item.name!)
                 
-            } else {
-                print("Error : \(String(describing: response.result.error))")
-                 AlertService.showErrorConnectionAlert(on: self)
             }
+            
+            nameList.sort()
+            
+        } catch {
+            print("Error in fetching Items \(error)")
         }
     }
     
-    func updateNameList(json : JSON){
-        if let tempResult = json.array {
-            print("tempResult updatePilzeData: \(tempResult.count)")
-            
-            for item in 0 ... tempResult.count - 1 {
-                nameList.append(json[item]["name"].stringValue)
-                nameList = nameList.sorted()
-            }
-        }
-    }
+//    func getNameListDateFromJSON(url : String) {
+//        Alamofire.request(url).responseJSON { response in
+//            if response.result.isSuccess{
+//                print("Success! Daten erhalten")
+//                let dataJSON : JSON = JSON(response.result.value!)
+//                self.updateNameList(json: dataJSON)
+//
+//            } else {
+//                print("Error : \(String(describing: response.result.error))")
+//                 AlertService.showErrorConnectionAlert(on: self)
+//            }
+//        }
+//    }
+//
+//    func updateNameList(json : JSON){
+//        if let tempResult = json.array {
+//            print("tempResult updatePilzeData: \(tempResult.count)")
+//
+//            for item in 0 ... tempResult.count - 1 {
+//                nameList.append(json[item]["name"].stringValue)
+//                nameList = nameList.sorted()
+//            }
+//        }
+//    }
 }
 
 //MARK: - LocationManager methods delegate

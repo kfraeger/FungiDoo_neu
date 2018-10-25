@@ -99,7 +99,6 @@ class BestimmungsVC: UIViewController {
         
         if segue.identifier == "goToResultVC"{
             let destinationVC = segue.destination as! ResultVC
-            
             destinationVC.result = resultKlasse
         }
     }
@@ -144,6 +143,7 @@ class BestimmungsVC: UIViewController {
         } else {
             print("Es gibt keinen Eintrag mit dieser Kombination")
             self.performSegue(withIdentifier: "goToResultVC", sender: self)
+            resultKlasse = ""
         }
     }
     
@@ -402,33 +402,6 @@ class BestimmungsVC: UIViewController {
         return temp
     }
 
-
-    
-//    //MARK: - methods for JSON encoding
-//    /***************************************************************/
-//
-//    /**
-//     reads JSON File from path
-//     - Parameters: String
-//     */
-//    func readJSONData(from file: String) {
-//
-//        guard let path = Bundle.main.path(forResource: file, ofType: "json") else {return}
-//        let url = URL(fileURLWithPath: path)
-//
-//        do {
-//            let jsonData : Data = try Data(contentsOf: url)
-//            questions = try! JSONDecoder().decode(Questions.self, from: jsonData)
-//
-//            //print(questions!)
-//
-//        }catch {
-//            print("json daten konnten nicht gelesen werden.")
-//        }
-//    }
-    
-    
-    
     
 //    //MARK: - methods fetching data from core data
 //    /***************************************************************/
@@ -441,7 +414,7 @@ class BestimmungsVC: UIViewController {
         let request : NSFetchRequest<Pilz> = Pilz.fetchRequest()
         do {
             dataArray = try context.fetch(request)
-            dataArray = dataArray.reversed()
+            //dataArray = dataArray.reversed()
             print(dataArray.count)
             print(dataArray)
         } catch {

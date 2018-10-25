@@ -1,83 +1,84 @@
-[
+{ "glossarItems" :
+    [
     {
         "name" : "Satansröhrling",
         "latein" : "Boletus satanas",
         "date_range" : "Juli - September",
         "family" : "Dickröhrlingsartige",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 8 - 25 cm, hellgrau bis olivgrau",
             "Stiel" : "6 - 12 cm, gelb bis gelb-rot mit Netzstruktur",
             "Poren" : "gelblich, rötliche",
-            "Fleisch" : "weißlich, gelb"
-            "Geruch" : "aasartig"
+            "Fleisch" : "weißlich, gelb",
+            "Geruch" : "aasartig",
             "Standort" : "Laubwälder"
-        }]
+        },
         "imageURL" : "satan-boletus-3654861_960_720.jpg",
-        "essbar" : "giftig"
+        "essbar" : "giftig",
         "synonym": "Satanspilz"
     },{
         "name" : "Weißer Anischampignon",
         "latein" : "Agaricus arvensis",
         "date_range" : "Mai - Oktober",
         "family" : "Egerlingsartige",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 5 - 20 cm, weiß",
             "Stiel" : "6 - 15 cm, flockig weiß",
             "Lamellen" : "gelblich, rötliche",
-            "Fleisch" : "weiß"
-            "Geruch" : "anisartig"
+            "Fleisch" : "weiß",
+            "Geruch" : "anisartig",
             "Standort" : "Grasflächen"
-        }]
+        },
         "imageURL" : "800px-Anis-champignon-Agaricus-silvicola.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Wiesenegerling"
     },{
         "name" : "Wiesenchampignon",
         "latein" : "Agaricus campestris",
         "date_range" : "Juni - Oktober",
         "family" : "Egerlingsartige",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 4 - 13 cm, weiß",
             "Stiel" : "6 - 15 cm, weiß",
             "Lamellen" : "graurosa, dunkelbraun",
-            "Fleisch" : "weiß - rötlich färbend"
-            "Geruch" : "pilzig, nicht oder fast unmerklich anisartig"
+            "Fleisch" : "weiß - rötlich färbend",
+            "Geruch" : "pilzig, nicht oder fast unmerklich anisartig",
             "Standort" : "Grasflächen"
-        }]
+        },
         "imageURL" : "2012-10-03_Agaricus_campestris.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Wiesenegerling"
     },{
         "name" : "Kleiner Waldchampignon",
         "latein" : "Agaricus silvaticus",
         "date_range" : "Juli - Oktober",
         "family" : "Egerlingsartige",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 4 - 10 cm, braun schuppig",
             "Stiel" : "3 - 5 cm, weißlich, rosa",
             "Lamellen" : "graurosa, braun",
-            "Fleisch" : "weiß - gelborange bis blutrote Verfärbung"
-            "Geruch" : "pilzig, leicht fruchtig"
+            "Fleisch" : "weiß - gelborange bis blutrote Verfärbung",
+            "Geruch" : "pilzig, leicht fruchtig",
             "Standort" : "Mischwald"
-        }]
+        },
         "imageURL" : "2012-10-03_Agaricus_campestris.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Kleiner Waldegerling, Echter Wald Egerling, Kleinsporiger Waldchampignon, Kleiner Blutegerling"
     },{
         "name" : "Gelber Knollenblätterpilz",
         "latein" : "Amanita citrina",
         "date_range" : "Juli - Oktober",
         "family" : "Wulstlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 3 - 13 cm, zitronengelb bis gelb mit Hüllresten",
             "Stiel" : "5 - 12 cm, weiß bis gelb",
             "Lamellen" : "weiß, leicht gelblich",
-            "Fleisch" : "weiß, oberer Bereich gelblich"
-            "Geruch" : "nach rohen Kartoffeln"
+            "Fleisch" : "weiß, oberer Bereich gelblich",
+            "Geruch" : "nach rohen Kartoffeln",
             "Standort" : "Nadel- und Mischwald"
-        }]
+        },
         "imageURL" : "2006-08-09_Amanita_citrina_46465_cropped.jpg",
-        "essbar" : "giftig"
+        "essbar" : "giftig",
         "synonym": "Zitronengelber Knollenblätterpilz, Gelber Knolli"
     },
     {
@@ -85,16 +86,16 @@
         "latein" : "Amanita phalloides",
         "date_range" : "Juli - Oktober",
         "family" : "Wulstlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 5 - 15 cm, weißlich, grünlich, olivgrün",
             "Stiel" : "6 - 12 cm, weiß grünlich, genattert",
             "Lamellen" : "weiß",
-            "Fleisch" : "weiß"
-            "Geruch" : "geruchlos, schwach"
+            "Fleisch" : "weiß",
+            "Geruch" : "geruchlos, schwach",
             "Standort" : "Laub- und Nadelwald"
-        }]
+        },
         "imageURL" : "800px-Gruener_Knollenblaetterpilz_Amanita_phalloides.jpg",
-        "essbar" : "toedlich giftig"
+        "essbar" : "toedlich giftig",
         "synonym": "Grüner Mörder, Gichtschwamm, Giftchampignon, Giftgrünling"
     },
     {
@@ -102,16 +103,16 @@
         "latein" : "Hygrophoropsis Aurantiaca",
         "date_range" : "September - November",
         "family" : "Afterleistlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 2 - 10 cm, orange, eingerollter Rand",
             "Stiel" : "3 - 7 cm, weiß grünlich, genattert",
             "Lamellen" : "gelb, orangegelb",
-            "Fleisch" : "gelb bis orangegelb"
-            "Geruch" : "säuerlich, geruchlos"
+            "Fleisch" : "gelb bis orangegelb",
+            "Geruch" : "säuerlich, geruchlos",
             "Standort" : "Nadelwald"
-        }]
+        },
         "imageURL" : "False_Chanterelle_Hygrophoropsis_aurantiaca.jpg",
-        "essbar" : "giftig"
+        "essbar" : "giftig",
         "synonym": "Falscher Eierschwamm, Orangegelber Gabelblättling, Gemeiner Afterleistling"
     },
     {
@@ -119,290 +120,307 @@
         "latein" : "Leccinum Scabrum",
         "date_range" : "Juni - Oktober",
         "family" : "Raufußröhrlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 4 - 16 cm, feinfilzig in Grau- oder Brauntönen",
             "Stiel" : "8 - 14 cm, weiß schwarz-braun geschuppt",
             "Poren" : "weiß, grau",
-            "Fleisch" : "weiß"
-            "Geruch" : "geruchlos, schwach pilzig"
+            "Fleisch" : "weiß",
+            "Geruch" : "geruchlos, schwach pilzig",
             "Standort" : "unter Birken"
-        }]
+        },
         "imageURL" : "birkenpilz.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Gemeiner Birkenpilz, Birkenraufuß"
     },{
         "name" : "Butterpilz",
         "latein" : "Suillus luteus",
         "date_range" : "August - November",
         "family" : "Schmierröhrlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 4 - 12 cm, braun",
             "Stiel" : "4 - 10 cm, gelblich",
             "Poren" : "gelb",
-            "Fleisch" : "weiß"
-            "Geruch" : "obstartig"
+            "Fleisch" : "weiß",
+            "Geruch" : "obstartig",
             "Standort" : "Nadelwald unter Kiefern"
-        }]
+        },
         "imageURL" : "butterpilz-suillus-luteus-1ca33e77-6b2d-4a51-a1e2-8f02c3dc9f3e.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Butterröhrling, Schmierling"
     },{
         "name" : "Echter Pfifferling",
         "latein" : "Cantharellus cibarius",
         "date_range" : "Juni - Oktober",
         "family" : "Leistlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 3 - 10 cm, gelb",
             "Stiel" : "3 - 8 cm, gelb",
-            "Leisten" : "gelb",
-            "Fleisch" : "gelblich"
-            "Geruch" : "fruchtig"
+            "Lamellen" : "gelbe Leisten",
+            "Fleisch" : "gelblich",
+            "Geruch" : "fruchtig",
             "Standort" : "Laub- und Nadelwald"
-        }]
+        },
         "imageURL" : "800px-2007-07-14_Cantharellus_cibarius.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Eierschwammerl"
     },{
         "name" : "Eichenrotkappe",
         "latein" : "Leccinum Quercinum",
         "date_range" : "Juni - Oktober",
         "family" : "Raufußröhrlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 4 - 15 cm, rotbraun rot, feinfilzig",
             "Stiel" : "6 - 20 cm, weiß mit rötlichen Schuppen",
             "Poren" : "Weiß, grau, bräunlich",
-            "Fleisch" : "Weiß"
-            "Geruch" : "pilzig"
+            "Fleisch" : "Weiß",
+            "Geruch" : "pilzig",
             "Standort" : "Laubwald"
-        }]
+        },
         "imageURL" : "3087010338_7a05fd82b3_b-2.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Eichenraufuss, Laubwald-Rotkappe"
     },{
         "name" : "Fichtensteinpilz",
         "latein" : "Boletus edulis",
         "date_range" : "Juli - Oktober",
         "family" : "Dickröhrlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 4 - 20 cm, braun",
-            "Stiel" : "5 - 20 cm, weiß, bräunlich mit Netzstruktur",
+            "Stiel" : "5 - 20 cm, weiß, braune Netzstruktur",
             "Poren" : "Weiß, gelblich",
-            "Fleisch" : "Weiß"
-            "Geruch" : "pilzig"
+            "Fleisch" : "Weiß",
+            "Geruch" : "pilzig",
             "Standort" : "Nadel- und Mischwälder"
-        }]
+        },
         "imageURL" : "Gemeine_Steinpilz_(Boletus_edulis).jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Herrenpilz, Gemeiner Steinpilz"
     },{
         "name" : "Fliegenpilz",
         "latein" : "Amanita muscaria",
         "date_range" : "August - November",
         "family" : "Wulstlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 8 - 20 cm, rot, orangerot mit Hüllresten",
             "Stiel" : "10 - 25 cm, weiß",
             "Lamellen" : "Weiß",
-            "Fleisch" : "Weiß"
-            "Geruch" : "neutral"
+            "Fleisch" : "Weiß",
+            "Geruch" : "neutral",
             "Standort" : "Laub- und Nadelwälder"
-        }]
+        },
         "imageURL" : "fliegenpilz.jpg",
-        "essbar" : "giftig"
+        "essbar" : "giftig",
         "synonym": "Roter Fliegenpilz"
     },{
         "name" : "Flockenstieliger Hexenröhrling",
         "latein" : "Boletus erythropus",
         "date_range" : "Juni - Oktober",
         "family" : "Dickröhrlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 5 - 20 cm, braun",
             "Stiel" : "5 - 15 cm, gelblich, rötlich geflockt",
             "Poren" : "rot",
-            "Fleisch" : "gelblich"
-            "Geruch" : "angenehm"
+            "Fleisch" : "gelblich",
+            "Geruch" : "angenehm",
             "Standort" : "Laub- und Nadelwälder"
-        }]
+        },
         "imageURL" : "Flockenstieliger_Hexenroehrling.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Zweifarbiger Hexenröhrling"
     },{
         "name" : "Hainbuchenröhrling",
         "latein" : "Leccinum griseum",
         "date_range" : "Juni - Oktober",
         "family" : "Raufußröhrlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 3 - 12 cm, graubraun",
             "Stiel" : "8 - 14 cm, graubraun",
             "Poren" : "weißlich",
-            "Fleisch" : "weiß"
-            "Geruch" : "neutral, angenehm pilzig"
+            "Fleisch" : "weiß",
+            "Geruch" : "neutral, angenehm pilzig",
             "Standort" : "Laubwald"
-        }]
+        },
         "imageURL" : "Flockenstieliger_Hexenroehrling.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Hainbuchenraufuß"
     },{
         "name" : "Hallimasch",
         "latein" : "Armillaria mellea",
         "date_range" : "September - November",
         "family" : "Ritterlingsartige",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 4 - 15 cm, braun",
             "Stiel" : "5 - 20 cm, bräunlich",
             "Lamellen" : "weißlich",
-            "Fleisch" : "weiß"
-            "Geruch" : "pilzartig"
+            "Fleisch" : "weiß",
+            "Geruch" : "pilzartig",
             "Standort" : "Laubwald- und Nadelwald"
-        }]
+        },
         "imageURL" : "mushrooms-223114_960_720-2.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Gemeiner Hallimasch"
     },{
         "name" : "Heiderotkappe",
         "latein" : "Leccinum versipelle",
         "date_range" : "Juni - Oktober",
         "family" : "Raufußröhrlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 4 - 12 cm, braunrot, orangegelb, filzig",
             "Stiel" : "5 - 20 cm, weiß mit schwarzen Schuppen",
             "Poren" : "weißlich, grau",
-            "Fleisch" : "weiß, schwach blauend"
-            "Geruch" : "angenehm pilzig"
+            "Fleisch" : "weiß, schwach blauend",
+            "Geruch" : "angenehm pilzig",
             "Standort" : "unter Birken"
-        }]
+        },
         "imageURL" : "800px-Koivunpunikkitatti.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Pappelraufuß, Kapuziner"
     },{
         "name" : "Karbolchampignon",
         "latein" : "Agaricus xanthoderma",
         "date_range" : "Mai - Oktober",
         "family" : "Egerlingsartige",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 5 - 12 cm, weiß",
             "Stiel" : "6 - 12 cm, weiß",
             "Lamellen" : "rosa bis braun",
-            "Fleisch" : "weiß, gelbe Knolle"
-            "Geruch" : "Tintengeruch, Karbolgeruch"
+            "Fleisch" : "weiß, gelbe Knolle",
+            "Geruch" : "Tintengeruch, Karbolgeruch",
             "Standort" : "Wiesen"
-        }]
+        },
         "imageURL" : "karbolchampignon.jpg",
-        "essbar" : "giftig"
+        "essbar" : "giftig",
         "synonym": "Karbolegerling, Giftchampignon"
     },{
         "name" : "Kegelhütiger Knollenblätterpilz",
         "latein" : "Amanita virosa",
         "date_range" : "Juli - Oktober",
         "family" : "Wulstlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 5 - 14 cm, weißlich",
             "Stiel" : "6 - 12 cm, weiß genattert",
             "Lamellen" : "weiß",
-            "Fleisch" : "weiß"
-            "Geruch" : "unangenehm"
+            "Fleisch" : "weiß",
+            "Geruch" : "unangenehm",
             "Standort" : "Laub- und Nadelwald"
-        }]
+        },
         "imageURL" : "453px-2006-08_Amanita_virosa_crop.jpg",
-        "essbar" : "toedlich giftig"
+        "essbar" : "toedlich giftig",
         "synonym": "Kegeliger Wulstling"
     },{
         "name" : "Maronenröhrling",
         "latein" : "Xerocomus badius",
         "date_range" : "Juni - November",
         "family" : "Filzröhrlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 4 - 15 cm, feinfilzig hell- bis dunkelbraun",
             "Stiel" : "4 - 12 cm, hellbraun",
             "Poren" : "weißlich",
-            "Fleisch" : "weiß"
-            "Geruch" : "pilzartig"
+            "Fleisch" : "weiß",
+            "Geruch" : "pilzartig",
             "Standort" : "Nadelwald"
-        }]
+        },
         "imageURL" : "2007-07-14_Boletus_badius_2.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Braunkappe"
     },{
         "name" : "Pantherpilz",
         "latein" : "Amanita pantherina",
         "date_range" : "Juni - Oktober",
         "family" : "Wulstlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 5 - 10 cm, braun",
             "Stiel" : "6 - 12 cm, weiß",
             "Lamellen" : "weißlich",
-            "Fleisch" : "weiß"
-            "Geruch" : "neutral"
+            "Fleisch" : "weiß",
+            "Geruch" : "neutral",
             "Standort" : "Laub- und Nadelwald"
-        }]
+        },
         "imageURL" : "Pantherpilz_Amanita_pantherina.jpg",
-        "essbar" : "toedlich giftig"
+        "essbar" : "toedlich giftig",
         "synonym": "Pantherwulstling"
     },{
         "name" : "Parasol",
         "latein" : "Lepiota procera",
         "date_range" : "Juli - Oktober",
         "family" : "Schirmlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 10 - 30 cm, bräunlich schuppig",
             "Stiel" : "10 - 40 cm, braun genattert",
             "Lamellen" : "weißlich",
-            "Fleisch" : "weiß"
-            "Geruch" : "nussartig"
+            "Fleisch" : "weiß",
+            "Geruch" : "nussartig",
             "Standort" : "Laubwald"
-        }]
+        },
         "imageURL" : "800px-Parasol_Schirmpilz.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Riesenschirmling"
     },{
         "name" : "Safranschirmling",
         "latein" : "Lepiota rhacodes",
         "date_range" : "Juli - Oktober",
         "family" : "Schirmlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 8 - 20 cm, braun schuppig",
             "Stiel" : "10 - 15 cm, hellbraun",
             "Lamellen" : "weiß",
-            "Fleisch" : "weiß"
-            "Geruch" : "angenehm"
+            "Fleisch" : "weiß",
+            "Geruch" : "angenehm",
             "Standort" : "Laubwald"
-        }]
+        },
         "imageURL" : "Safranschirmling-1-2.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Rötender Riesenschirmling"
     },{
         "name" : "Sommersteinpilz",
         "latein" : "Boletus reticulatus",
         "date_range" : "Juli - Oktober",
         "family" : "Dickröhrlinge",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 5 - 25 cm, hellbraun",
             "Stiel" : "5 - 20 cm, weiß, bräunlich mit Netzstruktur",
             "Poren" : "Weiß, gelblich",
-            "Fleisch" : "Weiß"
-            "Geruch" : "nussig"
+            "Fleisch" : "Weiß",
+            "Geruch" : "nussig",
             "Standort" : "Mischwald"
-        }]
+        },
         "imageURL" : "mushroom-2687012_960_720.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Eichensteinpilz"
     },{
         "name" : "Stockschwämmchen",
         "latein" : "Kuehneromyces mutabilis",
         "date_range" : "Mai - Oktober",
         "family" : "Träuschlingsartige, Schüpplingsartige",
-        "beschreibung" : [{
+        "beschreibung" : {
             "Hut" : "ø 1 - 10 cm, hellbraun",
             "Stiel" : "5 - 12 cm, gelbbraun",
             "Lamellen" : "hellbraun",
-            "Fleisch" : "gelblich"
-            "Geruch" : "pilzig"
+            "Fleisch" : "gelblich",
+            "Geruch" : "pilzig",
             "Standort" : "auf Laubholz"
-        }]
+        },
         "imageURL" : "nameko-228854_960_720-2.jpg",
-        "essbar" : "essbar"
+        "essbar" : "essbar",
         "synonym": "Gemeines Stockschwämmchen"
+    },{
+        "name" : "Schopftintling",
+        "latein" : "Coprinus comatus",
+        "date_range" : "Mai - November",
+        "family" : "Tintlingsartige",
+        "beschreibung" : {
+            "Hut" : "ø 3 - 8 cm, weiß",
+            "Stiel" : "5 - 18 cm,weiß",
+            "Lamellen" : "weiß, später schwarz",
+            "Fleisch" : "weiss",
+            "Geruch" : "angenehm",
+            "Standort" : "Wiesen, Felder"
+        },
+        "imageURL" : "schopftintling.jpg",
+        "essbar" : "essbar",
+        "synonym": "Schopfpilz, Tintenpilz, Eiertintling"
     }
-
- ]
+    
+]
+}
 

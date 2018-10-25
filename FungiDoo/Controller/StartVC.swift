@@ -27,12 +27,19 @@ class StartVC: UIViewController {
     let entityQuestionDB = "QuestionDB"
     let userDefaultKeyJSON = "jsonFileDate"
     
+    //decode JSON data from file
+    let jsonFileGlossar = "pilzeGlossar"
+    var glossarItems : GlossarItems?
+    let entityGlossarDB = "PilzGlossar"
+    let userDefaultKeyGlossarJSON = "jsonFileDateGlossar"
+    
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfCSVModified(from: csvFilePilze, ofType: "csv", key: userDefaultKeyCSV)
         checkIfCSVModified(from: jsonFile, ofType: "json", key: userDefaultKeyJSON)
+        checkIfCSVModified(from: jsonFileGlossar, ofType: "json", key: userDefaultKeyGlossarJSON)
         //clearQuestionsDatabase()
         //clearDatabase(entityname: entityPilz)
         //clearDatabase(entityname: entityQuestionDB)
@@ -80,7 +87,12 @@ class StartVC: UIViewController {
                     } else if ofType == "json" {
                      
                         clearDatabase(entityname: entityQuestionDB)
-                        readJSONData(from: jsonFile)}
+                        clearDatabase(entityname: entityGlossarDB)
+                        //readJSONData(from: jsonFile)
+                        decodeQuestionToCoreData(file : jsonFile)
+                        decodePilzGlossarToCoreData(file : jsonFileGlossar)
+                        
+                    }
                     
                      defaults.set(modifiedDate, forKey: key)
                 }
@@ -95,11 +107,48 @@ class StartVC: UIViewController {
     /***************************************************************/
     
     /**
+     reads JSON File from path and decode to CoreData
+     - Parameters: String
+     */
+    func decodePilzGlossarToCoreData(file : String){
+        
+        guard let path = Bundle.main.path(forResource: file, ofType: "json") else {return}
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            let jsonData : Data = try Data(contentsOf: url)
+            glossarItems = try! JSONDecoder().decode(GlossarItems.self, from: jsonData)
+            
+            for item in (glossarItems?.glossarItems)! {
+                let newItem = PilzGlossar(context: context)
+                newItem.name = item.name
+                newItem.lateinName = item.latein
+                newItem.dateRange = item.dateRange
+                newItem.family = item.family
+                newItem.imageURL = item.imageURL
+                newItem.eatable = item.essbar
+                newItem.synonym = item.synonym
+                newItem.hut = item.hut
+                newItem.stiel = item.stiel
+                newItem.poren = item.poren
+                newItem.lamellen = item.lamellen
+                newItem.fleisch = item.fleisch
+                newItem.geruch = item.geruch
+                newItem.standort = item.standort
+                saveItem()
+            }
+            
+        }catch let error as NSError {
+            print("Probleme beim Lesen der JSON-Datei: \(error).")
+        }
+        
+    }
+    
+    /**
      reads JSON File from path
      - Parameters: String
      */
-    func readJSONData(from file: String) {
-        
+    func decodeQuestionToCoreData(file : String){
         
         guard let path = Bundle.main.path(forResource: file, ofType: "json") else {return}
         let url = URL(fileURLWithPath: path)
@@ -120,6 +169,7 @@ class StartVC: UIViewController {
         }catch let error as NSError {
             print("Probleme beim Lesen der JSON-Datei: \(error).")
         }
+        
     }
     
     //MARK: - methods for CSV parsing and Core Data

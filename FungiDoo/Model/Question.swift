@@ -41,7 +41,7 @@ struct Question : Decodable {
     let questionImageURL : String
     let questionAnswer : String
     
-    enum CodingKeys : String, CodingKey {
+    private enum CodingKeys : String, CodingKey {
         case questionType = "questionsType"
         case questionText = "text"
         case questionImageURL = "image"
