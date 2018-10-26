@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
-import AlamofireImage
 import CoreData
 
 class GlossarVC: UIViewController {

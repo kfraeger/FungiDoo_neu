@@ -57,6 +57,7 @@ class BestimmungsVC: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionImage: UIImageView!
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var questionTypeLabel: UILabel!
     
     
     
@@ -67,9 +68,6 @@ class BestimmungsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        clearDatabase()
-//        readDataFromCSVFile(file: csvFilePilze)
-  //      readJSONData(from: jsonFile)
         loadItems()
         identificationMethods()
         //identificationMethodsStart()
@@ -101,6 +99,51 @@ class BestimmungsVC: UIViewController {
             let destinationVC = segue.destination as! ResultVC
             destinationVC.result = resultKlasse
         }
+    }
+    
+    //This method turns a condition code into the name of the eatable condition image
+    func updateTitleLabel(condition: String) -> String {
+        
+        switch (condition) {
+            
+        case "busch":
+            return "Stielbasis büschelig verwachsen"
+        case "hutUnterseite":
+            return "Lamellen & Röhren"
+        case "hutUnterseiteFarbe":
+            return "Farbe der Lamellen & Röhren"
+        case "hutForm":
+            return "Hutform des Pilzes"
+        case "hutFarbe":
+            return "Farbe des Pilzhutes"
+        case "hutOberflaeche":
+            return "Oberfläche des Hutes"
+        case "stielForm":
+            return "Form des Stieles"
+        case "stielBasis":
+            return "Basis des Stieles"
+        case "stielFarbe":
+            return "Farbe des Stieles"
+        case "stielOberflaeche", "stielNetzFlockenFarbe":
+            return "Oberflächenmerkmale des Stieles"
+        case "stielRing":
+            return "Manschette oder Ring am Stiel"
+        case "stielBasisVolva":
+            return "Stielbasis mit Hülle"
+        case "stielHohl":
+            return "hohler Pilz"
+        case "fleischFarbe":
+            return "Farbe des Pilzfleisches"
+        case "fleischVerfaerbung", "fleischVerfaerbungFarbe":
+            return "Verfärbung des Fleisches beim Anschnitt"
+        case "geruch", "geruchRichtung":
+            return "Geruch des Pilzes"
+        case "huVerfaerbung", "huVerfaerbungFarbe":
+            return "Verfärbung der Röhren oder Lamellen unter Druck"
+        default :
+            return "Pilzmerkmal"
+        }
+        
     }
     
     
@@ -183,6 +226,7 @@ class BestimmungsVC: UIViewController {
         //gets an random question of the result of the questions and shows text and image
         questionLabel.text = resultQuestions[randomQuestionIndex].questionText
         questionImage.image = UIImage(named: resultQuestions[randomQuestionIndex].questionImageURL!)
+        questionTypeLabel.text = updateTitleLabel(condition: resultQuestions[randomQuestionIndex].questionType!)
         //stores the given answer related to the property
         tempPropertyQuestion = type
         tempAnswerQuestion = resultQuestions[randomQuestionIndex].questionAnswer!.description

@@ -2,14 +2,14 @@
   "questions": [
     {
       "questionsType": "busch",
-      "text": "Steht der Pilz in einer buschartigen Gruppe wie im oberen Beispiel dargestellt?",
-      "image": "",
+      "text": "Ist die Stielbasis büschelig verwachsen wie abgebildet?",
+      "image": "stielbasis_busch.jpg",
       "answer": "ja"
     },
     {
       "questionsType": "busch",
-      "text": "Steht der Pilz einzeln oder nur in einer kleinen Gruppe, die nicht buschartig aussieht?",
-      "image": "",
+      "text": "Steht der Pilz einzeln oder nur in einer kleinen Gruppe, die nicht an der Stielbasis büschelig verwachsen ist so wie abgebildet?",
+      "image": "stielbasis_busch.jpg",
       "answer": "nein"
     },
     {"questionsType": "hutUnterseite",
@@ -395,12 +395,12 @@
     {
       "questionsType": "fleischVerfaerbung",
       "text": "Wenn du den Pilz aufschneidest, verfärbt sich das innere Fleisch?",
-      "image": "pilz_fleisch.jpg",
+      "image": "pilz_fleischverfaerbung.jpg",
       "answer": "ja"
     },
     {"questionsType": "fleischVerfaerbung",
-      "text": "Beim Anschnitt des Fleisches kommt es zu keiner Farbveränderung?",
-      "image": "pilz_fleisch.jpg",
+      "text": "Beim Anschnitt des Fleisches kommt es anders als abgebildet zu keiner Farbveränderung?",
+      "image": "pilz_fleischverfaerbung.jpg",
       "answer": "nein"
     },
     {
