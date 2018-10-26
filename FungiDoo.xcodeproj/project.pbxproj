@@ -8,23 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7609C2ADF6C81CDDDE73CC99 /* Pods_FungiDoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FED889CC8CFF9E8C91B1870 /* Pods_FungiDoo.framework */; };
-		D00459D8217CE40900073D4C /* hutfarbe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459D7217CE40900073D4C /* hutfarbe.jpg */; };
-		D00459DE217CEAED00073D4C /* hut_schuppig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459D9217CEAEC00073D4C /* hut_schuppig.jpg */; };
-		D00459DF217CEAED00073D4C /* hut_huellreste.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459DA217CEAED00073D4C /* hut_huellreste.jpg */; };
-		D00459E0217CEAEE00073D4C /* hut_schmierig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459DB217CEAED00073D4C /* hut_schmierig.jpg */; };
-		D00459E1217CEAEE00073D4C /* hut_samtig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459DC217CEAED00073D4C /* hut_samtig.jpg */; };
-		D00459E2217CEAEE00073D4C /* hut_felderig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459DD217CEAED00073D4C /* hut_felderig.jpg */; };
-		D00459E5217CEB0600073D4C /* poren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459E3217CEB0500073D4C /* poren.jpg */; };
-		D00459E6217CEB0600073D4C /* lamellen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459E4217CEB0600073D4C /* lamellen.jpg */; };
-		D00459FF217CFD7200073D4C /* stielbasis_huelle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459F7217CFD7100073D4C /* stielbasis_huelle.jpg */; };
-		D0045A00217CFD7200073D4C /* stielform_zylindrisch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459F8217CFD7100073D4C /* stielform_zylindrisch.jpg */; };
-		D0045A01217CFD7200073D4C /* stiel_farbe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459F9217CFD7100073D4C /* stiel_farbe.jpg */; };
-		D0045A02217CFD7200073D4C /* stiel_ring.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459FA217CFD7100073D4C /* stiel_ring.jpg */; };
-		D0045A03217CFD7200073D4C /* stielform_bauchig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459FB217CFD7100073D4C /* stielform_bauchig.jpg */; };
-		D0045A04217CFD7200073D4C /* stielbasis_knolle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459FC217CFD7200073D4C /* stielbasis_knolle.jpg */; };
-		D0045A05217CFD7200073D4C /* stielform_keule.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459FD217CFD7200073D4C /* stielform_keule.jpg */; };
-		D0045A06217CFD7200073D4C /* stielbasis_zugespitzt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D00459FE217CFD7200073D4C /* stielbasis_zugespitzt.jpg */; };
-		D0045A08217D004400073D4C /* geruch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0045A07217D004400073D4C /* geruch.jpg */; };
 		D00632EB2179CD5700A45285 /* pilzeGlossar.json in Resources */ = {isa = PBXBuildFile; fileRef = D00632EA2179CD5700A45285 /* pilzeGlossar.json */; };
 		D0063342217BB75D00A45285 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D0063341217BB75D00A45285 /* questions.json */; };
 		D014BAE2215131EE00C77187 /* UserListAddItemNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014BAE0215131EE00C77187 /* UserListAddItemNameTableViewCell.swift */; };
@@ -47,7 +30,6 @@
 		D075483D21774437003C6E71 /* schopftintling.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D075483C21774437003C6E71 /* schopftintling.jpg */; };
 		D080013521724CC00039E6B5 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D080013421724CC00039E6B5 /* Question.swift */; };
 		D097841621527F7A00CD3374 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D097841521527F7A00CD3374 /* CameraVC.swift */; };
-		D0B396B2217DD3E30066EF8E /* hutunterseite_farbe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0B396B1217DD3E30066EF8E /* hutunterseite_farbe.jpg */; };
 		D0B396CE217E32810066EF8E /* Flockenstieliger_Hexenroehrling.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0B396B3217E32790066EF8E /* Flockenstieliger_Hexenroehrling.jpg */; };
 		D0B396CF217E32810066EF8E /* 800px-2007-07-14_Cantharellus_cibarius.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0B396B4217E32790066EF8E /* 800px-2007-07-14_Cantharellus_cibarius.jpg */; };
 		D0B396D0217E32810066EF8E /* mushroom-2687012_960_720.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0B396B5217E327A0066EF8E /* mushroom-2687012_960_720.jpg */; };
@@ -77,14 +59,48 @@
 		D0B396E8217E32810066EF8E /* butterpilz-suillus-luteus-1ca33e77-6b2d-4a51-a1e2-8f02c3dc9f3e.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0B396CD217E32800066EF8E /* butterpilz-suillus-luteus-1ca33e77-6b2d-4a51-a1e2-8f02c3dc9f3e.jpg */; };
 		D0B396EA217E45090066EF8E /* IMG_7478.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0B396E9217E45080066EF8E /* IMG_7478.jpg */; };
 		D0B396EC217E5CAD0066EF8E /* Leccinum_-pseudoscabrum-2133.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0B396EB217E5CAC0066EF8E /* Leccinum_-pseudoscabrum-2133.jpg */; };
-		D0E877F7218302190004230D /* stielbasis_busch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E877F6218302180004230D /* stielbasis_busch.jpg */; };
-		D0E8780F218329FD0004230D /* stiel_genattert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87808218329FA0004230D /* stiel_genattert.jpg */; };
-		D0E87810218329FD0004230D /* stiel_flockig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87809218329FB0004230D /* stiel_flockig.jpg */; };
-		D0E87811218329FD0004230D /* stiel_schuppig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8780A218329FB0004230D /* stiel_schuppig.jpg */; };
-		D0E87812218329FD0004230D /* stiel_grubig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8780B218329FB0004230D /* stiel_grubig.jpg */; };
-		D0E87813218329FD0004230D /* stiel_laengsfaserig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8780C218329FC0004230D /* stiel_laengsfaserig.jpg */; };
-		D0E87814218329FD0004230D /* stiel_koernchen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8780D218329FC0004230D /* stiel_koernchen.jpg */; };
-		D0E87815218329FD0004230D /* stiel_netz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8780E218329FD0004230D /* stiel_netz.jpg */; };
+		D0E8783E2183923A0004230D /* trichterfoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87816218391F10004230D /* trichterfoermig.jpg */; };
+		D0E8783F2183923A0004230D /* kugelig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87817218391F20004230D /* kugelig.jpg */; };
+		D0E878402183923A0004230D /* stiel_grubig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87818218391F30004230D /* stiel_grubig.jpg */; };
+		D0E878412183923A0004230D /* stielbasis_zugespitzt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87819218391F50004230D /* stielbasis_zugespitzt.jpg */; };
+		D0E878422183923A0004230D /* eifoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8781A218391F70004230D /* eifoermig.jpg */; };
+		D0E878432183923A0004230D /* stielbasis_busch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8781B218391F80004230D /* stielbasis_busch.jpg */; };
+		D0E878442183923A0004230D /* hut_samtig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8781C218391F90004230D /* hut_samtig.jpg */; };
+		D0E878452183923A0004230D /* stiel_ring.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8781D218391FB0004230D /* stiel_ring.jpg */; };
+		D0E878462183923A0004230D /* lamellen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8781E218391FC0004230D /* lamellen.jpg */; };
+		D0E878472183923A0004230D /* hut_schmierig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8781F218391FE0004230D /* hut_schmierig.jpg */; };
+		D0E878482183923A0004230D /* pilz_fleisch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87820218392000004230D /* pilz_fleisch.jpg */; };
+		D0E878492183923A0004230D /* gewoelbt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87821218392020004230D /* gewoelbt.jpg */; };
+		D0E8784A2183923A0004230D /* stiel_genattert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87822218392040004230D /* stiel_genattert.jpg */; };
+		D0E8784B2183923A0004230D /* stielbasis_knolle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87823218392060004230D /* stielbasis_knolle.jpg */; };
+		D0E8784C2183923A0004230D /* schuesselfoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87824218392080004230D /* schuesselfoermig.jpg */; };
+		D0E8784D2183923A0004230D /* kegelfoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87825218392090004230D /* kegelfoermig.jpg */; };
+		D0E8784E2183923A0004230D /* stiel_flockig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E878262183920B0004230D /* stiel_flockig.jpg */; };
+		D0E8784F2183923A0004230D /* stiel_koernchen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E878272183920D0004230D /* stiel_koernchen.jpg */; };
+		D0E878502183923A0004230D /* stiel_farbe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E878282183920F0004230D /* stiel_farbe.jpg */; };
+		D0E878512183923A0004230D /* stiel_schuppig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87829218392100004230D /* stiel_schuppig.jpg */; };
+		D0E878522183923A0004230D /* poren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8782A218392120004230D /* poren.jpg */; };
+		D0E878532183923A0004230D /* hut_schuppig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8782B218392140004230D /* hut_schuppig.jpg */; };
+		D0E878542183923A0004230D /* halbkugelig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8782C218392160004230D /* halbkugelig.jpg */; };
+		D0E878552183923A0004230D /* stiel_laengsfaserig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8782D218392180004230D /* stiel_laengsfaserig.jpg */; };
+		D0E878562183923A0004230D /* stielform_keule.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8782E2183921A0004230D /* stielform_keule.jpg */; };
+		D0E878572183923A0004230D /* hut_huellreste.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8782F2183921C0004230D /* hut_huellreste.jpg */; };
+		D0E878582183923A0004230D /* stielform_zylindrisch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E878302183921E0004230D /* stielform_zylindrisch.jpg */; };
+		D0E878592183923A0004230D /* hut_laengsfaserig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87831218392200004230D /* hut_laengsfaserig.jpg */; };
+		D0E8785A2183923A0004230D /* hut_verfaerbung.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87832218392220004230D /* hut_verfaerbung.jpg */; };
+		D0E8785B2183923A0004230D /* geruch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87833218392230004230D /* geruch.jpg */; };
+		D0E8785C2183923A0004230D /* pilz_fleischverfaerbung.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87834218392250004230D /* pilz_fleischverfaerbung.jpg */; };
+		D0E8785D2183923A0004230D /* hut_felderig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87835218392270004230D /* hut_felderig.jpg */; };
+		D0E8785E2183923A0004230D /* hutunterseite_farbe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E87836218392290004230D /* hutunterseite_farbe.jpg */; };
+		D0E8785F2183923A0004230D /* hutfarbe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E878372183922B0004230D /* hutfarbe.jpg */; };
+		D0E878602183923A0004230D /* gebuckelt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E878382183922D0004230D /* gebuckelt.jpg */; };
+		D0E878612183923A0004230D /* pilz_hohl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E878392183922F0004230D /* pilz_hohl.jpg */; };
+		D0E878622183923A0004230D /* glockenfoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8783A218392310004230D /* glockenfoermig.jpg */; };
+		D0E878632183923A0004230D /* stiel_netz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8783B218392320004230D /* stiel_netz.jpg */; };
+		D0E878642183923A0004230D /* stielbasis_huelle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8783C218392340004230D /* stielbasis_huelle.jpg */; };
+		D0E878652183923A0004230D /* stielform_bauchig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8783D218392370004230D /* stielform_bauchig.jpg */; };
+		D0E878682183A4720004230D /* BestimmungHelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E878672183A4720004230D /* BestimmungHelpVC.swift */; };
+		D0E8786A2183A61C0004230D /* BestimmungHelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E878692183A61C0004230D /* BestimmungHelpTableViewCell.swift */; };
 		D0EA3880214FE3E6002E462C /* GlossarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA387F214FE3E6002E462C /* GlossarVC.swift */; };
 		D0EA3882214FE47B002E462C /* GlossarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3881214FE47B002E462C /* GlossarItem.swift */; };
 		D0EA3885214FE694002E462C /* GlossarListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3883214FE694002E462C /* GlossarListTableViewCell.swift */; };
@@ -93,43 +109,12 @@
 		D0EA388B21500022002E462C /* GlossarHelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA388A21500021002E462C /* GlossarHelpVC.swift */; };
 		D0EA388D215001AA002E462C /* GlossarHelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA388C215001AA002E462C /* GlossarHelpTableViewCell.swift */; };
 		D0EA388F21501367002E462C /* GlossarDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA388E21501367002E462C /* GlossarDetailVC.swift */; };
-		D0FC53172181CB8000B813DE /* hut_faserschuppig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC53162181CB8000B813DE /* hut_faserschuppig.jpg */; };
-		D0FC53212181D1D900B813DE /* halbkugelig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC53182181D1D700B813DE /* halbkugelig.jpg */; };
-		D0FC53222181D1D900B813DE /* gebuckelt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC53192181D1D700B813DE /* gebuckelt.jpg */; };
-		D0FC53232181D1D900B813DE /* glockenfoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC531A2181D1D800B813DE /* glockenfoermig.jpg */; };
-		D0FC53242181D1D900B813DE /* trichterfoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC531B2181D1D800B813DE /* trichterfoermig.jpg */; };
-		D0FC53252181D1D900B813DE /* eifoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC531C2181D1D800B813DE /* eifoermig.jpg */; };
-		D0FC53262181D1D900B813DE /* gewoelbt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC531D2181D1D800B813DE /* gewoelbt.jpg */; };
-		D0FC53272181D1D900B813DE /* kegelfoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC531E2181D1D800B813DE /* kegelfoermig.jpg */; };
-		D0FC53282181D1D900B813DE /* kugelig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC531F2181D1D800B813DE /* kugelig.jpg */; };
-		D0FC53292181D1D900B813DE /* schuesselfoermig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC53202181D1D900B813DE /* schuesselfoermig.jpg */; };
 		D0FC532B2181D39300B813DE /* Data.csv in Resources */ = {isa = PBXBuildFile; fileRef = D0FC532A2181D39300B813DE /* Data.csv */; };
-		D0FC532E2181F66000B813DE /* pilz_hohl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC532C2181F66000B813DE /* pilz_hohl.jpg */; };
-		D0FC532F2181F66000B813DE /* pilz_fleisch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC532D2181F66000B813DE /* pilz_fleisch.jpg */; };
-		D0FC53312181F91700B813DE /* pilz_fleischverfaerbung.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC53302181F91700B813DE /* pilz_fleischverfaerbung.jpg */; };
-		D0FC53332181FAAF00B813DE /* hut_verfaerbung.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0FC53322181FAAF00B813DE /* hut_verfaerbung.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		539F91D9F1DD01E0ED45B0CA /* Pods-FungiDoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FungiDoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FungiDoo/Pods-FungiDoo.debug.xcconfig"; sourceTree = "<group>"; };
 		7FED889CC8CFF9E8C91B1870 /* Pods_FungiDoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FungiDoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D00459D7217CE40900073D4C /* hutfarbe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe.jpg; sourceTree = "<group>"; };
-		D00459D9217CEAEC00073D4C /* hut_schuppig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_schuppig.jpg; sourceTree = "<group>"; };
-		D00459DA217CEAED00073D4C /* hut_huellreste.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_huellreste.jpg; sourceTree = "<group>"; };
-		D00459DB217CEAED00073D4C /* hut_schmierig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_schmierig.jpg; sourceTree = "<group>"; };
-		D00459DC217CEAED00073D4C /* hut_samtig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_samtig.jpg; sourceTree = "<group>"; };
-		D00459DD217CEAED00073D4C /* hut_felderig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_felderig.jpg; sourceTree = "<group>"; };
-		D00459E3217CEB0500073D4C /* poren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = poren.jpg; sourceTree = "<group>"; };
-		D00459E4217CEB0600073D4C /* lamellen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lamellen.jpg; sourceTree = "<group>"; };
-		D00459F7217CFD7100073D4C /* stielbasis_huelle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielbasis_huelle.jpg; sourceTree = "<group>"; };
-		D00459F8217CFD7100073D4C /* stielform_zylindrisch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielform_zylindrisch.jpg; sourceTree = "<group>"; };
-		D00459F9217CFD7100073D4C /* stiel_farbe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_farbe.jpg; sourceTree = "<group>"; };
-		D00459FA217CFD7100073D4C /* stiel_ring.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_ring.jpg; sourceTree = "<group>"; };
-		D00459FB217CFD7100073D4C /* stielform_bauchig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielform_bauchig.jpg; sourceTree = "<group>"; };
-		D00459FC217CFD7200073D4C /* stielbasis_knolle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielbasis_knolle.jpg; sourceTree = "<group>"; };
-		D00459FD217CFD7200073D4C /* stielform_keule.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielform_keule.jpg; sourceTree = "<group>"; };
-		D00459FE217CFD7200073D4C /* stielbasis_zugespitzt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielbasis_zugespitzt.jpg; sourceTree = "<group>"; };
-		D0045A07217D004400073D4C /* geruch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = geruch.jpg; sourceTree = "<group>"; };
 		D00632EA2179CD5700A45285 /* pilzeGlossar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pilzeGlossar.json; sourceTree = "<group>"; };
 		D0063341217BB75D00A45285 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		D014BAE0215131EE00C77187 /* UserListAddItemNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAddItemNameTableViewCell.swift; sourceTree = "<group>"; };
@@ -154,7 +139,6 @@
 		D075483C21774437003C6E71 /* schopftintling.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schopftintling.jpg; sourceTree = "<group>"; };
 		D080013421724CC00039E6B5 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D097841521527F7A00CD3374 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
-		D0B396B1217DD3E30066EF8E /* hutunterseite_farbe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutunterseite_farbe.jpg; sourceTree = "<group>"; };
 		D0B396B3217E32790066EF8E /* Flockenstieliger_Hexenroehrling.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Flockenstieliger_Hexenroehrling.jpg; sourceTree = "<group>"; };
 		D0B396B4217E32790066EF8E /* 800px-2007-07-14_Cantharellus_cibarius.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "800px-2007-07-14_Cantharellus_cibarius.jpg"; sourceTree = "<group>"; };
 		D0B396B5217E327A0066EF8E /* mushroom-2687012_960_720.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mushroom-2687012_960_720.jpg"; sourceTree = "<group>"; };
@@ -184,14 +168,48 @@
 		D0B396CD217E32800066EF8E /* butterpilz-suillus-luteus-1ca33e77-6b2d-4a51-a1e2-8f02c3dc9f3e.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "butterpilz-suillus-luteus-1ca33e77-6b2d-4a51-a1e2-8f02c3dc9f3e.jpg"; sourceTree = "<group>"; };
 		D0B396E9217E45080066EF8E /* IMG_7478.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_7478.jpg; sourceTree = "<group>"; };
 		D0B396EB217E5CAC0066EF8E /* Leccinum_-pseudoscabrum-2133.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Leccinum_-pseudoscabrum-2133.jpg"; sourceTree = "<group>"; };
-		D0E877F6218302180004230D /* stielbasis_busch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielbasis_busch.jpg; sourceTree = "<group>"; };
-		D0E87808218329FA0004230D /* stiel_genattert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_genattert.jpg; sourceTree = "<group>"; };
-		D0E87809218329FB0004230D /* stiel_flockig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_flockig.jpg; sourceTree = "<group>"; };
-		D0E8780A218329FB0004230D /* stiel_schuppig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_schuppig.jpg; sourceTree = "<group>"; };
-		D0E8780B218329FB0004230D /* stiel_grubig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_grubig.jpg; sourceTree = "<group>"; };
-		D0E8780C218329FC0004230D /* stiel_laengsfaserig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_laengsfaserig.jpg; sourceTree = "<group>"; };
-		D0E8780D218329FC0004230D /* stiel_koernchen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_koernchen.jpg; sourceTree = "<group>"; };
-		D0E8780E218329FD0004230D /* stiel_netz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_netz.jpg; sourceTree = "<group>"; };
+		D0E87816218391F10004230D /* trichterfoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trichterfoermig.jpg; sourceTree = "<group>"; };
+		D0E87817218391F20004230D /* kugelig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kugelig.jpg; sourceTree = "<group>"; };
+		D0E87818218391F30004230D /* stiel_grubig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_grubig.jpg; sourceTree = "<group>"; };
+		D0E87819218391F50004230D /* stielbasis_zugespitzt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielbasis_zugespitzt.jpg; sourceTree = "<group>"; };
+		D0E8781A218391F70004230D /* eifoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eifoermig.jpg; sourceTree = "<group>"; };
+		D0E8781B218391F80004230D /* stielbasis_busch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielbasis_busch.jpg; sourceTree = "<group>"; };
+		D0E8781C218391F90004230D /* hut_samtig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_samtig.jpg; sourceTree = "<group>"; };
+		D0E8781D218391FB0004230D /* stiel_ring.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_ring.jpg; sourceTree = "<group>"; };
+		D0E8781E218391FC0004230D /* lamellen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lamellen.jpg; sourceTree = "<group>"; };
+		D0E8781F218391FE0004230D /* hut_schmierig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_schmierig.jpg; sourceTree = "<group>"; };
+		D0E87820218392000004230D /* pilz_fleisch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pilz_fleisch.jpg; sourceTree = "<group>"; };
+		D0E87821218392020004230D /* gewoelbt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gewoelbt.jpg; sourceTree = "<group>"; };
+		D0E87822218392040004230D /* stiel_genattert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_genattert.jpg; sourceTree = "<group>"; };
+		D0E87823218392060004230D /* stielbasis_knolle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielbasis_knolle.jpg; sourceTree = "<group>"; };
+		D0E87824218392080004230D /* schuesselfoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schuesselfoermig.jpg; sourceTree = "<group>"; };
+		D0E87825218392090004230D /* kegelfoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kegelfoermig.jpg; sourceTree = "<group>"; };
+		D0E878262183920B0004230D /* stiel_flockig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_flockig.jpg; sourceTree = "<group>"; };
+		D0E878272183920D0004230D /* stiel_koernchen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_koernchen.jpg; sourceTree = "<group>"; };
+		D0E878282183920F0004230D /* stiel_farbe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_farbe.jpg; sourceTree = "<group>"; };
+		D0E87829218392100004230D /* stiel_schuppig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_schuppig.jpg; sourceTree = "<group>"; };
+		D0E8782A218392120004230D /* poren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = poren.jpg; sourceTree = "<group>"; };
+		D0E8782B218392140004230D /* hut_schuppig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_schuppig.jpg; sourceTree = "<group>"; };
+		D0E8782C218392160004230D /* halbkugelig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halbkugelig.jpg; sourceTree = "<group>"; };
+		D0E8782D218392180004230D /* stiel_laengsfaserig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_laengsfaserig.jpg; sourceTree = "<group>"; };
+		D0E8782E2183921A0004230D /* stielform_keule.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielform_keule.jpg; sourceTree = "<group>"; };
+		D0E8782F2183921C0004230D /* hut_huellreste.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_huellreste.jpg; sourceTree = "<group>"; };
+		D0E878302183921E0004230D /* stielform_zylindrisch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielform_zylindrisch.jpg; sourceTree = "<group>"; };
+		D0E87831218392200004230D /* hut_laengsfaserig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_laengsfaserig.jpg; sourceTree = "<group>"; };
+		D0E87832218392220004230D /* hut_verfaerbung.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_verfaerbung.jpg; sourceTree = "<group>"; };
+		D0E87833218392230004230D /* geruch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = geruch.jpg; sourceTree = "<group>"; };
+		D0E87834218392250004230D /* pilz_fleischverfaerbung.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pilz_fleischverfaerbung.jpg; sourceTree = "<group>"; };
+		D0E87835218392270004230D /* hut_felderig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_felderig.jpg; sourceTree = "<group>"; };
+		D0E87836218392290004230D /* hutunterseite_farbe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutunterseite_farbe.jpg; sourceTree = "<group>"; };
+		D0E878372183922B0004230D /* hutfarbe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hutfarbe.jpg; sourceTree = "<group>"; };
+		D0E878382183922D0004230D /* gebuckelt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gebuckelt.jpg; sourceTree = "<group>"; };
+		D0E878392183922F0004230D /* pilz_hohl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pilz_hohl.jpg; sourceTree = "<group>"; };
+		D0E8783A218392310004230D /* glockenfoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = glockenfoermig.jpg; sourceTree = "<group>"; };
+		D0E8783B218392320004230D /* stiel_netz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_netz.jpg; sourceTree = "<group>"; };
+		D0E8783C218392340004230D /* stielbasis_huelle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielbasis_huelle.jpg; sourceTree = "<group>"; };
+		D0E8783D218392370004230D /* stielform_bauchig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielform_bauchig.jpg; sourceTree = "<group>"; };
+		D0E878672183A4720004230D /* BestimmungHelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestimmungHelpVC.swift; sourceTree = "<group>"; };
+		D0E878692183A61C0004230D /* BestimmungHelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestimmungHelpTableViewCell.swift; sourceTree = "<group>"; };
 		D0EA387F214FE3E6002E462C /* GlossarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarVC.swift; sourceTree = "<group>"; };
 		D0EA3881214FE47B002E462C /* GlossarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarItem.swift; sourceTree = "<group>"; };
 		D0EA3883214FE694002E462C /* GlossarListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarListTableViewCell.swift; sourceTree = "<group>"; };
@@ -200,21 +218,7 @@
 		D0EA388A21500021002E462C /* GlossarHelpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlossarHelpVC.swift; sourceTree = "<group>"; };
 		D0EA388C215001AA002E462C /* GlossarHelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarHelpTableViewCell.swift; sourceTree = "<group>"; };
 		D0EA388E21501367002E462C /* GlossarDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarDetailVC.swift; sourceTree = "<group>"; };
-		D0FC53162181CB8000B813DE /* hut_faserschuppig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_faserschuppig.jpg; sourceTree = "<group>"; };
-		D0FC53182181D1D700B813DE /* halbkugelig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halbkugelig.jpg; sourceTree = "<group>"; };
-		D0FC53192181D1D700B813DE /* gebuckelt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gebuckelt.jpg; sourceTree = "<group>"; };
-		D0FC531A2181D1D800B813DE /* glockenfoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = glockenfoermig.jpg; sourceTree = "<group>"; };
-		D0FC531B2181D1D800B813DE /* trichterfoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trichterfoermig.jpg; sourceTree = "<group>"; };
-		D0FC531C2181D1D800B813DE /* eifoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eifoermig.jpg; sourceTree = "<group>"; };
-		D0FC531D2181D1D800B813DE /* gewoelbt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gewoelbt.jpg; sourceTree = "<group>"; };
-		D0FC531E2181D1D800B813DE /* kegelfoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kegelfoermig.jpg; sourceTree = "<group>"; };
-		D0FC531F2181D1D800B813DE /* kugelig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kugelig.jpg; sourceTree = "<group>"; };
-		D0FC53202181D1D900B813DE /* schuesselfoermig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = schuesselfoermig.jpg; sourceTree = "<group>"; };
 		D0FC532A2181D39300B813DE /* Data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Data.csv; sourceTree = "<group>"; };
-		D0FC532C2181F66000B813DE /* pilz_hohl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pilz_hohl.jpg; sourceTree = "<group>"; };
-		D0FC532D2181F66000B813DE /* pilz_fleisch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pilz_fleisch.jpg; sourceTree = "<group>"; };
-		D0FC53302181F91700B813DE /* pilz_fleischverfaerbung.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pilz_fleischverfaerbung.jpg; sourceTree = "<group>"; };
-		D0FC53322181FAAF00B813DE /* hut_verfaerbung.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hut_verfaerbung.jpg; sourceTree = "<group>"; };
 		D4108D0D4BDCDF3C379AFA5B /* Pods-FungiDoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FungiDoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FungiDoo/Pods-FungiDoo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,49 +251,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D00459E7217CFD1D00073D4C /* stielOberflaeche */ = {
-			isa = PBXGroup;
-			children = (
-				D0E87809218329FB0004230D /* stiel_flockig.jpg */,
-				D0E87808218329FA0004230D /* stiel_genattert.jpg */,
-				D0E8780B218329FB0004230D /* stiel_grubig.jpg */,
-				D0E8780D218329FC0004230D /* stiel_koernchen.jpg */,
-				D0E8780C218329FC0004230D /* stiel_laengsfaserig.jpg */,
-				D0E8780E218329FD0004230D /* stiel_netz.jpg */,
-				D0E8780A218329FB0004230D /* stiel_schuppig.jpg */,
-			);
-			path = stielOberflaeche;
-			sourceTree = "<group>";
-		};
-		D00459F6217CFD5100073D4C /* stiel */ = {
-			isa = PBXGroup;
-			children = (
-				D0E877F6218302180004230D /* stielbasis_busch.jpg */,
-				D00459F9217CFD7100073D4C /* stiel_farbe.jpg */,
-				D00459FA217CFD7100073D4C /* stiel_ring.jpg */,
-				D00459F7217CFD7100073D4C /* stielbasis_huelle.jpg */,
-				D00459FC217CFD7200073D4C /* stielbasis_knolle.jpg */,
-				D00459FE217CFD7200073D4C /* stielbasis_zugespitzt.jpg */,
-				D00459FB217CFD7100073D4C /* stielform_bauchig.jpg */,
-				D00459FD217CFD7200073D4C /* stielform_keule.jpg */,
-				D00459F8217CFD7100073D4C /* stielform_zylindrisch.jpg */,
-			);
-			path = stiel;
-			sourceTree = "<group>";
-		};
-		D00632F0217B8D3200A45285 /* hutOberflaeche */ = {
-			isa = PBXGroup;
-			children = (
-				D0FC53162181CB8000B813DE /* hut_faserschuppig.jpg */,
-				D00459DD217CEAED00073D4C /* hut_felderig.jpg */,
-				D00459DA217CEAED00073D4C /* hut_huellreste.jpg */,
-				D00459DC217CEAED00073D4C /* hut_samtig.jpg */,
-				D00459DB217CEAED00073D4C /* hut_schmierig.jpg */,
-				D00459D9217CEAEC00073D4C /* hut_schuppig.jpg */,
-			);
-			path = hutOberflaeche;
-			sourceTree = "<group>";
-		};
 		D03467FE2150F3E500197129 /* GlossarViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,25 +259,6 @@
 				D0EA3884214FE694002E462C /* GlossarListTableViewCell.xib */,
 			);
 			path = GlossarViews;
-			sourceTree = "<group>";
-		};
-		D041F86A21788E4100BAFFDD /* hutfarben */ = {
-			isa = PBXGroup;
-			children = (
-				D00459D7217CE40900073D4C /* hutfarbe.jpg */,
-			);
-			path = hutfarben;
-			sourceTree = "<group>";
-		};
-		D041F8932178BDFF00BAFFDD /* hutUnterseite */ = {
-			isa = PBXGroup;
-			children = (
-				D0FC53322181FAAF00B813DE /* hut_verfaerbung.jpg */,
-				D0B396B1217DD3E30066EF8E /* hutunterseite_farbe.jpg */,
-				D00459E4217CEB0600073D4C /* lamellen.jpg */,
-				D00459E3217CEB0500073D4C /* poren.jpg */,
-			);
-			path = hutUnterseite;
 			sourceTree = "<group>";
 		};
 		D0675210214F9CF60086B007 = {
@@ -368,6 +310,7 @@
 				D0675220214F9CF60086B007 /* Main.storyboard */,
 				D0675228214F9CF80086B007 /* LaunchScreen.storyboard */,
 				D097841821527FCF00CD3374 /* UserListViews */,
+				D0E878692183A61C0004230D /* BestimmungHelpTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -378,8 +321,7 @@
 				D0EA38902150173A002E462C /* GlossarVCs */,
 				D097841721527FAC00CD3374 /* UserListVCs */,
 				D097841521527F7A00CD3374 /* CameraVC.swift */,
-				D05DBEC0216E3340001C4837 /* BestimmungsVC.swift */,
-				D041F88F21789DFB00BAFFDD /* ResultVC.swift */,
+				D0E878662183A43E0004230D /* BestimmungVCs */,
 				D041F8C82178D66A00BAFFDD /* StartVC.swift */,
 			);
 			path = Controller;
@@ -422,22 +364,6 @@
 			path = imagesGlossar;
 			sourceTree = "<group>";
 		};
-		D075485421778685003C6E71 /* hutformen */ = {
-			isa = PBXGroup;
-			children = (
-				D0FC531C2181D1D800B813DE /* eifoermig.jpg */,
-				D0FC53192181D1D700B813DE /* gebuckelt.jpg */,
-				D0FC531D2181D1D800B813DE /* gewoelbt.jpg */,
-				D0FC531A2181D1D800B813DE /* glockenfoermig.jpg */,
-				D0FC53182181D1D700B813DE /* halbkugelig.jpg */,
-				D0FC531E2181D1D800B813DE /* kegelfoermig.jpg */,
-				D0FC531F2181D1D800B813DE /* kugelig.jpg */,
-				D0FC53202181D1D900B813DE /* schuesselfoermig.jpg */,
-				D0FC531B2181D1D800B813DE /* trichterfoermig.jpg */,
-			);
-			path = hutformen;
-			sourceTree = "<group>";
-		};
 		D097841721527FAC00CD3374 /* UserListVCs */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,18 +401,58 @@
 		D09A3CD12173A0F70089456E /* imagesFragen */ = {
 			isa = PBXGroup;
 			children = (
-				D0FC53302181F91700B813DE /* pilz_fleischverfaerbung.jpg */,
-				D0FC532D2181F66000B813DE /* pilz_fleisch.jpg */,
-				D0FC532C2181F66000B813DE /* pilz_hohl.jpg */,
-				D0045A07217D004400073D4C /* geruch.jpg */,
-				D00459F6217CFD5100073D4C /* stiel */,
-				D00459E7217CFD1D00073D4C /* stielOberflaeche */,
-				D00632F0217B8D3200A45285 /* hutOberflaeche */,
-				D041F8932178BDFF00BAFFDD /* hutUnterseite */,
-				D041F86A21788E4100BAFFDD /* hutfarben */,
-				D075485421778685003C6E71 /* hutformen */,
+				D0E8781A218391F70004230D /* eifoermig.jpg */,
+				D0E878382183922D0004230D /* gebuckelt.jpg */,
+				D0E87833218392230004230D /* geruch.jpg */,
+				D0E87821218392020004230D /* gewoelbt.jpg */,
+				D0E8783A218392310004230D /* glockenfoermig.jpg */,
+				D0E8782C218392160004230D /* halbkugelig.jpg */,
+				D0E87835218392270004230D /* hut_felderig.jpg */,
+				D0E8782F2183921C0004230D /* hut_huellreste.jpg */,
+				D0E87831218392200004230D /* hut_laengsfaserig.jpg */,
+				D0E8781C218391F90004230D /* hut_samtig.jpg */,
+				D0E8781F218391FE0004230D /* hut_schmierig.jpg */,
+				D0E8782B218392140004230D /* hut_schuppig.jpg */,
+				D0E87832218392220004230D /* hut_verfaerbung.jpg */,
+				D0E878372183922B0004230D /* hutfarbe.jpg */,
+				D0E87836218392290004230D /* hutunterseite_farbe.jpg */,
+				D0E87825218392090004230D /* kegelfoermig.jpg */,
+				D0E87817218391F20004230D /* kugelig.jpg */,
+				D0E8781E218391FC0004230D /* lamellen.jpg */,
+				D0E87820218392000004230D /* pilz_fleisch.jpg */,
+				D0E87834218392250004230D /* pilz_fleischverfaerbung.jpg */,
+				D0E878392183922F0004230D /* pilz_hohl.jpg */,
+				D0E8782A218392120004230D /* poren.jpg */,
+				D0E87824218392080004230D /* schuesselfoermig.jpg */,
+				D0E878282183920F0004230D /* stiel_farbe.jpg */,
+				D0E878262183920B0004230D /* stiel_flockig.jpg */,
+				D0E87822218392040004230D /* stiel_genattert.jpg */,
+				D0E87818218391F30004230D /* stiel_grubig.jpg */,
+				D0E878272183920D0004230D /* stiel_koernchen.jpg */,
+				D0E8782D218392180004230D /* stiel_laengsfaserig.jpg */,
+				D0E8783B218392320004230D /* stiel_netz.jpg */,
+				D0E8781D218391FB0004230D /* stiel_ring.jpg */,
+				D0E87829218392100004230D /* stiel_schuppig.jpg */,
+				D0E8781B218391F80004230D /* stielbasis_busch.jpg */,
+				D0E8783C218392340004230D /* stielbasis_huelle.jpg */,
+				D0E87823218392060004230D /* stielbasis_knolle.jpg */,
+				D0E87819218391F50004230D /* stielbasis_zugespitzt.jpg */,
+				D0E8783D218392370004230D /* stielform_bauchig.jpg */,
+				D0E8782E2183921A0004230D /* stielform_keule.jpg */,
+				D0E878302183921E0004230D /* stielform_zylindrisch.jpg */,
+				D0E87816218391F10004230D /* trichterfoermig.jpg */,
 			);
 			path = imagesFragen;
+			sourceTree = "<group>";
+		};
+		D0E878662183A43E0004230D /* BestimmungVCs */ = {
+			isa = PBXGroup;
+			children = (
+				D05DBEC0216E3340001C4837 /* BestimmungsVC.swift */,
+				D041F88F21789DFB00BAFFDD /* ResultVC.swift */,
+				D0E878672183A4720004230D /* BestimmungHelpVC.swift */,
+			);
+			path = BestimmungVCs;
 			sourceTree = "<group>";
 		};
 		D0EA387B214FDF36002E462C /* Model */ = {
@@ -578,85 +544,85 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E878442183923A0004230D /* hut_samtig.jpg in Resources */,
+				D0E878612183923A0004230D /* pilz_hohl.jpg in Resources */,
+				D0E878572183923A0004230D /* hut_huellreste.jpg in Resources */,
 				D0B396D0217E32810066EF8E /* mushroom-2687012_960_720.jpg in Resources */,
-				D0FC532E2181F66000B813DE /* pilz_hohl.jpg in Resources */,
 				D0B396DA217E32810066EF8E /* 453px-2006-08_Amanita_virosa_crop.jpg in Resources */,
 				D067522A214F9CF80086B007 /* LaunchScreen.storyboard in Resources */,
+				D0E878422183923A0004230D /* eifoermig.jpg in Resources */,
+				D0E878412183923A0004230D /* stielbasis_zugespitzt.jpg in Resources */,
 				D0B396E7217E32810066EF8E /* 3087010338_7a05fd82b3_b-2.jpg in Resources */,
+				D0E8784C2183923A0004230D /* schuesselfoermig.jpg in Resources */,
+				D0E878472183923A0004230D /* hut_schmierig.jpg in Resources */,
 				D0B396E4217E32810066EF8E /* 800px-Anis-champignon-Agaricus-silvicola.jpg in Resources */,
 				D0B396DE217E32810066EF8E /* Pantherpilz_Amanita_pantherina.jpg in Resources */,
+				D0E8785D2183923A0004230D /* hut_felderig.jpg in Resources */,
 				D0B396E3217E32810066EF8E /* nameko-228854_960_720-2.jpg in Resources */,
-				D00459DF217CEAED00073D4C /* hut_huellreste.jpg in Resources */,
+				D0E878562183923A0004230D /* stielform_keule.jpg in Resources */,
 				D0B396E8217E32810066EF8E /* butterpilz-suillus-luteus-1ca33e77-6b2d-4a51-a1e2-8f02c3dc9f3e.jpg in Resources */,
-				D00459E1217CEAEE00073D4C /* hut_samtig.jpg in Resources */,
-				D00459E6217CEB0600073D4C /* lamellen.jpg in Resources */,
-				D00459D8217CE40900073D4C /* hutfarbe.jpg in Resources */,
+				D0E878592183923A0004230D /* hut_laengsfaserig.jpg in Resources */,
 				D0B396D9217E32810066EF8E /* 800px-Parasol_Schirmpilz.jpg in Resources */,
-				D0FC53242181D1D900B813DE /* trichterfoermig.jpg in Resources */,
+				D0E878402183923A0004230D /* stiel_grubig.jpg in Resources */,
+				D0E878432183923A0004230D /* stielbasis_busch.jpg in Resources */,
 				D0B396CE217E32810066EF8E /* Flockenstieliger_Hexenroehrling.jpg in Resources */,
-				D0045A01217CFD7200073D4C /* stiel_farbe.jpg in Resources */,
-				D0FC53232181D1D900B813DE /* glockenfoermig.jpg in Resources */,
+				D0E878552183923A0004230D /* stiel_laengsfaserig.jpg in Resources */,
 				D0B396E6217E32810066EF8E /* 2007-07-14_Boletus_badius_2.jpg in Resources */,
-				D0FC53222181D1D900B813DE /* gebuckelt.jpg in Resources */,
-				D00459E5217CEB0600073D4C /* poren.jpg in Resources */,
-				D0E877F7218302190004230D /* stielbasis_busch.jpg in Resources */,
+				D0E8784D2183923A0004230D /* kegelfoermig.jpg in Resources */,
 				D0B396DF217E32810066EF8E /* 800px-Kleiner_Waldchampignon_Agaricus_silvaticus.jpg in Resources */,
-				D0045A08217D004400073D4C /* geruch.jpg in Resources */,
-				D00459DE217CEAED00073D4C /* hut_schuppig.jpg in Resources */,
+				D0E8784F2183923A0004230D /* stiel_koernchen.jpg in Resources */,
 				D03468022150FA2500197129 /* UserItemTableViewCell.xib in Resources */,
 				D0B396DD217E32810066EF8E /* Safranschirmling-1-2.jpg in Resources */,
-				D0045A03217CFD7200073D4C /* stielform_bauchig.jpg in Resources */,
 				D0FC532B2181D39300B813DE /* Data.csv in Resources */,
-				D0B396B2217DD3E30066EF8E /* hutunterseite_farbe.jpg in Resources */,
-				D0FC53262181D1D900B813DE /* gewoelbt.jpg in Resources */,
+				D0E8784E2183923A0004230D /* stiel_flockig.jpg in Resources */,
 				D0B396D7217E32810066EF8E /* karbolchampignon.jpg in Resources */,
+				D0E8783E2183923A0004230D /* trichterfoermig.jpg in Resources */,
 				D0B396DB217E32810066EF8E /* Gemeine_Steinpilz_(Boletus_edulis).jpg in Resources */,
+				D0E878652183923A0004230D /* stielform_bauchig.jpg in Resources */,
+				D0E8784A2183923A0004230D /* stiel_genattert.jpg in Resources */,
+				D0E878632183923A0004230D /* stiel_netz.jpg in Resources */,
+				D0E878492183923A0004230D /* gewoelbt.jpg in Resources */,
 				D0B396E0217E32810066EF8E /* 2006-08-09_Amanita_citrina_46465_cropped.jpg in Resources */,
 				D0675227214F9CF80086B007 /* Assets.xcassets in Resources */,
-				D0E87812218329FD0004230D /* stiel_grubig.jpg in Resources */,
 				D0B396D2217E32810066EF8E /* fichtensteinpilz.jpg in Resources */,
+				D0E878602183923A0004230D /* gebuckelt.jpg in Resources */,
 				D0675233214F9DF10086B007 /* pilzeList.json in Resources */,
-				D0E87815218329FD0004230D /* stiel_netz.jpg in Resources */,
-				D0E87811218329FD0004230D /* stiel_schuppig.jpg in Resources */,
-				D0045A04217CFD7200073D4C /* stielbasis_knolle.jpg in Resources */,
 				D0B396D1217E32810066EF8E /* birkenpilz.jpg in Resources */,
-				D0045A02217CFD7200073D4C /* stiel_ring.jpg in Resources */,
 				D0B396D5217E32810066EF8E /* satan-boletus-3654861_960_720.jpg in Resources */,
+				D0E878582183923A0004230D /* stielform_zylindrisch.jpg in Resources */,
 				D075483D21774437003C6E71 /* schopftintling.jpg in Resources */,
+				D0E878512183923A0004230D /* stiel_schuppig.jpg in Resources */,
 				D0B396E5217E32810066EF8E /* 800px-Gruener_Knollenblaetterpilz_Amanita_phalloides.jpg in Resources */,
 				D0B396E2217E32810066EF8E /* mushrooms-223114_960_720-2.jpg in Resources */,
-				D0FC53332181FAAF00B813DE /* hut_verfaerbung.jpg in Resources */,
-				D0E87814218329FD0004230D /* stiel_koernchen.jpg in Resources */,
-				D0FC53212181D1D900B813DE /* halbkugelig.jpg in Resources */,
+				D0E8785E2183923A0004230D /* hutunterseite_farbe.jpg in Resources */,
 				D0B396EA217E45090066EF8E /* IMG_7478.jpg in Resources */,
 				D0063342217BB75D00A45285 /* questions.json in Resources */,
-				D0045A06217CFD7200073D4C /* stielbasis_zugespitzt.jpg in Resources */,
-				D0FC53172181CB8000B813DE /* hut_faserschuppig.jpg in Resources */,
+				D0E8785C2183923A0004230D /* pilz_fleischverfaerbung.jpg in Resources */,
 				D0675222214F9CF60086B007 /* Main.storyboard in Resources */,
-				D00459E0217CEAEE00073D4C /* hut_schmierig.jpg in Resources */,
-				D0FC53312181F91700B813DE /* pilz_fleischverfaerbung.jpg in Resources */,
 				D0B396D4217E32810066EF8E /* 2012-10-03_Agaricus_campestris.jpg in Resources */,
-				D0FC53292181D1D900B813DE /* schuesselfoermig.jpg in Resources */,
-				D00459E2217CEAEE00073D4C /* hut_felderig.jpg in Resources */,
+				D0E878522183923A0004230D /* poren.jpg in Resources */,
 				D0EA3886214FE694002E462C /* GlossarListTableViewCell.xib in Resources */,
+				D0E878462183923A0004230D /* lamellen.jpg in Resources */,
+				D0E8785F2183923A0004230D /* hutfarbe.jpg in Resources */,
+				D0E878642183923A0004230D /* stielbasis_huelle.jpg in Resources */,
+				D0E878482183923A0004230D /* pilz_fleisch.jpg in Resources */,
+				D0E8785A2183923A0004230D /* hut_verfaerbung.jpg in Resources */,
+				D0E8784B2183923A0004230D /* stielbasis_knolle.jpg in Resources */,
+				D0E878542183923A0004230D /* halbkugelig.jpg in Resources */,
 				D0B396CF217E32810066EF8E /* 800px-2007-07-14_Cantharellus_cibarius.jpg in Resources */,
-				D0045A05217CFD7200073D4C /* stielform_keule.jpg in Resources */,
 				D0B396EC217E5CAD0066EF8E /* Leccinum_-pseudoscabrum-2133.jpg in Resources */,
-				D0FC53282181D1D900B813DE /* kugelig.jpg in Resources */,
 				D0B396D8217E32810066EF8E /* fliegenpilz.jpg in Resources */,
+				D0E878532183923A0004230D /* hut_schuppig.jpg in Resources */,
 				D0B396D3217E32810066EF8E /* 800px-Koivunpunikkitatti.jpg in Resources */,
-				D0E87810218329FD0004230D /* stiel_flockig.jpg in Resources */,
-				D0E87813218329FD0004230D /* stiel_laengsfaserig.jpg in Resources */,
-				D00459FF217CFD7200073D4C /* stielbasis_huelle.jpg in Resources */,
+				D0E8783F2183923A0004230D /* kugelig.jpg in Resources */,
+				D0E878502183923A0004230D /* stiel_farbe.jpg in Resources */,
+				D0E878622183923A0004230D /* glockenfoermig.jpg in Resources */,
 				D0B396D6217E32810066EF8E /* Agaricus_bisporus_mushroom.jpg in Resources */,
-				D0FC53272181D1D900B813DE /* kegelfoermig.jpg in Resources */,
-				D0E8780F218329FD0004230D /* stiel_genattert.jpg in Resources */,
 				D00632EB2179CD5700A45285 /* pilzeGlossar.json in Resources */,
 				D0B396DC217E32810066EF8E /* False_Chanterelle_Hygrophoropsis_aurantiaca.jpg in Resources */,
-				D0FC532F2181F66000B813DE /* pilz_fleisch.jpg in Resources */,
-				D0FC53252181D1D900B813DE /* eifoermig.jpg in Resources */,
-				D0045A00217CFD7200073D4C /* stielform_zylindrisch.jpg in Resources */,
 				D0B396E1217E32810066EF8E /* Gallenroehrling.jpg in Resources */,
+				D0E878452183923A0004230D /* stiel_ring.jpg in Resources */,
+				D0E8785B2183923A0004230D /* geruch.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +688,8 @@
 				D097841621527F7A00CD3374 /* CameraVC.swift in Sources */,
 				D049C7802153FA6A001167EF /* UserListDetailVC.swift in Sources */,
 				D041F8C92178D66A00BAFFDD /* StartVC.swift in Sources */,
+				D0E878682183A4720004230D /* BestimmungHelpVC.swift in Sources */,
+				D0E8786A2183A61C0004230D /* BestimmungHelpTableViewCell.swift in Sources */,
 				D024038921550A6F002B00AB /* UserListAddItemMapVC.swift in Sources */,
 				D014BAE5215134E800C77187 /* UserListAddItemImageTableViewCell.swift in Sources */,
 				D0EA388F21501367002E462C /* GlossarDetailVC.swift in Sources */,
