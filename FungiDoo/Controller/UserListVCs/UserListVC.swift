@@ -74,6 +74,8 @@ class UserListVC: UIViewController {
         }
     }
     
+     @IBAction func unwindToUserListVC(segue:UIStoryboardSegue) { }
+    
     //MARK: - Core Data methods
     /***************************************************************/
     

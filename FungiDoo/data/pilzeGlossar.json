@@ -105,7 +105,7 @@
         "family" : "Afterleistlinge",
         "beschreibung" : {
             "Hut" : "ø 2 - 10 cm, orange, eingerollter Rand",
-            "Stiel" : "3 - 7 cm, weiß grünlich, genattert",
+            "Stiel" : "3 - 7 cm, orangegelb",
             "Lamellen" : "gelb, orangegelb",
             "Fleisch" : "gelb bis orangegelb",
             "Geruch" : "säuerlich, geruchlos",
@@ -190,7 +190,7 @@
             "Poren" : "Weiß, gelblich",
             "Fleisch" : "Weiß",
             "Geruch" : "pilzig",
-            "Standort" : "Nadel- und Mischwälder"
+            "Standort" : "Nadel- und Mischwald"
         },
         "imageURL" : "Gemeine_Steinpilz_(Boletus_edulis).jpg",
         "essbar" : "essbar",

@@ -96,12 +96,13 @@ class BestimmungsVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "goToResultVC"{
-            let destinationVC = segue.destination as! ResultVC
-            destinationVC.result = resultKlasse
-        } else if segue.identifier == "goToBestimmungsHelp"{
-            let destinationVC = segue.destination as! BestimmungHelpVC
-            destinationVC.category = propertyCalculated
-        }
+            
+            let destinationVC = segue.destination as! UINavigationController
+            if let childDestination  = destinationVC.topViewController as? ResultVC {
+                childDestination.result = resultKlasse
+                
+            }
+        } 
     }
     
     //This method turns a condition code into the name of the eatable condition image

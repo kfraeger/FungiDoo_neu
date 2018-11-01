@@ -14,22 +14,35 @@ class ResultVC: UIViewController {
     var result = ""
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var imageName = ""
+    var pilzData : PilzGlossar?
     
     
     @IBOutlet weak var resultImageView: UIImageView!    
     @IBOutlet weak var resultTextLabel: UILabel!
+    @IBOutlet weak var eatableImageView: UIImageView!
+    @IBOutlet weak var detailButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if result != "" {
-        imageName = getImageItemFromDB(name: result)
-        resultImageView.image = UIImage(named: imageName)
-        resultTextLabel.text = result
+            getItemFromDB(name: result)
+            
+            if let data = pilzData {
+                resultImageView.image = UIImage(named: data.imageURL!)
+                resultTextLabel.text = data.name
+                eatableImageView.image = UIImage(named: data.eatableIconString!)
+            }
+            
+            
         } else {
             resultImageView.image = UIImage(named: "noimage_icon")
             resultTextLabel.text = "Keinen Eintrag gefunden"
+            disable(button: saveButton)
+            disable(button: detailButton)
+            
         }
     }
     
@@ -46,29 +59,37 @@ class ResultVC: UIViewController {
                 childDestination.nameResult = result
                 
             }
+        } else if segue.identifier == "goToGlossarDetailResult"{
+            let destinationVC = segue.destination as! GlossarDetailVC
+            
+            destinationVC.pilzData = pilzData
+            
         }
     }
     
     /**
-     get certain objects
+     changes color, alpha of button and
+     disables it
      */
-    func getImageItemFromDB(name : String) -> String {
+    func disable(button : UIButton){
+        button.isEnabled = false
+        button.backgroundColor = UIColor.lightGray
+        button.alpha = 0.3
+    }
+    
+    /**
+     get certain object with name from PilzGlossar core data
+     */
+    func getItemFromDB(name : String) {
         
         let request : NSFetchRequest<PilzGlossar> = PilzGlossar.fetchRequest()
         request.predicate = NSPredicate(format: "name == %@", name)
         
         do {
             let item = try context.fetch(request)
-            
-            if let imageUrl = item[0].imageURL {
-                return imageUrl
-            }
-            
+                pilzData = item[0]
         } catch {
             print("Error in fetching Items \(error)")
         }
-        
-        return ""
     }
-
 }

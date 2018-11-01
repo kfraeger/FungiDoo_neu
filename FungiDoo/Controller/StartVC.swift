@@ -40,12 +40,6 @@ class StartVC: UIViewController {
         checkIfCSVModified(from: csvFilePilze, ofType: "csv", key: userDefaultKeyCSV)
         checkIfCSVModified(from: jsonFile, ofType: "json", key: userDefaultKeyJSON)
         checkIfCSVModified(from: jsonFileGlossar, ofType: "json", key: userDefaultKeyGlossarJSON)
-        //clearQuestionsDatabase()
-        //clearDatabase(entityname: entityPilz)
-        //clearDatabase(entityname: entityQuestionDB)
-        //readDataFromCSVFile(file: csvFilePilze)
-        //readJSONData(from: jsonFile)
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func unwindToStartVC(segue:UIStoryboardSegue) { }
@@ -135,11 +129,37 @@ class StartVC: UIViewController {
                 newItem.fleisch = item.fleisch
                 newItem.geruch = item.geruch
                 newItem.standort = item.standort
+                newItem.eatableIconString = updateEatableIcon(condition: item.essbar)
                 saveItem()
             }
             
         }catch let error as NSError {
             print("Probleme beim Lesen der JSON-Datei: \(error).")
+        }
+        
+    }
+    
+    //This method turns a condition code into the name of the eatable condition image
+    private func updateEatableIcon(condition: String) -> String {
+        
+        switch (condition) {
+            
+        case "toedlich giftig":
+            return "giftig-toedlich-icon"
+            
+        case "giftig":
+            return "giftig-icon"
+            
+        case "ungenießbar":
+            return "ungeniessbar-icon"
+            
+        case "eingeschrenkt essbar":
+            return "beschraenkt-essbar-icon"
+            
+        case "essbar":
+            return "essbar-icon"
+        default :
+            return "noimage_icon"
         }
         
     }

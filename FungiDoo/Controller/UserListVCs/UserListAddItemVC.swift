@@ -127,7 +127,9 @@ class UserListAddItemVC: UIViewController, CameraInputChangeDelegate, LocationCh
         newItem.image = (tempData["image"] as! Data)
         saveItem()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil )
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+        
     }
     
     
@@ -478,31 +480,6 @@ extension UserListAddItemVC {
             print("Error in fetching Items \(error)")
         }
     }
-    
-//    func getNameListDateFromJSON(url : String) {
-//        Alamofire.request(url).responseJSON { response in
-//            if response.result.isSuccess{
-//                print("Success! Daten erhalten")
-//                let dataJSON : JSON = JSON(response.result.value!)
-//                self.updateNameList(json: dataJSON)
-//
-//            } else {
-//                print("Error : \(String(describing: response.result.error))")
-//                 AlertService.showErrorConnectionAlert(on: self)
-//            }
-//        }
-//    }
-//
-//    func updateNameList(json : JSON){
-//        if let tempResult = json.array {
-//            print("tempResult updatePilzeData: \(tempResult.count)")
-//
-//            for item in 0 ... tempResult.count - 1 {
-//                nameList.append(json[item]["name"].stringValue)
-//                nameList = nameList.sorted()
-//            }
-//        }
-//    }
 }
 
 //MARK: - LocationManager methods delegate

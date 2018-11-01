@@ -5,19 +5,26 @@
 //  Created by Katja Fraeger on 09.09.18.
 //  Copyright © 2018 Katja Fraeger. All rights reserved.
 //
+//  presents the detailView of one glossar item
 
 import UIKit
-import CoreData
+
 
 class GlossarDetailVC: UIViewController {
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    //MARK: - Variables & Constants
+    /***************************************************************/
     
+    //passed data from GlossarVC
     var pilzData : PilzGlossar?
     var eatableIcon = String()
     
+    //titles of the description part
     let descriptionDetails = ["Hut", "Stiel", "Poren", "Lamellen", "Geruch", "Standort", "Synonym"]
     
+    
+    //MARK: - IBOutlets
+    /***************************************************************/
     
     @IBOutlet weak var pilzImageView: UIImageView!
     @IBOutlet weak var eatableImageView: UIImageView!
@@ -38,7 +45,7 @@ class GlossarDetailVC: UIViewController {
         if let data = pilzData {
             
             pilzImageView.image = UIImage(named: data.imageURL!)
-            eatableImageView.image = UIImage(named: eatableIcon)
+            eatableImageView.image = UIImage(named: data.eatableIconString ?? "")
             
             nameLabel.text = data.name
             lateinNameLabel.text = data.lateinName
@@ -53,7 +60,10 @@ class GlossarDetailVC: UIViewController {
         
     }
     
-    
+    /**
+        creates the title and the sublabel of
+        one description item
+     */
     func createDescriptionLabel(data: PilzGlossar, and key: String, x: CGFloat, y: CGFloat) {
         
         let label = UILabel(frame: CGRect(x: x, y: y, width: view.frame.width - 50, height: 25))
@@ -81,6 +91,10 @@ class GlossarDetailVC: UIViewController {
         
     }
     
+    /**
+        creates all titles and the sublabels of
+        all description items
+     */
     func createLabels(data: PilzGlossar, x: CGFloat, y: CGFloat){
         var yPos = 0
 

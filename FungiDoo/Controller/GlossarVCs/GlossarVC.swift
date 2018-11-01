@@ -72,13 +72,13 @@ class GlossarVC: UIViewController {
     
     
     //shows and  hides NOResultLabel for the search
-    func switchShowHideInfoLabel(number : Int){
+    private func switchShowHideInfoLabel(number : Int){
         infoLabel.isHidden = (number != 0 ? true : false)
         
     }
     
     //Generates the indices for the table sections from first letter of name
-    func generatedABCIndexForSection(){
+    private func generatedABCIndexForSection(){
         //print("generatedABCIndexForSection()")
         for item in data {
             
@@ -94,7 +94,7 @@ class GlossarVC: UIViewController {
     }
     
     //Sorts rows to the generated sections
-    func getRowsForSection(){
+    private func getRowsForSection(){
         //print("getRowsForSection()")
         var tempArr : [PilzGlossar] = []
         for index in sectionIndices{
@@ -108,41 +108,8 @@ class GlossarVC: UIViewController {
         }
     }
     
-    //MARK: - Segues
-    /***************************************************************/
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "goToGlossarDetail"{
-            let destinationVC = segue.destination as! GlossarDetailVC
-            
-            destinationVC.pilzData = (searching ? filteredData[indexOfRow] : rowsSection[indexOfSection][indexOfRow])
-            destinationVC.eatableIcon = (searching ? self.updateEatableIcon(condition: filteredData[indexOfRow].eatable!) : self.updateEatableIcon(condition: rowsSection[indexOfSection][indexOfRow].eatable!))
-            
-        }
-    }
-    
-    /**
-     loads all items from core data
-     */
-    func loadItems(){
-        let request : NSFetchRequest<PilzGlossar> = PilzGlossar.fetchRequest()
-        let sort = NSSortDescriptor(key: "name", ascending: true)
-        request.sortDescriptors = [sort]
-        
-        do {
-            data = try context.fetch(request)
-            
-        } catch {
-            print("Error in fetching Items \(error)")
-        }
-        
-        generatedABCIndexForSection()
-        getRowsForSection()
-        self.glossarTableView.reloadData()
-    }
-    
     //This method turns a condition code into the name of the eatable condition image
-    func updateEatableIcon(condition: String) -> String {
+    private func updateEatableIcon(condition: String) -> String {
         
         switch (condition) {
             
@@ -165,6 +132,44 @@ class GlossarVC: UIViewController {
         }
         
     }
+    
+    //MARK: - Segues
+    /***************************************************************/
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToGlossarDetail"{
+            let destinationVC = segue.destination as! GlossarDetailVC
+            
+            destinationVC.pilzData = (searching ? filteredData[indexOfRow] : rowsSection[indexOfSection][indexOfRow])
+            destinationVC.eatableIcon = (searching ? self.updateEatableIcon(condition: filteredData[indexOfRow].eatable!) : self.updateEatableIcon(condition: rowsSection[indexOfSection][indexOfRow].eatable!))
+            
+        }
+    }
+    
+    //MARK: - core data load
+    /***************************************************************/
+    
+    /**
+     loads all items from core data
+     */
+    private func loadItems(){
+        let request : NSFetchRequest<PilzGlossar> = PilzGlossar.fetchRequest()
+        let sort = NSSortDescriptor(key: "name", ascending: true)
+        request.sortDescriptors = [sort]
+        
+        do {
+            data = try context.fetch(request)
+            
+        } catch {
+            print("Error in fetching Items \(error)")
+        }
+        
+        generatedABCIndexForSection()
+        getRowsForSection()
+        self.glossarTableView.reloadData()
+    }
+    
+    
 
 }
 

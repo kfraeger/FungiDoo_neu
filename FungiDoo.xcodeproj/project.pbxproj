@@ -10,6 +10,7 @@
 		7609C2ADF6C81CDDDE73CC99 /* Pods_FungiDoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FED889CC8CFF9E8C91B1870 /* Pods_FungiDoo.framework */; };
 		D00632EB2179CD5700A45285 /* pilzeGlossar.json in Resources */ = {isa = PBXBuildFile; fileRef = D00632EA2179CD5700A45285 /* pilzeGlossar.json */; };
 		D0063342217BB75D00A45285 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D0063341217BB75D00A45285 /* questions.json */; };
+		D010E81A2188686E005D266C /* Data.csv in Resources */ = {isa = PBXBuildFile; fileRef = D010E8192188686E005D266C /* Data.csv */; };
 		D014BAE2215131EE00C77187 /* UserListAddItemNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014BAE0215131EE00C77187 /* UserListAddItemNameTableViewCell.swift */; };
 		D014BAE5215134E800C77187 /* UserListAddItemImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014BAE4215134E800C77187 /* UserListAddItemImageTableViewCell.swift */; };
 		D024038921550A6F002B00AB /* UserListAddItemMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024038821550A6F002B00AB /* UserListAddItemMapVC.swift */; };
@@ -99,7 +100,6 @@
 		D0E878632183923A0004230D /* stiel_netz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8783B218392320004230D /* stiel_netz.jpg */; };
 		D0E878642183923A0004230D /* stielbasis_huelle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8783C218392340004230D /* stielbasis_huelle.jpg */; };
 		D0E878652183923A0004230D /* stielform_bauchig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0E8783D218392370004230D /* stielform_bauchig.jpg */; };
-		D0E878682183A4720004230D /* BestimmungHelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E878672183A4720004230D /* BestimmungHelpVC.swift */; };
 		D0E8786A2183A61C0004230D /* BestimmungHelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E878692183A61C0004230D /* BestimmungHelpTableViewCell.swift */; };
 		D0EA3880214FE3E6002E462C /* GlossarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA387F214FE3E6002E462C /* GlossarVC.swift */; };
 		D0EA3882214FE47B002E462C /* GlossarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA3881214FE47B002E462C /* GlossarItem.swift */; };
@@ -109,7 +109,6 @@
 		D0EA388B21500022002E462C /* GlossarHelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA388A21500021002E462C /* GlossarHelpVC.swift */; };
 		D0EA388D215001AA002E462C /* GlossarHelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA388C215001AA002E462C /* GlossarHelpTableViewCell.swift */; };
 		D0EA388F21501367002E462C /* GlossarDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA388E21501367002E462C /* GlossarDetailVC.swift */; };
-		D0FC532B2181D39300B813DE /* Data.csv in Resources */ = {isa = PBXBuildFile; fileRef = D0FC532A2181D39300B813DE /* Data.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +116,7 @@
 		7FED889CC8CFF9E8C91B1870 /* Pods_FungiDoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FungiDoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00632EA2179CD5700A45285 /* pilzeGlossar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pilzeGlossar.json; sourceTree = "<group>"; };
 		D0063341217BB75D00A45285 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		D010E8192188686E005D266C /* Data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Data.csv; sourceTree = "<group>"; };
 		D014BAE0215131EE00C77187 /* UserListAddItemNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAddItemNameTableViewCell.swift; sourceTree = "<group>"; };
 		D014BAE4215134E800C77187 /* UserListAddItemImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAddItemImageTableViewCell.swift; sourceTree = "<group>"; };
 		D024038821550A6F002B00AB /* UserListAddItemMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAddItemMapVC.swift; sourceTree = "<group>"; };
@@ -208,7 +208,6 @@
 		D0E8783B218392320004230D /* stiel_netz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stiel_netz.jpg; sourceTree = "<group>"; };
 		D0E8783C218392340004230D /* stielbasis_huelle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielbasis_huelle.jpg; sourceTree = "<group>"; };
 		D0E8783D218392370004230D /* stielform_bauchig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stielform_bauchig.jpg; sourceTree = "<group>"; };
-		D0E878672183A4720004230D /* BestimmungHelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestimmungHelpVC.swift; sourceTree = "<group>"; };
 		D0E878692183A61C0004230D /* BestimmungHelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestimmungHelpTableViewCell.swift; sourceTree = "<group>"; };
 		D0EA387F214FE3E6002E462C /* GlossarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarVC.swift; sourceTree = "<group>"; };
 		D0EA3881214FE47B002E462C /* GlossarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarItem.swift; sourceTree = "<group>"; };
@@ -218,7 +217,6 @@
 		D0EA388A21500021002E462C /* GlossarHelpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlossarHelpVC.swift; sourceTree = "<group>"; };
 		D0EA388C215001AA002E462C /* GlossarHelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarHelpTableViewCell.swift; sourceTree = "<group>"; };
 		D0EA388E21501367002E462C /* GlossarDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossarDetailVC.swift; sourceTree = "<group>"; };
-		D0FC532A2181D39300B813DE /* Data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Data.csv; sourceTree = "<group>"; };
 		D4108D0D4BDCDF3C379AFA5B /* Pods-FungiDoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FungiDoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FungiDoo/Pods-FungiDoo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -392,7 +390,7 @@
 				D075483B2177439B003C6E71 /* imagesGlossar */,
 				D00632EA2179CD5700A45285 /* pilzeGlossar.json */,
 				D0063341217BB75D00A45285 /* questions.json */,
-				D0FC532A2181D39300B813DE /* Data.csv */,
+				D010E8192188686E005D266C /* Data.csv */,
 				D09A3CD12173A0F70089456E /* imagesFragen */,
 			);
 			path = data;
@@ -450,7 +448,6 @@
 			children = (
 				D05DBEC0216E3340001C4837 /* BestimmungsVC.swift */,
 				D041F88F21789DFB00BAFFDD /* ResultVC.swift */,
-				D0E878672183A4720004230D /* BestimmungHelpVC.swift */,
 			);
 			path = BestimmungVCs;
 			sourceTree = "<group>";
@@ -555,6 +552,7 @@
 				D0B396E7217E32810066EF8E /* 3087010338_7a05fd82b3_b-2.jpg in Resources */,
 				D0E8784C2183923A0004230D /* schuesselfoermig.jpg in Resources */,
 				D0E878472183923A0004230D /* hut_schmierig.jpg in Resources */,
+				D010E81A2188686E005D266C /* Data.csv in Resources */,
 				D0B396E4217E32810066EF8E /* 800px-Anis-champignon-Agaricus-silvicola.jpg in Resources */,
 				D0B396DE217E32810066EF8E /* Pantherpilz_Amanita_pantherina.jpg in Resources */,
 				D0E8785D2183923A0004230D /* hut_felderig.jpg in Resources */,
@@ -573,7 +571,6 @@
 				D0E8784F2183923A0004230D /* stiel_koernchen.jpg in Resources */,
 				D03468022150FA2500197129 /* UserItemTableViewCell.xib in Resources */,
 				D0B396DD217E32810066EF8E /* Safranschirmling-1-2.jpg in Resources */,
-				D0FC532B2181D39300B813DE /* Data.csv in Resources */,
 				D0E8784E2183923A0004230D /* stiel_flockig.jpg in Resources */,
 				D0B396D7217E32810066EF8E /* karbolchampignon.jpg in Resources */,
 				D0E8783E2183923A0004230D /* trichterfoermig.jpg in Resources */,
@@ -688,7 +685,6 @@
 				D097841621527F7A00CD3374 /* CameraVC.swift in Sources */,
 				D049C7802153FA6A001167EF /* UserListDetailVC.swift in Sources */,
 				D041F8C92178D66A00BAFFDD /* StartVC.swift in Sources */,
-				D0E878682183A4720004230D /* BestimmungHelpVC.swift in Sources */,
 				D0E8786A2183A61C0004230D /* BestimmungHelpTableViewCell.swift in Sources */,
 				D024038921550A6F002B00AB /* UserListAddItemMapVC.swift in Sources */,
 				D014BAE5215134E800C77187 /* UserListAddItemImageTableViewCell.swift in Sources */,

@@ -556,7 +556,11 @@
 
 
 
-
+    {"questionsType": "hutUnterseiteFarbe",
+        "text": "Ist die Poren- oder Lamellenfarbe graubraun?",
+        "image": "hutunterseite_farbe.jpg",
+        "answer": "graubraun"
+    },
     {"questionsType": "hutUnterseiteFarbe",
       "text": "Ist die Poren- oder Lamellenfarbe braeunlich?",
       "image": "hutunterseite_farbe.jpg",

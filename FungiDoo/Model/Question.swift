@@ -5,6 +5,7 @@
 //  Created by Katja Fraeger on 13.10.18.
 //  Copyright © 2018 Katja Fraeger. All rights reserved.
 //
+//  Model of Questions decodable from json
 
 import Foundation
 import UIKit

@@ -1,5 +1,5 @@
 //
-//  Pilze.swift
+//  PilzeGlossar.swift
 //  FungiDoo
 //
 //  Created by Katja Fraeger on 17.09.18.
@@ -26,7 +26,6 @@ struct GlossarItem : Decodable{
     let fleisch : String
     let geruch : String
     let standort : String
-    //let eatableIconString : String
     
     private enum GlossarKeys : String, CodingKey {
         case name
@@ -71,38 +70,7 @@ struct GlossarItem : Decodable{
         self.geruch = try descriptionContainer.decode(String.self, forKey: .geruch)
         self.standort = try descriptionContainer.decode(String.self, forKey: .standort)
         self.fleisch = try descriptionContainer.decode(String.self, forKey: .fleisch)
-        //self.eatableIconString = updateEatableIcon(condition: self.essbar)
     }
-    
-    
-    
-    
-    
-    //This method turns a condition code into the name of the eatable condition image
-   func updateEatableIcon(condition: String) -> String {
-
-        switch (condition) {
-
-        case "toedlich giftig":
-            return "giftig-toedlich-icon"
-
-        case "giftig":
-            return "giftig-icon"
-
-        case "ungenießbar":
-            return "ungeniessbar-icon"
-
-        case "eingeschrenkt essbar":
-            return "beschraenkt-essbar-icon"
-
-        case "essbar":
-            return "essbar-icon"
-        default :
-            return "noimage_icon"
-        }
-
-    }
-
     
 }
 
